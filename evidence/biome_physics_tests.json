@@ -1,0 +1,488 @@
+{
+  "checkedAt": "2026-11-08T14:48:17.378Z",
+  "scope": "Actual SnowboardPhysics delegation, SurfSolver and shared analytic wave field with project Three Vector3; includes shared elliptical island shorelines. Does not verify rendering, browser input, surf visuals or minor decorative rocks.",
+  "summary": {
+    "passed": 15,
+    "failed": 0
+  },
+  "results": [
+    {
+      "name": "ocean analytic normal and water velocity match finite differences",
+      "status": "passed",
+      "measurements": [
+        {
+          "normal": 2.6951451559585697e-9,
+          "velocity": 8.563201703282175e-9
+        },
+        {
+          "normal": 2.7017449822617795e-9,
+          "velocity": 9.572231896015637e-10
+        },
+        {
+          "normal": 2.2871820493573843e-9,
+          "velocity": 5.971295458095938e-9
+        }
+      ]
+    },
+    {
+      "name": "surf reset uses the rendered wave surface and enters with real velocity",
+      "status": "passed",
+      "measurements": {
+        "spawn": {
+          "x": 11999.998077243446,
+          "z": -11880.019227565537,
+          "dx": -0.099503719,
+          "dz": -0.99503719,
+          "toast": "潮汐海湾 · 顺着浪墙压板，左右切入浪面"
+        },
+        "position": [
+          11999.998077243446,
+          1.206147954977629,
+          -11880.019227565537
+        ],
+        "velocity": [
+          -0.7164267769511923,
+          0.24235856924163057,
+          -7.164267769511922
+        ]
+      }
+    },
+    {
+      "name": "paddling adds actual movement, while braking substantially slows the board",
+      "status": "passed",
+      "measurements": {
+        "paddle": {
+          "position": [
+            11990.068154876306,
+            -0.036667808840815955,
+            -11978.440563298942
+          ],
+          "velocity": [
+            -0.9929454219357913,
+            -1.0866474776403363,
+            -7.486008314354455
+          ],
+          "yaw": 0.09966865249116204,
+          "distance": 98.92879902630881,
+          "peakSpeed": 17.13856554902415,
+          "maxWaterSeparation": 0.15908860680405057,
+          "waveTime": 8.000000000000187,
+          "grounded": true
+        },
+        "coast": {
+          "position": [
+            11992.182115554235,
+            -0.8808841361877642,
+            -11956.874919984504
+          ],
+          "velocity": [
+            -1.3112835870641921,
+            -2.9770160928387908,
+            -15.28301766147296
+          ],
+          "yaw": 0.09966865249116204,
+          "distance": 77.28028479033733,
+          "peakSpeed": 15.339168604803794,
+          "maxWaterSeparation": 0.1572256987890964,
+          "waveTime": 8.000000000000187,
+          "grounded": true
+        },
+        "brake": {
+          "position": [
+            11999.500842478448,
+            0.43680676029918547,
+            -11886.217374697837
+          ],
+          "velocity": [
+            0.2990110813582412,
+            -3.8739218998855227,
+            1.1111876164827932
+          ],
+          "yaw": 0.09966865249116204,
+          "distance": 6.265473338781931,
+          "peakSpeed": 7.064795413526359,
+          "maxWaterSeparation": 0.1190795334211252,
+          "waveTime": 8.000000000000187,
+          "grounded": true
+        }
+      }
+    },
+    {
+      "name": "carving changes the heading and creates lateral travel",
+      "status": "passed",
+      "measurements": {
+        "position": [
+          11991.511107646484,
+          2.213309538551167,
+          -11894.690174866693
+        ],
+        "velocity": [
+          -8.360268125622898,
+          -1.0667516656192921,
+          -4.055859162278394
+        ],
+        "yaw": 1.3526055333557703,
+        "distance": 16.97880213997723,
+        "peakSpeed": 9.38841777043004,
+        "maxWaterSeparation": 0.15092532525248492,
+        "waveTime": 1.9999999999999953,
+        "grounded": true
+      }
+    },
+    {
+      "name": "buoyancy follows the same time-varying water without sinking",
+      "status": "passed",
+      "measurements": {
+        "position": [
+          11905.102931395702,
+          1.9314079543151403,
+          -11842.5786467175
+        ],
+        "velocity": [
+          11.868488765443892,
+          -1.0093316895014404,
+          -0.2131304979800404
+        ],
+        "yaw": 4.686307074385584,
+        "distance": 102.01672314757833,
+        "peakSpeed": 16.544802939232778,
+        "maxWaterSeparation": 0.37946811322506724,
+        "waveTime": 34.99999999999866,
+        "grounded": true
+      }
+    },
+    {
+      "name": "charged pop leaves the water and lands back on the current swell",
+      "status": "passed",
+      "measurements": {
+        "position": [
+          11997.515956058203,
+          2.5909066631893505,
+          -11909.414427401416
+        ],
+        "velocity": [
+          -1.1198493859777416,
+          -0.026883479335203783,
+          -9.510258479257182
+        ],
+        "yaw": 0.09966865249116204,
+        "distance": 25.628422376524025,
+        "peakSpeed": 9.57596360631962,
+        "maxWaterSeparation": 0.11449870505446391,
+        "waveTime": 3.5083333333333235,
+        "grounded": true,
+        "events": [
+          {
+            "type": "land",
+            "impact": 6.284398255062807
+          },
+          {
+            "type": "air",
+            "frontRolls": 0,
+            "spin": 0,
+            "time": 1.1749999999999983
+          }
+        ]
+      }
+    },
+    {
+      "name": "speed settings, walking input, suspension and bay boundary remain safe",
+      "status": "passed",
+      "measurements": {
+        "position": [
+          11999.243687878103,
+          0.32129682209320426,
+          -11891.353681013008
+        ],
+        "velocity": [
+          -0.49259005784432663,
+          -2.80477478046868,
+          -2.809020018753835
+        ],
+        "yaw": 0.09966865249116204,
+        "distance": 11.393941363496438,
+        "peakSpeed": 3.999991414421945,
+        "maxWaterSeparation": 0.10205242806335124,
+        "waveTime": 2.999999999999992,
+        "grounded": true,
+        "afterBoundary": [
+          13275.405328058283,
+          2.0832846429373126,
+          -11892.91339970449
+        ]
+      }
+    },
+    {
+      "name": "switching through all modes restores every original physics reference and snow tuning",
+      "status": "passed",
+      "measurements": {
+        "position": [
+          0,
+          -0.9170219177287404,
+          -3.6680876709149617
+        ],
+        "velocity": [
+          0,
+          -0.872990915358868,
+          -3.491963661435472
+        ],
+        "yaw": 0,
+        "distance": 3.780978227802065,
+        "peakSpeed": 3.491963661435472,
+        "maxWaterSeparation": 0,
+        "waveTime": 1.9999999999999953,
+        "grounded": true
+      }
+    },
+    {
+      "name": "shared island shorelines keep the surfer on the water side of every coast",
+      "status": "passed",
+      "measurements": [
+        {
+          "island": {
+            "x": -330,
+            "z": -80,
+            "rx": 150,
+            "rz": 290,
+            "height": 42
+          },
+          "minimumEllipseRadius": 1.0000000000000002
+        },
+        {
+          "island": {
+            "x": 390,
+            "z": -500,
+            "rx": 170,
+            "rz": 140,
+            "height": 28
+          },
+          "minimumEllipseRadius": 0.9999999999999949
+        },
+        {
+          "island": {
+            "x": -650,
+            "z": -900,
+            "rx": 230,
+            "rz": 120,
+            "height": 56
+          },
+          "minimumEllipseRadius": 1.0000000000000022
+        }
+      ]
+    },
+    {
+      "name": "surf integration at 30 and 120 Hz agrees with fixed substeps",
+      "status": "passed",
+      "measurements": {
+        "positionDifference": 0,
+        "velocityDifference": 0
+      }
+    },
+    {
+      "name": "the main swell has five-metre faces while the wave groups retain fine detail",
+      "status": "passed",
+      "measurements": {
+        "mainWaveHeight": 5.051639203139325,
+        "mainWavelength": 46,
+        "groups": [
+          {
+            "time": 0,
+            "trough": -3.194566604386772,
+            "crest": 3.3184448145189123,
+            "wallHeight": 6.513011418905684,
+            "peakFoam": 0.9174741887868508
+          },
+          {
+            "time": 4,
+            "trough": -2.0023989327336396,
+            "crest": 2.6494446863746584,
+            "wallHeight": 4.651843619108298,
+            "peakFoam": 0.4306807267514592
+          },
+          {
+            "time": 9,
+            "trough": -2.958677664044874,
+            "crest": 2.497202298685963,
+            "wallHeight": 5.455879962730837,
+            "peakFoam": 0.8067443661231962
+          },
+          {
+            "time": 21,
+            "trough": -2.560168811775167,
+            "crest": 3.3330163509671324,
+            "wallHeight": 5.8931851627422995,
+            "peakFoam": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "fresh runs find the nearest advancing front face at any ocean time",
+      "status": "passed",
+      "measurements": [
+        {
+          "time": 0,
+          "moved": 0.019323464214584436,
+          "height": 1.126147954977629,
+          "face": 0.7128271470104294,
+          "energy": 0.434359366087884
+        },
+        {
+          "time": 5,
+          "moved": 3.607259273410932,
+          "height": 1.7259213724372149,
+          "face": 0.712827147010459,
+          "energy": 0.4343593660877501
+        },
+        {
+          "time": 18,
+          "moved": 14.563625608759361,
+          "height": 2.0222344568592625,
+          "face": 0.7128271470104287,
+          "energy": 0.43435936608788706
+        },
+        {
+          "time": 63,
+          "moved": 18.07561902987825,
+          "height": 2.0329519244970355,
+          "face": 0.71282714701044,
+          "energy": 0.43435936608783643
+        },
+        {
+          "time": 240,
+          "moved": 9.943352058144864,
+          "height": 1.7576760828500166,
+          "face": 0.7128271470104153,
+          "energy": 0.43435936608794706
+        }
+      ]
+    },
+    {
+      "name": "an aligned board gains real speed and distance from the moving large swell",
+      "status": "passed",
+      "measurements": {
+        "startSpeed": 7.2,
+        "position": [
+          11992.182115554235,
+          -0.8808841361877642,
+          -11956.874919984504
+        ],
+        "velocity": [
+          -1.3112835870641921,
+          -2.9770160928387908,
+          -15.28301766147296
+        ],
+        "yaw": 0.09966865249116204,
+        "distance": 77.28028479033733,
+        "peakSpeed": 15.339168604803794,
+        "maxWaterSeparation": 0.1572256987890964,
+        "waveTime": 8.000000000000187,
+        "grounded": true
+      }
+    },
+    {
+      "name": "holding pressure and carving through wave groups never triggers automatic launches",
+      "status": "passed",
+      "measurements": {
+        "seconds": 90,
+        "maximumSeparation": 0.3238617056238353,
+        "maximumSpray": 0.6540277175602669,
+        "position": [
+          11726.65656070487,
+          2.205374302640326,
+          -11686.88231657685
+        ]
+      }
+    },
+    {
+      "name": "jumps rejoin different moving wave groups with bounded relative landing impulse",
+      "status": "passed",
+      "measurements": [
+        {
+          "initialOceanTime": 0,
+          "impact": 5.49877844270705,
+          "finalWaterSeparation": 0.09678035969568555,
+          "position": [
+            11989.711326733246,
+            1.8183632357668216,
+            -11918.914415210405
+          ],
+          "velocity": [
+            -6.034299265930027,
+            -0.43137103834811785,
+            -11.116371480804233
+          ],
+          "yaw": 0.543813106018131,
+          "distance": 36.81379712224474,
+          "peakSpeed": 12.648576304471636,
+          "maxWaterSeparation": 0.15536832853370286,
+          "waveTime": 4.458333333333345,
+          "grounded": true
+        },
+        {
+          "initialOceanTime": 4,
+          "impact": 5.682490860709814,
+          "finalWaterSeparation": 0.1359283667024208,
+          "position": [
+            11987.824876120685,
+            0.12311401271602439,
+            -11914.99471752894
+          ],
+          "velocity": [
+            -6.572806863648671,
+            -1.9546744381125174,
+            -12.725433259183037
+          ],
+          "yaw": 0.5101560106895711,
+          "distance": 45.37672024862671,
+          "peakSpeed": 14.322654841220913,
+          "maxWaterSeparation": 0.1657294722908433,
+          "waveTime": 8.458333333333506,
+          "grounded": true
+        },
+        {
+          "initialOceanTime": 11,
+          "impact": 6.218205950705189,
+          "finalWaterSeparation": 0.027015638291701782,
+          "position": [
+            11986.277930067301,
+            -0.4297102441210727,
+            -11928.25838636461
+          ],
+          "velocity": [
+            -6.965126681780916,
+            1.9317907096289528,
+            -13.308645372952805
+          ],
+          "yaw": 0.5099781556285647,
+          "distance": 45.4998037264656,
+          "peakSpeed": 15.434425171012109,
+          "maxWaterSeparation": 0.1608900425655173,
+          "waveTime": 15.45833333333308,
+          "grounded": true
+        },
+        {
+          "initialOceanTime": 23,
+          "impact": 5.2069355359295,
+          "finalWaterSeparation": 0.05380747834022048,
+          "position": [
+            11987.651376683853,
+            1.8406896473775805,
+            -11930.515395864772
+          ],
+          "velocity": [
+            -5.5862114549452135,
+            0.6693415898473835,
+            -9.974804355850402
+          ],
+          "yaw": 0.5407574969136298,
+          "distance": 37.59316584220424,
+          "peakSpeed": 11.432518548283808,
+          "maxWaterSeparation": 0.14217591134370067,
+          "waveTime": 27.45833333333308,
+          "grounded": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+class {
+  constructor({ hf: e3, piste: t2, forest: n2, obstacles: r2 = [], lakes: i2 = [] }) {
+    this.hf = e3, this.piste = t2, this.forest = n2, this.obstacles = r2, this.lakes = i2, this.crashDir = new w(), this.pos = new w(), this.prev = new w(), this.vel = new w(), this.normal = new w(0, 1, 0), this.yaw = 0, this.yawRate = 0, this.grounded = true, this.airTime = 0, this.crashed = 0, this.shakeOff = 0, this.crashMotion = { side: 0, forward: 1, speed: 0 }, this.slip = 0, this.powder = 0, this.jumpCharge = 0, this.flip = 0, this.flipTarget = 0, this.landingRecovery = 0, this.gear = `board`, this.realistic = false, this.edgeSide = 0, this.edgeHeld = 0, this.pumpT = 0, this.skate = { on: false, kick: -1, rest: 0, queued: false, held: false, style: `board`, side: -1, steps: 0 }, this.events = [];
+  }
+  kickLength(e3, t2 = this.skate.style) {
+    return t2 === `stride` ? E.clamp(0.9 - 0.06 * e3, 0.72, 0.9) : t2 === `pole` ? 0.9 : E.clamp(0.85 - 0.06 * e3, 0.58, 0.85);
+  }
+  reset(e3, t2, n2) {
+    this.pos.set(e3, this.hf.heightAt(e3, t2), t2), this.vel.set(0, 0, 0), this.yaw = n2, this.yawRate = 0, this.grounded = true, this.crashed = this.shakeOff = 0, this.airTime = 0, this.flip = this.landingRecovery = this.jumpCharge = 0, this.flipTarget = 0, this.edgeSide = this.edgeHeld = this.pumpT = 0, this.#r(), this.hf.normalAt(e3, t2, this.normal);
+  }
+  get speed() {
+    return this.vel.length();
+  }
+  forward(e3 = new w()) {
+    return e3.set(-Math.sin(this.yaw), 0, -Math.cos(this.yaw));
+  }
+  maxTurnRate(e3) {
+    return Math.min(2.2, 14 / Math.max(e3, 1)) * (this.gear === `ski` ? 1.1 : 1);
+  }
+  crash(e3, t2 = null) {
+    if (this.crashed > 0) return;
+    this.#r(), this.crashed = r, this.shakeOff = 0;
+    let n2 = this.vel.x * Math.cos(this.yaw) - this.vel.z * Math.sin(this.yaw), i2 = -this.vel.x * Math.sin(this.yaw) - this.vel.z * Math.cos(this.yaw);
+    this.crashMotion = { side: e3 === `sideways landing` || Math.abs(n2) > Math.abs(i2) ? Math.sign(n2) || 1 : 0, forward: Math.sign(i2) || 1, speed: this.speed, reason: e3 }, this.crashMotion.kind = m(this.crashMotion), this.vel.y = 0, this.vel.multiplyScalar(0.7), this.flip = this.flipTarget = 0, this.crashDir.set(this.vel.x, 0, this.vel.z), this.crashDir.lengthSq() < 1 && this.forward(this.crashDir), this.crashDir.normalize(), this.events.push({ type: `crash`, reason: e3, tree: t2 });
+  }
+  step(e3, t2) {
+    let n2 = this.hf;
+    if (this.prev.copy(this.pos), this.shakeOff = t2.steer || t2.tuck || t2.brake || t2.jump ? 0 : Math.max(0, this.shakeOff - e3), this.landingRecovery = Math.max(0, this.landingRecovery - e3), this.crashed > 0) {
+      this.crashed = Math.max(0, this.crashed - e3);
+      let t3 = r - this.crashed, a3 = n2.normalAt(this.pos.x, this.pos.z, this.normal);
+      if (t3 < 1.05) {
+        this.vel.x += Nc * a3.y * a3.x * e3, this.vel.z += Nc * a3.y * a3.z * e3;
+        let t4 = Math.hypot(this.vel.x, this.vel.z);
+        t4 > 0 && this.vel.multiplyScalar(Math.max(0, t4 - (Rc * Nc * a3.y + 0.02 * t4 * t4) * e3) / t4);
+      } else this.vel.multiplyScalar(Math.exp(-e3 * 9));
+      if (t3 >= 1.5 && this.vel.set(0, 0, 0), Math.hypot(a3.x, a3.z) > 0.09 && t3 > 0.3 && t3 < 1.5) {
+        let t4 = ye[this.crashMotion.kind].rest === `chest` ? -1 : 1, n3 = Math.atan2(-a3.z * t4, a3.x * t4) - this.yaw;
+        n3 = Math.atan2(Math.sin(n3), Math.cos(n3)), this.yaw += n3 * (1 - Math.exp(-e3 * 3.5));
+      }
+      this.pos.addScaledVector(this.vel, e3), this.grounded = true, this.vel.y = 0, this.#i(), this.pos.y = n2.heightAt(this.pos.x, this.pos.z), n2.normalAt(this.pos.x, this.pos.z, this.normal), this.crashed <= 0 && (this.shakeOff = i, this.events.push({ type: `recovered` }));
+      return;
+    }
+    if (this.shakeOff > 0 && this.grounded) {
+      this.vel.set(0, 0, 0), this.pos.y = n2.heightAt(this.pos.x, this.pos.z), n2.normalAt(this.pos.x, this.pos.z, this.normal);
+      return;
+    }
+    let a2 = this.vel.length(), o2 = t2.steer * this.maxTurnRate(a2);
+    this.grounded || (o2 = t2.steer * 4.5), this.yawRate += (o2 - this.yawRate) * (1 - Math.exp(-e3 * 7)), this.yaw += this.yawRate * e3, this.grounded ? this.#e(e3, t2, a2) : this.#o(e3, t2), this.#i();
+    let s2 = this.forest.hit(this.pos.x, this.pos.z, 0.35);
+    s2 && (this.vel.length() > 4.5 ? this.crash(`tree`, s2) : (Uc.set(this.pos.x - s2.x, 0, this.pos.z - s2.z).normalize(), this.pos.addScaledVector(Uc, 0.05), this.vel.multiplyScalar(0.5)));
+  }
+  stepWalk(e3, t2) {
+    if (e3 <= 0) return;
+    this.prev.copy(this.pos), this.grounded = true, this.airTime = this.jumpCharge = this.slip = 0;
+    let n2 = t2.steer * 2.6;
+    this.yawRate += (n2 - this.yawRate) * (1 - Math.exp(-e3 * 10)), this.yaw += this.yawRate * e3, this.hf.normalAt(this.pos.x, this.pos.z, this.normal), this.forward(Bc).addScaledVector(this.normal, -Bc.dot(this.normal)).normalize();
+    let r2 = t2.walk && !t2.brake ? t2.run ? 4 : 1.4 : 0, i2 = 1 - Math.exp(-e3 * (r2 > 0 ? 8 : 14));
+    this.vel.x += (Bc.x * r2 - this.vel.x) * i2, this.vel.z += (Bc.z * r2 - this.vel.z) * i2, this.pos.x += this.vel.x * e3, this.pos.z += this.vel.z * e3, this.#i();
+    let a2 = this.forest.hit(this.pos.x, this.pos.z, 0.35), o2 = a2 && Math.hypot(this.pos.x - a2.x, this.pos.z - a2.z) <= Math.hypot(this.prev.x - a2.x, this.prev.z - a2.z), s2 = this.hf.heightAt(this.pos.x, this.pos.z), c2 = Math.hypot(this.pos.x - this.prev.x, this.pos.z - this.prev.z), l2 = this.hf.normalAt(this.pos.x, this.pos.z, zc);
+    o2 || l2.y < Math.cos(Math.PI * 50 / 180) || Math.abs(s2 - this.prev.y) > c2 * 1.2 + 0.08 ? (this.pos.copy(this.prev), this.vel.set(0, 0, 0), this.hf.normalAt(this.pos.x, this.pos.z, this.normal)) : (this.pos.y = s2, this.vel.y = (s2 - this.prev.y) / e3, this.normal.copy(l2));
+  }
+  #e(e3, t2, n2) {
+    let r2 = this.hf.normalAt(this.pos.x, this.pos.z, zc);
+    this.normal.copy(r2), this.forward(Bc), Bc.addScaledVector(r2, -Bc.dot(r2)).normalize(), Vc.crossVectors(r2, Bc), Hc.set(0, -9.81, 0).addScaledVector(r2, Nc * r2.y), this.vel.addScaledVector(Hc, e3);
+    let i2 = 1 - E.smoothstep(this.piste.distAt(this.pos.x, this.pos.z), 16, 20);
+    this.powder = (1 - i2) * (1 - 0.7 * (1 - E.smoothstep(r2.y, 0.77, 0.83)));
+    let a2 = Math.abs(this.yawRate) > 0.35 * this.maxTurnRate(n2) ? Math.sign(this.yawRate) : 0;
+    a2 && (a2 !== this.edgeSide && (this.edgeSide && this.edgeHeld > 0.3 && (this.pumpT = Ic.pumpTime), this.edgeSide = a2, this.edgeHeld = 0), this.edgeHeld += e3);
+    let o2 = this.vel.dot(Bc), s2 = this.vel.dot(Vc), c2 = (t2.brake ? 2.2 : 7.5) * (1 - 0.15 * this.powder) * (this.gear === `ski` ? 1.05 : 1), l2 = s2 * Math.exp(-c2 * e3), u2 = t2.brake ? 0.1 : this.realistic ? Ic.keep : 0.8;
+    this.realistic ? o2 = Math.sign(o2 || 1) * Math.sqrt(o2 * o2 + u2 * (s2 * s2 - l2 * l2)) : o2 += Math.sign(o2 || 1) * (Math.abs(s2) - Math.abs(l2)) * u2, this.slip = Math.abs(s2), this.vel.copy(Bc).multiplyScalar(o2).addScaledVector(Vc, l2);
+    let d2 = 0.035 + 0.025 * this.powder;
+    t2.brake && (d2 += 0.5);
+    let f2 = t2.tuck ? 22e-4 : 42e-4, p2 = this.vel.length(), m2 = 0.06 * this.powder * p2 * (1 - 0.55 * E.smoothstep(p2, 4, 14)), h2 = Math.hypot(r2.x, r2.z), g2 = Math.min(1, Math.abs(this.yawRate) / this.maxTurnRate(p2)), _2 = this.realistic ? g2 * Nc * h2 * Ic.drag * E.smoothstep(p2, Ic.dragFrom, Ic.dragTo) : 0, v2 = d2 * Nc * r2.y + f2 * p2 * p2 + m2 + _2;
+    if (p2 > 0 && this.vel.multiplyScalar(Math.max(0, p2 - v2 * e3) / p2), this.pumpT > 0 && (this.pumpT -= e3, this.realistic && !t2.brake)) {
+      let t3 = 1 - E.smoothstep(p2, Ic.pumpFade[0], Ic.pumpFade[1]);
+      this.vel.addScaledVector(Bc, Math.sign(this.vel.dot(Bc) || 1) * Ic.pump * t3 * e3);
+    }
+    if (this.#t(e3, t2), t2.jump) this.jumpCharge = Math.min(1, this.jumpCharge + e3 * 2.5);
+    else if (this.jumpCharge > 0) {
+      this.vel.addScaledVector(r2, 2.6 + this.jumpCharge * 2.6), this.jumpCharge = 0, this.#a(), this.pos.addScaledVector(this.vel, e3);
+      return;
+    }
+    let y2 = this.pos.y;
+    this.pos.x += this.vel.x * e3, this.pos.z += this.vel.z * e3;
+    let b2 = this.hf.heightAt(this.pos.x, this.pos.z), x2 = y2 + this.vel.y * e3 - 0.5 * Nc * e3 * e3;
+    if (b2 < x2 - 0.04 && p2 > 7) this.pos.y = x2, this.#a();
+    else {
+      this.pos.y = b2;
+      let e4 = this.hf.normalAt(this.pos.x, this.pos.z, Uc), t3 = this.vel.length();
+      this.vel.addScaledVector(e4, -this.vel.dot(e4));
+      let n3 = this.vel.length();
+      n3 > 1e-4 && this.vel.multiplyScalar(t3 * 0.999 / n3);
+    }
+  }
+  #t(e3, t2) {
+    let n2 = this.skate, r2 = t2.tuck && !n2.held;
+    n2.held = !!t2.tuck;
+    let i2 = this.vel.length(), a2 = this.vel.dot(Bc), o2 = Pc;
+    if (!n2.on) {
+      if (!t2.tuck || t2.brake || i2 > o2) return;
+      Object.assign(n2, { on: true, kick: -1, rest: 0, queued: true, steps: 0 });
+    }
+    if (t2.brake || i2 > 8.444444444444445) return this.#r();
+    if (r2 && (n2.queued = true), n2.kick < 0 && (n2.queued || t2.tuck) && a2 < o2 && (this.#n(i2), n2.kick = 0), n2.kick < 0) n2.queued = false, n2.rest += e3, n2.rest > (this.gear === `ski` ? Fc.rest : Fc.strap) && this.#r();
+    else {
+      if (n2.kick += e3 / this.kickLength(i2), n2.kick > Fc.plant && n2.kick < Fc.lift) {
+        let t3 = Math.max(0, 1 - (a2 / 7.944444444444445) ** 4), r3 = n2.style === `stride` ? Fc.stride : n2.style === `pole` ? Fc.pole : Fc.push;
+        this.vel.addScaledVector(Bc, r3 * t3 * e3);
+      }
+      if (n2.kick >= 1) {
+        let e4 = (n2.queued || t2.tuck) && a2 < o2;
+        e4 && this.#n(i2), n2.kick = e4 ? n2.kick - 1 : -1, n2.rest = 0;
+      }
+    }
+  }
+  #n(e3) {
+    let t2 = this.skate;
+    t2.queued = false, this.gear === `ski` ? (t2.style = e3 < Fc.glide || t2.steps < Fc.steps && e3 < Fc.glide * 2 ? `stride` : `pole`, t2.style === `stride` && (t2.side = -t2.side, t2.steps++)) : t2.style = `board`;
+  }
+  #r() {
+    Object.assign(this.skate, { on: false, kick: -1, rest: 0, queued: false });
+  }
+  #i() {
+    let { hf: e3, pos: t2, vel: n2 } = this, r2 = e3.half - Lc, i2 = false;
+    e3.holeAt(t2.x, t2.z) && (e3.holeAt(t2.x, this.prev.z) && (t2.x = this.prev.x, n2.x = 0), e3.holeAt(t2.x, t2.z) && (t2.z = this.prev.z, n2.z = 0), i2 = true);
+    for (let [a3, o3] of [[`x`, e3.center[0]], [`z`, e3.center[1]]]) {
+      let e4 = t2[a3] - o3;
+      Math.abs(e4) <= r2 || (t2[a3] = o3 + Math.sign(e4) * r2, n2[a3] * e4 > 0 && (n2[a3] = 0), i2 = true);
+    }
+    let a2 = 0.5;
+    for (let e4 of this.obstacles) {
+      let r3 = Math.cos(e4.yaw), o3 = Math.sin(e4.yaw), s2 = t2.x - e4.x, c2 = t2.z - e4.z, l2 = s2 * r3 - c2 * o3, u2 = s2 * o3 + c2 * r3, d2 = e4.hw + a2 - Math.abs(l2), f2 = e4.hd + a2 - Math.abs(u2);
+      if (d2 <= 0 || f2 <= 0) continue;
+      let [p2, m2, h2] = d2 < f2 ? [r3 * Math.sign(l2), -o3 * Math.sign(l2), d2] : [o3 * Math.sign(u2), r3 * Math.sign(u2), f2];
+      t2.x += p2 * h2, t2.z += m2 * h2;
+      let g2 = n2.x * p2 + n2.z * m2;
+      g2 < 0 && (n2.x -= p2 * g2, n2.z -= m2 * g2), i2 = true;
+    }
+    let o2 = b(this.lakes, t2.x, t2.z, 2);
+    if (o2 && o2.d < 0) {
+      t2.x -= o2.nx * o2.d, t2.z -= o2.nz * o2.d;
+      let e4 = n2.x * o2.nx + n2.z * o2.nz;
+      e4 < 0 && (n2.x -= o2.nx * e4, n2.z -= o2.nz * e4), i2 = true;
+    }
+    i2 && this.grounded && (t2.y = e3.heightAt(t2.x, t2.z));
+  }
+  #a() {
+    this.#r(), this.grounded = false, this.airTime = 0, this.slip = 0, this.takeoffYaw = this.yaw, this.flip = 0, this.flipTarget = 0;
+  }
+  #o(e3, t2) {
+    this.airTime += e3;
+    let n2 = Math.PI * 2;
+    t2.tuck ? (this.flip += n2 / 0.9 * e3, this.flipTarget = Math.ceil((this.flip - 1e-8) / n2) * n2) : this.flip < this.flipTarget && (this.flip = Math.min(this.flipTarget, this.flip + n2 / 0.9 * e3)), this.vel.y -= Nc * e3;
+    let r2 = this.vel.length();
+    this.vel.multiplyScalar(1 - 35e-4 * r2 * e3), this.pos.addScaledVector(this.vel, e3);
+    let i2 = this.hf.heightAt(this.pos.x, this.pos.z);
+    if (this.pos.y > i2) return;
+    this.pos.y = i2;
+    let a2 = this.hf.normalAt(this.pos.x, this.pos.z, zc), o2 = -this.vel.dot(a2);
+    this.vel.addScaledVector(a2, o2), this.grounded = true;
+    let s2 = Uc.copy(this.vel).addScaledVector(a2, -this.vel.dot(a2)), c2 = this.forward(Bc);
+    if ((s2.lengthSq() > 1 ? Math.abs(s2.normalize().dot(c2)) : 1) < 0.45 && this.vel.length() > 7) return this.crash(`sideways landing`);
+    let l2 = t2.tuck ? 36 : 28;
+    if (o2 > l2) return this.crash(`hard landing`);
+    this.normal.copy(a2);
+    let u2 = Math.floor((this.flip + 1e-8) / (Math.PI * 2));
+    this.flip = this.flipTarget = 0, this.landingRecovery = E.clamp(o2 / 24, 0.15, 0.9), this.vel.multiplyScalar(E.lerp(0.96, 0.72, E.smoothstep(o2, 10, l2))), this.airTime > 0.25 && this.events.push({ type: `land`, impact: o2 }), (this.airTime > 0.6 || u2 > 0) && this.events.push({ type: `air`, frontRolls: u2, time: this.airTime, spin: Math.round(Math.abs(this.yaw - this.takeoffYaw) / Math.PI) * 180 });
+  }
+}

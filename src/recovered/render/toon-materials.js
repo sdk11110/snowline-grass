@@ -1,0 +1,189 @@
+/**
+ * RECOVERED / ADAPTED SOURCE — Hemu Ski public build.
+ * Published module: https://eric1hua.github.io/hemu-ski/assets/toon-zaef0iWs.js
+ * This filename and semantic labels were recovered for local customization.
+ * Third-party notices are retained; original author source was not available.
+ */
+import { Dt as e, y as t } from "../../vendor/three/core.js";
+var toonUniforms = {
+  uLitTint: {
+    value: new t(`#fff6e6`)
+  },
+  uShadowTint: {
+    value: new t(`#9fc4cc`)
+  },
+  uSunIntensity: {
+    value: 3
+  },
+  uPixelRatio: {
+    value: 1
+  },
+  uRibScale: {
+    value: 1
+  }
+};
+var r = `
+float tHash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+float tNoise(vec2 p) {
+  vec2 i = floor(p), f = fract(p);
+  vec2 u = f * f * (3.0 - 2.0 * f);
+  return mix(mix(tHash(i), tHash(i + vec2(1, 0)), u.x), mix(tHash(i + vec2(0, 1)), tHash(i + vec2(1, 1)), u.x), u.y);
+}
+`;
+function createToonMaterial(t = {}, i = {}) {
+  let {
+      hatch: a = 1,
+      rim: o = 0,
+      snow: s = 0,
+      piste: c = 0,
+      strands: l = 0
+    } = i,
+    u = new e(t);
+  return c && (u.defines = {
+    ...u.defines,
+    TOON_PISTE: ``
+  }), l && (u.defines = {
+    ...u.defines,
+    TOON_STRANDS: ``
+  }, u.userData.strands = {
+    amount: {
+      value: 0
+    },
+    time: {
+      value: 0
+    }
+  }), u.onBeforeCompile = e => {
+    Object.assign(e.uniforms, toonUniforms);
+    e.uniforms.uHatch = {
+      value: a
+    };
+    e.uniforms.uRim = {
+      value: o
+    };
+    e.uniforms.uSnow = {
+      value: s
+    };
+    l && (e.uniforms.uStrands = u.userData.strands.amount, e.uniforms.uStrandTime = u.userData.strands.time);
+    e.vertexShader = e.vertexShader.replace(`#include <common>`, `#include <common>
+        varying vec3 vTWorld;
+        #ifdef TOON_PISTE
+          attribute vec3 aPiste;
+          varying vec3 vPiste;
+        #endif
+        #ifdef TOON_STRANDS
+          attribute vec2 aStrand;
+          uniform float uStrands;
+          uniform float uStrandTime;
+        #endif`).replace(`#include <skinning_vertex>`, `#include <skinning_vertex>
+        #if defined(TOON_STRANDS) && defined(USE_SKINNING)
+        {
+          // Ripples running down each lock, more toward its end, across it and
+          // in and out, each lock a little out of step with the next. The
+          // ways across and out are the rest pose's, carried round by the
+          // skinning, so they stay square to the hair however it hangs.
+          float a = aStrand.x * aStrand.x * uStrands, t = uStrandTime, d = aStrand.x * 9.0, ph = aStrand.y;
+          float across = sin(t * 31.0 - d + ph) + 0.5 * sin(t * 47.0 - 1.6 * d + 1.7 * ph);
+          float bulge = sin(t * 37.0 - 1.3 * d + 0.6 * ph + 1.0);
+          transformed += a * (across * (skinMatrix * vec4(1.0, 0.0, 0.0, 0.0)).xyz + 0.6 * bulge * (skinMatrix * vec4(0.0, 0.0, 1.0, 0.0)).xyz);
+        }
+        #endif`).replace(`#include <project_vertex>`, `#include <project_vertex>
+        {
+          vec4 tw = vec4(transformed, 1.0);
+          #ifdef USE_INSTANCING
+            tw = instanceMatrix * tw;
+          #endif
+          vTWorld = (modelMatrix * tw).xyz;
+          #ifdef TOON_PISTE
+            vPiste = aPiste;
+          #endif
+        }`);
+    e.fragmentShader = e.fragmentShader.replace(`#include <common>`, `#include <common>
+        varying vec3 vTWorld;
+        uniform vec3 uLitTint;
+        uniform vec3 uShadowTint;
+        uniform float uSunIntensity;
+        uniform float uPixelRatio;
+        uniform float uRibScale;
+        uniform float uHatch;
+        uniform float uRim;
+        uniform float uSnow;
+        #ifdef TOON_PISTE
+          varying vec3 vPiste;
+        #endif
+        ${r}`).replace(`#include <opaque_fragment>`, `{
+          vec3 base = diffuseColor.rgb;
+          if (uSnow > 0.0) {
+            // Painterly snow surface: soft drifts, wind-blown strokes and
+            // flecks, faded out with distance so it never shimmers.
+            vec2 w = vTWorld.xz;
+            float near = 1.0 - smoothstep(60.0, 260.0, length(vViewPosition));
+            // The fine octave is metres across up close but finer than a
+            // pixel further off (phones sooner: no AA, capped pixel ratio),
+            // where it stops reading as drifts and turns into striping.
+            float drift = tNoise(w * 0.045) * 0.6 + tNoise(w * 0.18) * 0.4 * mix(0.25, 1.0, near);
+            base *= 1.0 - drift * 0.05;
+            vec2 sw = vec2(w.x * 0.9 + w.y * 0.4, w.y * 0.25 - w.x * 0.1);
+            float stroke = smoothstep(0.66, 0.7, tNoise(sw * 1.3)) * smoothstep(0.35, 0.6, tNoise(w * 0.07 + 7.0));
+            float fleck = step(0.985, tHash(floor(w * 2.2)));
+            float groomed = 0.0;
+            #ifdef TOON_PISTE
+            {
+              // Corduroy: the groomer's ribs along the run, in lanes a tiller
+              // wide with a seam between them, scuffed away in patches, and a
+              // ragged edge where the grooming stops. Each fades out before
+              // it's too fine to draw.
+              float along = vPiste.y;
+              float o = vPiste.x + (tNoise(vec2(along * 0.008, 1.7)) - 0.5) * 1.2; // the groomer wanders
+              float m = smoothstep(0.35, 0.65, vPiste.z + (tNoise(vec2(along * 0.25, o * 0.6)) - 0.5) * 0.35);
+              float rib = o / 0.18;
+              float ribs = (0.5 + 0.5 * cos(rib * 6.2831853)) * (1.0 - smoothstep(0.3, 0.7, fwidth(rib) * uRibScale));
+              float lane = o / 4.4;
+              float seamD = min(fract(lane), 1.0 - fract(lane)) * 4.4;
+              float seam = (1.0 - smoothstep(0.04, 0.16, seamD)) * (1.0 - smoothstep(0.08, 0.3, fwidth(o) * uRibScale));
+              float worn = smoothstep(0.45, 0.8, tNoise(vec2(along * 0.035, o * 0.12) + floor(lane) * 1.31));
+              base *= 1.0 - m * (ribs * 0.1 * (1.0 - worn * 0.85) + seam * 0.09);
+              groomed = m;
+            }
+            #endif
+            base *= 1.0 - (stroke * 0.07 + fleck * 0.06) * near * (1.0 - groomed);
+          }
+          float lum = max(dot(base, vec3(0.299, 0.587, 0.114)), 1e-4);
+          float direct = dot(reflectedLight.directDiffuse, vec3(0.299, 0.587, 0.114)) / lum;
+          direct *= PI / uSunIntensity;            // ~ N.L * shadow, 0..1
+          // Wobble the terminator a little so it reads as painted, not computed.
+          // The wobble's noise is ~3 m across: once that is finer than a pixel
+          // it aliases into thin stripes crawling over the snow (the far
+          // mountains already guard against this — see mountain-material.js),
+          // so fade it out as it reaches pixel size, and widen both steps by
+          // a pixel of direct light so the edge itself can never alias either.
+          float wob = (tNoise(vTWorld.xz * 0.35 + vTWorld.y * 0.2) - 0.5) * 0.08
+            * (1.0 - smoothstep(0.15, 0.35, length(fwidth(vTWorld.xz * 0.35))));
+          float dw = fwidth(direct);
+          float lit = smoothstep(0.24 + wob - dw, 0.30 + wob + dw, direct);
+          float full = smoothstep(0.55 + wob - dw, 0.6 + wob + dw, direct);
+          // Three flat tones: shadow, mid (turning away from the sun), lit.
+          vec3 col = mix(base * uShadowTint, base * mix(uShadowTint, uLitTint, 0.68), lit);
+          col = mix(col, base * uLitTint, full);
+
+          // Hatching: diagonal ink strokes in patches of shadow.
+          vec2 sc = gl_FragCoord.xy / uPixelRatio;
+          float stripe = abs(fract((sc.x + sc.y) / 7.0) - 0.5);
+          float line = 1.0 - smoothstep(0.06, 0.13, stripe);
+          float patchy = smoothstep(0.45, 0.7, tNoise(vTWorld.xz * 0.08 + vTWorld.y * 0.05));
+          // The patch mask is world-space noise: far off it goes sub-pixel and
+          // the strokes break into moiré striping, so settle it to a plain
+          // half-strength mask with distance instead.
+          patchy = mix(0.5, patchy, 1.0 - smoothstep(60.0, 260.0, length(vViewPosition)));
+          col *= 1.0 - line * patchy * (1.0 - lit) * 0.16 * uHatch;
+
+          // Optional pale rim on the lit side for characters.
+          float rimF = pow(1.0 - abs(dot(normal, normalize(vViewPosition))), 3.0);
+          col += uRim * rimF * lit * 0.25;
+
+          outgoingLight = col + totalEmissiveRadiance;
+        }
+        #include <opaque_fragment>`);
+  }, u.customProgramCacheKey = () => `toon-${a}-${o}-${s}-${c}-${l}`, u;
+}
+export { toonUniforms as n, createToonMaterial as t };
+export { toonUniforms, createToonMaterial };

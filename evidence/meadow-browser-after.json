@@ -1,0 +1,46 @@
+{
+  "mode": "meadow",
+  "viewport": [
+    631,
+    675
+  ],
+  "frame": {
+    "samples": 1800,
+    "meanMs": 6.257,
+    "p95Ms": 7.1,
+    "maxMs": 12.6
+  },
+  "estimatedFps": 159.8,
+  "worldUpdate": {
+    "samples": 1800,
+    "meanMs": 0.028,
+    "p95Ms": 0.1,
+    "maxMs": 1.2
+  },
+  "terrainPatches": 984,
+  "oceanTime": 0,
+  "grassTufts": 11638,
+  "meadowStreaming": {
+    "frames": 24780,
+    "builtCells": 0,
+    "activatedInstances": 0,
+    "uploadedInstances": 0,
+    "plannedTiles": 0,
+    "updateMs": 0,
+    "maxUpdateMs": 3.5,
+    "cacheTiles": 1400,
+    "nearCount": 4141,
+    "midCount": 7497,
+    "pendingTiles": 0,
+    "totalBuiltCells": 138304,
+    "totalActivatedInstances": 202561,
+    "totalUploadedInstances": 381576
+  },
+  "activeSpray": 0,
+  "renderer": {
+    "calls": 984,
+    "triangles": 6761356,
+    "geometries": 721
+  },
+  "note": "帧间隔含渲染等待；worldUpdate为CPU计时。"
+}

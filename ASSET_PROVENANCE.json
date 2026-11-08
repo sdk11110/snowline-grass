@@ -1,0 +1,696 @@
+{
+  "project": "Snowfield Lab",
+  "createdAt": "2026-11-08T19:00:26.854996+08:00",
+  "sourceDeployment": "https://eric1hua.github.io/hemu-ski/",
+  "sourceAuthorAttribution": {
+    "displayName": "Eric / @redknots",
+    "link": "https://x.com/redknots",
+    "evidence": "Original game NPC dialogue identifies Eric as creator. Individual model/font authors are not asserted here."
+  },
+  "sourceManifest": {
+    "originalPath": "D:\\ai\\tep1\\8.22\\hemu-ski-local\\evidence\\resource_manifest.json",
+    "sha256": "814b040ce8ceb54e5dd7efe3258dce2c53449c399621ec2278d3cfa14571e746",
+    "note": "Per-resource original hashes are embedded below so this provenance remains useful outside the original workspace.",
+    "collectionWorkspaceCleaned": true
+  },
+  "ownershipNotice": "Models, embedded textures, original audio, terrain and map data, and fonts remain from the original Hemu Ski deployment. This project does not claim those assets as original work.",
+  "licenseStatus": {
+    "originalGameAssets": "No standalone redistribution license was found in the downloaded public build; retain attribution and confirm rights before redistributing assets.",
+    "mapData": "https://eric1hua.github.io/hemu-ski/data/world.json",
+    "mapDataAttribution": {
+      "elevation": "AWS Terrain Tiles (Terrarium), Mapzen/SRTM et al.",
+      "pistes": "© OpenStreetMap contributors (ODbL), via Overpass; see openskimap.org"
+    },
+    "fonts": "Patrick Hand / Patrick Hand SC WOFF2 resources copied unchanged; no font license file was included in the downloaded build."
+  },
+  "copyPolicy": {
+    "included": [
+      "data",
+      "models",
+      "audio",
+      "assets fonts/images only"
+    ],
+    "excluded": [
+      "all original compiled JavaScript",
+      "original CSS",
+      "original HTML"
+    ],
+    "embeddedTextures": "GLB textures remain embedded in original GLB binaries; no standalone image resources were found in the required runtime closure."
+  },
+  "summary": {
+    "files": 59,
+    "bytes": 63331495,
+    "allMatchOriginalManifest": true
+  },
+  "resources": [
+    {
+      "path": "public/assets/patrick-hand-latin-CLvioJyB.woff2",
+      "category": "font_or_image",
+      "sourcePath": "assets/patrick-hand-latin-CLvioJyB.woff2",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/assets/patrick-hand-latin-CLvioJyB.woff2",
+      "bytes": 14224,
+      "sha256": "42156e008dd5fc3000679ff4e9ba9cbd3f417b6317c6dcbe11a12e9c87a09b28",
+      "originalManifestSha256": "42156e008dd5fc3000679ff4e9ba9cbd3f417b6317c6dcbe11a12e9c87a09b28",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/assets/patrick-hand-latin-ext-BrmbLZ0Z.woff2",
+      "category": "font_or_image",
+      "sourcePath": "assets/patrick-hand-latin-ext-BrmbLZ0Z.woff2",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/assets/patrick-hand-latin-ext-BrmbLZ0Z.woff2",
+      "bytes": 10604,
+      "sha256": "670f39d1fb3f168229c65b6af8b9016a61915731709c8a1da689e74394bc666f",
+      "originalManifestSha256": "670f39d1fb3f168229c65b6af8b9016a61915731709c8a1da689e74394bc666f",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/assets/patrick-hand-sc-latin-B24HhQI1.woff2",
+      "category": "font_or_image",
+      "sourcePath": "assets/patrick-hand-sc-latin-B24HhQI1.woff2",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/assets/patrick-hand-sc-latin-B24HhQI1.woff2",
+      "bytes": 14292,
+      "sha256": "b72359aef528cf42f0c1822617549d79308e60b0b3dd8a330590237ea7676429",
+      "originalManifestSha256": "b72359aef528cf42f0c1822617549d79308e60b0b3dd8a330590237ea7676429",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/assets/patrick-hand-sc-latin-ext-CkIWoGM5.woff2",
+      "category": "font_or_image",
+      "sourcePath": "assets/patrick-hand-sc-latin-ext-CkIWoGM5.woff2",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/assets/patrick-hand-sc-latin-ext-CkIWoGM5.woff2",
+      "bytes": 10152,
+      "sha256": "8d2b45858ce928be113004e7ac53be07b302b19abb6b6c9bbcebc8c6d2bf6ce3",
+      "originalManifestSha256": "8d2b45858ce928be113004e7ac53be07b302b19abb6b6c9bbcebc8c6d2bf6ce3",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/audio/fireball-v01/hadouken-voice-v02.mp3",
+      "category": "audio",
+      "sourcePath": "audio/fireball-v01/hadouken-voice-v02.mp3",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/audio/fireball-v01/hadouken-voice-v02.mp3",
+      "bytes": 28046,
+      "sha256": "ec70710c96616d5db6a3f44def8d246e6f9dca79e446bfb14f86408f96271171",
+      "originalManifestSha256": "ec70710c96616d5db6a3f44def8d246e6f9dca79e446bfb14f86408f96271171",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/data/backdrop-dem-v02.json",
+      "category": "terrain_and_map_data",
+      "sourcePath": "data/backdrop-dem-v02.json",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/data/backdrop-dem-v02.json",
+      "bytes": 2742,
+      "sha256": "0f9ff2311f01630b7c24d99451782d9da02a713294a5a6482ef2d7e3d3e39a2d",
+      "originalManifestSha256": "0f9ff2311f01630b7c24d99451782d9da02a713294a5a6482ef2d7e3d3e39a2d",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/data/backdrop-dem-v02.u16",
+      "category": "terrain_and_map_data",
+      "sourcePath": "data/backdrop-dem-v02.u16",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/data/backdrop-dem-v02.u16",
+      "bytes": 2004002,
+      "sha256": "5ac0c4240e35eb9090471dc5e541a5359e86cb3146e14504cd4255e3de70e329",
+      "originalManifestSha256": "5ac0c4240e35eb9090471dc5e541a5359e86cb3146e14504cd4255e3de70e329",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/data/detail.u16",
+      "category": "terrain_and_map_data",
+      "sourcePath": "data/detail.u16",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/data/detail.u16",
+      "bytes": 1623602,
+      "sha256": "51e5e17f4798291dc4fb9734d0914eda111c5ff850b37ecfd16cf963cce60052",
+      "originalManifestSha256": "51e5e17f4798291dc4fb9734d0914eda111c5ff850b37ecfd16cf963cce60052",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/data/edits/detail.u16",
+      "category": "terrain_and_map_data",
+      "sourcePath": "data/edits/detail.u16",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/data/edits/detail.u16",
+      "bytes": 1623602,
+      "sha256": "51e5e17f4798291dc4fb9734d0914eda111c5ff850b37ecfd16cf963cce60052",
+      "originalManifestSha256": "51e5e17f4798291dc4fb9734d0914eda111c5ff850b37ecfd16cf963cce60052",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/data/edits/edits.json",
+      "category": "terrain_and_map_data",
+      "sourcePath": "data/edits/edits.json",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/data/edits/edits.json",
+      "bytes": 25955,
+      "sha256": "4e64542e9fd06f02017d8749f026e4d3fc2111002bd4c6d586ef567559ca03ea",
+      "originalManifestSha256": "4e64542e9fd06f02017d8749f026e4d3fc2111002bd4c6d586ef567559ca03ea",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/data/world.json",
+      "category": "terrain_and_map_data",
+      "sourcePath": "data/world.json",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/data/world.json",
+      "bytes": 26502,
+      "sha256": "f1ffedb8f4d8765dda1583256c5a687b194fae1b4760482ed0ba0a1ebb8885d0",
+      "originalManifestSha256": "f1ffedb8f4d8765dda1583256c5a687b194fae1b4760482ed0ba0a1ebb8885d0",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/coffee-cabin/coffee-cabin.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/coffee-cabin/coffee-cabin.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/coffee-cabin/coffee-cabin.glb",
+      "bytes": 3812828,
+      "sha256": "3ad5c7c7d2f4fbf50442967743ec6e789b3a13d9bed6c614a17f2fdadda0c180",
+      "originalManifestSha256": "3ad5c7c7d2f4fbf50442967743ec6e789b3a13d9bed6c614a17f2fdadda0c180",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/dog/old-english-sheepdog.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/dog/old-english-sheepdog.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/dog/old-english-sheepdog.glb",
+      "bytes": 1686652,
+      "sha256": "0302ed363a1da63cdef23a3257ee167ae441b3d413d431642d7866ec4469030f",
+      "originalManifestSha256": "0302ed363a1da63cdef23a3257ee167ae441b3d413d431642d7866ec4469030f",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/female-rider/female-rider-mitten-walk-run-tex2k-v04.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/female-rider/female-rider-mitten-walk-run-tex2k-v04.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/female-rider/female-rider-mitten-walk-run-tex2k-v04.glb",
+      "bytes": 2386092,
+      "sha256": "7a253d214e3cf7f86a4418dd2effe24ce04729b71143bc812eb83c0488731658",
+      "originalManifestSha256": "7a253d214e3cf7f86a4418dd2effe24ce04729b71143bc812eb83c0488731658",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/female-rider/female-rider-swim-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/female-rider/female-rider-swim-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/female-rider/female-rider-swim-v01.glb",
+      "bytes": 2293160,
+      "sha256": "0ebb2f4420fb2d00d9cbeed490a61cb20d189b2798b3a03e0aff42d758e340c9",
+      "originalManifestSha256": "0ebb2f4420fb2d00d9cbeed490a61cb20d189b2798b3a03e0aff42d758e340c9",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/fox/red-fox.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/fox/red-fox.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/fox/red-fox.glb",
+      "bytes": 287432,
+      "sha256": "bcedd9d0c80c935041cd221bf22cdf3e50bc0450118a3a42682129f7c57e3365",
+      "originalManifestSha256": "bcedd9d0c80c935041cd221bf22cdf3e50bc0450118a3a42682129f7c57e3365",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/horse/altai-horse.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/horse/altai-horse.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/horse/altai-horse.glb",
+      "bytes": 1702324,
+      "sha256": "ee47a4aa73ea2b10d0f0de944067c2db27a523068fc6076b2b2ee16f0d072bd1",
+      "originalManifestSha256": "ee47a4aa73ea2b10d0f0de944067c2db27a523068fc6076b2b2ee16f0d072bd1",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/jetson/jetson-one.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/jetson/jetson-one.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/jetson/jetson-one.glb",
+      "bytes": 2203056,
+      "sha256": "9ee65b0ccd2bfdc82bd06fbebbc28943d907a688467259773fc263584110dbbb",
+      "originalManifestSha256": "9ee65b0ccd2bfdc82bd06fbebbc28943d907a688467259773fc263584110dbbb",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/lift-pylon/lift-pylon-no-sign-v03.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/lift-pylon/lift-pylon-no-sign-v03.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/lift-pylon/lift-pylon-no-sign-v03.glb",
+      "bytes": 184836,
+      "sha256": "fa0489dde688566889cce91157da5b0bd5ba73619a4d10d263a0bd8dc44670f4",
+      "originalManifestSha256": "fa0489dde688566889cce91157da5b0bd5ba73619a4d10d263a0bd8dc44670f4",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/lifts/cabin.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/lifts/cabin.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/lifts/cabin.glb",
+      "bytes": 275960,
+      "sha256": "c2b1a7d81da94a6f4b46e6ac95a77cc496ea0314ee76638388488d9aebc9846a",
+      "originalManifestSha256": "c2b1a7d81da94a6f4b46e6ac95a77cc496ea0314ee76638388488d9aebc9846a",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/lifts/chair.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/lifts/chair.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/lifts/chair.glb",
+      "bytes": 251252,
+      "sha256": "3c67c7305c40425a4818d0614dd612a3159cf5b3a876735042db78c2f438a860",
+      "originalManifestSha256": "3c67c7305c40425a4818d0614dd612a3159cf5b3a876735042db78c2f438a860",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/lifts/station.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/lifts/station.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/lifts/station.glb",
+      "bytes": 1033016,
+      "sha256": "c5fa5bd0d4f0c066b1c0b6a7e6b8160bfff77f83a76f43efa56ba3d0578bce42",
+      "originalManifestSha256": "c5fa5bd0d4f0c066b1c0b6a7e6b8160bfff77f83a76f43efa56ba3d0578bce42",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/coffee-cabin/coffee-cabin-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/coffee-cabin/coffee-cabin-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/coffee-cabin/coffee-cabin-mobile-v01.glb",
+      "bytes": 3683260,
+      "sha256": "c92e2ab449da33edccae6678a66e20a76ca6b5f46193cb05a72447a03eca521e",
+      "originalManifestSha256": "c92e2ab449da33edccae6678a66e20a76ca6b5f46193cb05a72447a03eca521e",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/dog/old-english-sheepdog-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/dog/old-english-sheepdog-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/dog/old-english-sheepdog-mobile-v01.glb",
+      "bytes": 1574444,
+      "sha256": "516d9f290fd03dcb06c2b91e44988e72369bc93b067042cefb45bc58766bb18f",
+      "originalManifestSha256": "516d9f290fd03dcb06c2b91e44988e72369bc93b067042cefb45bc58766bb18f",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/female-rider/female-rider-mitten-walk-run-tex1k-v04-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/female-rider/female-rider-mitten-walk-run-tex1k-v04-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/female-rider/female-rider-mitten-walk-run-tex1k-v04-mobile-v01.glb",
+      "bytes": 1697408,
+      "sha256": "4144b5a3d6e36ef3ae3826f6073470bae12d80efd23426513f3955f7ca43c0dd",
+      "originalManifestSha256": "4144b5a3d6e36ef3ae3826f6073470bae12d80efd23426513f3955f7ca43c0dd",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/female-rider/female-rider-swim-v01-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/female-rider/female-rider-swim-v01-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/female-rider/female-rider-swim-v01-mobile-v01.glb",
+      "bytes": 1730460,
+      "sha256": "29abf02ef631837b5cb5a4a294b61369da6ed1b3b2e8919fe27fc4f83f598fef",
+      "originalManifestSha256": "29abf02ef631837b5cb5a4a294b61369da6ed1b3b2e8919fe27fc4f83f598fef",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/horse/altai-horse-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/horse/altai-horse-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/horse/altai-horse-mobile-v01.glb",
+      "bytes": 1311560,
+      "sha256": "da287fbb027ad8926f505fc74febfb073a829f931f620cdfe0b978d3082f6c5c",
+      "originalManifestSha256": "da287fbb027ad8926f505fc74febfb073a829f931f620cdfe0b978d3082f6c5c",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/jetson/jetson-one-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/jetson/jetson-one-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/jetson/jetson-one-mobile-v01.glb",
+      "bytes": 1673248,
+      "sha256": "c4356af6241adec76a92c2a89cf3436eac5ba49ff8d829ec5777b98959d10deb",
+      "originalManifestSha256": "c4356af6241adec76a92c2a89cf3436eac5ba49ff8d829ec5777b98959d10deb",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/lifts/station-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/lifts/station-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/lifts/station-mobile-v01.glb",
+      "bytes": 648452,
+      "sha256": "df30e5c407d846bb998267b05e6e51aaef13dadaa922756e241c05248609ad48",
+      "originalManifestSha256": "df30e5c407d846bb998267b05e6e51aaef13dadaa922756e241c05248609ad48",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/onsen/cave-rock-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/onsen/cave-rock-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/onsen/cave-rock-mobile-v01.glb",
+      "bytes": 450804,
+      "sha256": "cf320ddf2a99662e60d02eb963376f484f0d2c9e03989e1482ad8dcf6fdf1934",
+      "originalManifestSha256": "cf320ddf2a99662e60d02eb963376f484f0d2c9e03989e1482ad8dcf6fdf1934",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/onsen/stone-arena-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/onsen/stone-arena-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/onsen/stone-arena-mobile-v01.glb",
+      "bytes": 1062588,
+      "sha256": "b75949acac32be31830973565bb91506f9ad9e133a1e3087016354f27a2f95d0",
+      "originalManifestSha256": "b75949acac32be31830973565bb91506f9ad9e133a1e3087016354f27a2f95d0",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/player-mitten-v02-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/player-mitten-v02-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/player-mitten-v02-mobile-v01.glb",
+      "bytes": 1649732,
+      "sha256": "45cc3d6ac088d90002468fb3dc5e04a371a9ca745bd4bd33164d3812b801efac",
+      "originalManifestSha256": "45cc3d6ac088d90002468fb3dc5e04a371a9ca745bd4bd33164d3812b801efac",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/prayer-wheels/prayer-wheels-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/prayer-wheels/prayer-wheels-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/prayer-wheels/prayer-wheels-mobile-v01.glb",
+      "bytes": 1134896,
+      "sha256": "404958ec5c445baf63e21e1bb3edc396cc7a852a87e58efa936c654f07e1c5b1",
+      "originalManifestSha256": "404958ec5c445baf63e21e1bb3edc396cc7a852a87e58efa936c654f07e1c5b1",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/saddle/kazakh-saddle-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/saddle/kazakh-saddle-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/saddle/kazakh-saddle-mobile-v01.glb",
+      "bytes": 881492,
+      "sha256": "03224770ac69e13914724387bb8e0526fcdb0f266ea87caf4ed81f82c86a2968",
+      "originalManifestSha256": "03224770ac69e13914724387bb8e0526fcdb0f266ea87caf4ed81f82c86a2968",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/snowmobile/snowmobile-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/snowmobile/snowmobile-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/snowmobile/snowmobile-mobile-v01.glb",
+      "bytes": 1453368,
+      "sha256": "c11c5ea331ce43d3cc19ee7ccce0c36c3431125f87d89535f13ea8d18baac74d",
+      "originalManifestSha256": "c11c5ea331ce43d3cc19ee7ccce0c36c3431125f87d89535f13ea8d18baac74d",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/mobile-v01/truck/pickup-mobile-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/mobile-v01/truck/pickup-mobile-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/mobile-v01/truck/pickup-mobile-v01.glb",
+      "bytes": 2916976,
+      "sha256": "65cb7587a0396f7463c10543547da4c0029bd3ecea177074dfdf1ec875a568c9",
+      "originalManifestSha256": "65cb7587a0396f7463c10543547da4c0029bd3ecea177074dfdf1ec875a568c9",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/baseball-pitching-v01/baseball-pitching-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/baseball-pitching-v01/baseball-pitching-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/baseball-pitching-v01/baseball-pitching-v01.glb",
+      "bytes": 163888,
+      "sha256": "6320df9b9e27c5aaec599ea6b1faaa3559be4f70202dcc60abba23e2bedc72e8",
+      "originalManifestSha256": "6320df9b9e27c5aaec599ea6b1faaa3559be4f70202dcc60abba23e2bedc72e8",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/chairlift-sitting-v01/chairlift-sitting-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/chairlift-sitting-v01/chairlift-sitting-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/chairlift-sitting-v01/chairlift-sitting-v01.glb",
+      "bytes": 85888,
+      "sha256": "f6f7733e697af709cc28e276595df1a44a9d18539ec2094c24d3a595ffaf21e9",
+      "originalManifestSha256": "f6f7733e697af709cc28e276595df1a44a9d18539ec2094c24d3a595ffaf21e9",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/rider-locomotion-v02/female-locomotion-v02.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/rider-locomotion-v02/female-locomotion-v02.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/rider-locomotion-v02/female-locomotion-v02.glb",
+      "bytes": 143436,
+      "sha256": "ba2c63294e67a3eac913acb19c6d7cc223a5d37e62c49fd56ee0ee99267f6bed",
+      "originalManifestSha256": "ba2c63294e67a3eac913acb19c6d7cc223a5d37e62c49fd56ee0ee99267f6bed",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/special-actions-v01/booty-hip-hop-dance.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/special-actions-v01/booty-hip-hop-dance.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/special-actions-v01/booty-hip-hop-dance.glb",
+      "bytes": 179040,
+      "sha256": "e2f7564b0197d7057daac6261035cb13ae75165c961b9be2eac36abe4ac8e40c",
+      "originalManifestSha256": "e2f7564b0197d7057daac6261035cb13ae75165c961b9be2eac36abe4ac8e40c",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/special-actions-v01/breakdance-freezes.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/special-actions-v01/breakdance-freezes.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/special-actions-v01/breakdance-freezes.glb",
+      "bytes": 238668,
+      "sha256": "71361a80a02cd2da0c52d7396e5ab3b2ae7352bff23b575cf55c5c05f19976b6",
+      "originalManifestSha256": "71361a80a02cd2da0c52d7396e5ab3b2ae7352bff23b575cf55c5c05f19976b6",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/special-actions-v01/fireball.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/special-actions-v01/fireball.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/special-actions-v01/fireball.glb",
+      "bytes": 153480,
+      "sha256": "ea0a0af844380462fcdcacc31c52dbdfdbf8728858abc80ffac90b3cb594c32c",
+      "originalManifestSha256": "ea0a0af844380462fcdcacc31c52dbdfdbf8728858abc80ffac90b3cb594c32c",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/special-actions-v01/golf-drive.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/special-actions-v01/golf-drive.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/special-actions-v01/golf-drive.glb",
+      "bytes": 129372,
+      "sha256": "a87a71f3c962f30599222f4a5240320275c46127d4bac4a3da08766763083c19",
+      "originalManifestSha256": "a87a71f3c962f30599222f4a5240320275c46127d4bac4a3da08766763083c19",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/special-actions-v01/guitar-playing.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/special-actions-v01/guitar-playing.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/special-actions-v01/guitar-playing.glb",
+      "bytes": 173732,
+      "sha256": "cf44e407fc4f8b2acf985289bbb583441c81689c5b0bf99aa557a8e2619f606f",
+      "originalManifestSha256": "cf44e407fc4f8b2acf985289bbb583441c81689c5b0bf99aa557a8e2619f606f",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/special-actions-v01/gunplay.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/special-actions-v01/gunplay.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/special-actions-v01/gunplay.glb",
+      "bytes": 71804,
+      "sha256": "033a81cd412f512963a16b279d90a89f839560b70aa3a99ada8a9cc46c6ebd42",
+      "originalManifestSha256": "033a81cd412f512963a16b279d90a89f839560b70aa3a99ada8a9cc46c6ebd42",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/special-actions-v01/kneeling-down.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/special-actions-v01/kneeling-down.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/special-actions-v01/kneeling-down.glb",
+      "bytes": 125428,
+      "sha256": "afb52d465a6cf8980ce20948d83b2cf3d1b189438f44d98546917361ec95f60d",
+      "originalManifestSha256": "afb52d465a6cf8980ce20948d83b2cf3d1b189438f44d98546917361ec95f60d",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/special-actions-v01/macarena-dance.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/special-actions-v01/macarena-dance.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/special-actions-v01/macarena-dance.glb",
+      "bytes": 258284,
+      "sha256": "ac3a43a3a13e87378484234d63a8bcdc477f3f0c04be896ff40c3e07aeef80fe",
+      "originalManifestSha256": "ac3a43a3a13e87378484234d63a8bcdc477f3f0c04be896ff40c3e07aeef80fe",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/special-actions-v01/moonwalk.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/special-actions-v01/moonwalk.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/special-actions-v01/moonwalk.glb",
+      "bytes": 93856,
+      "sha256": "4ec84d71660bca2a4d74e1213d6454fe17ca14b494d6eb7590a45a101303a7bd",
+      "originalManifestSha256": "4ec84d71660bca2a4d74e1213d6454fe17ca14b494d6eb7590a45a101303a7bd",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/special-actions-v01/roundhouse-kick.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/special-actions-v01/roundhouse-kick.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/special-actions-v01/roundhouse-kick.glb",
+      "bytes": 131796,
+      "sha256": "96c47f44d5e4f66cdd7856afe3ed3b22dfca9e34c41ffd9628a0f9f11ae7546d",
+      "originalManifestSha256": "96c47f44d5e4f66cdd7856afe3ed3b22dfca9e34c41ffd9628a0f9f11ae7546d",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/motions/weight-shift-idle-v01/weight-shift-idle-v01.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/motions/weight-shift-idle-v01/weight-shift-idle-v01.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/motions/weight-shift-idle-v01/weight-shift-idle-v01.glb",
+      "bytes": 491588,
+      "sha256": "55aa704abfba843fcb3cca824cb444038fd2e1aa21b584745dbf7858240afa60",
+      "originalManifestSha256": "55aa704abfba843fcb3cca824cb444038fd2e1aa21b584745dbf7858240afa60",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/onsen/cave-rock.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/onsen/cave-rock.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/onsen/cave-rock.glb",
+      "bytes": 979520,
+      "sha256": "3fe3c4e48700e9cd8e5988c58d99eedb3083687d55b3c20bf0eea2522b3b7f55",
+      "originalManifestSha256": "3fe3c4e48700e9cd8e5988c58d99eedb3083687d55b3c20bf0eea2522b3b7f55",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/onsen/stone-arena.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/onsen/stone-arena.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/onsen/stone-arena.glb",
+      "bytes": 2151992,
+      "sha256": "6ab2a530ca8f1115acd0c8d21602541af292d126cb72f9b1a4bb342f988c4d1b",
+      "originalManifestSha256": "6ab2a530ca8f1115acd0c8d21602541af292d126cb72f9b1a4bb342f988c4d1b",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/player-mitten-v02.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/player-mitten-v02.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/player-mitten-v02.glb",
+      "bytes": 2549476,
+      "sha256": "54206f990b2b8c8d12aeb394916b2bf0d3fd9579c6fdd8068a6048b4c013c386",
+      "originalManifestSha256": "54206f990b2b8c8d12aeb394916b2bf0d3fd9579c6fdd8068a6048b4c013c386",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/prayer-wheels/prayer-wheels.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/prayer-wheels/prayer-wheels.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/prayer-wheels/prayer-wheels.glb",
+      "bytes": 1755128,
+      "sha256": "cbd4f316b171eca1d899996250ff84b37f032321a67388e241540382e7c01b5f",
+      "originalManifestSha256": "cbd4f316b171eca1d899996250ff84b37f032321a67388e241540382e7c01b5f",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/saddle/kazakh-saddle.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/saddle/kazakh-saddle.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/saddle/kazakh-saddle.glb",
+      "bytes": 1257840,
+      "sha256": "1e3192982d4bfb759fa7b73c833bf1d6eec11a711085c160b9a6bd48e569ec71",
+      "originalManifestSha256": "1e3192982d4bfb759fa7b73c833bf1d6eec11a711085c160b9a6bd48e569ec71",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/snow-monster-v04/snow-monster-rig-v04.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/snow-monster-v04/snow-monster-rig-v04.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/snow-monster-v04/snow-monster-rig-v04.glb",
+      "bytes": 2944456,
+      "sha256": "d3bf422f44e700d7ecfcb72e4ef80870952a328228750d6ebaa6af7f912e6b3d",
+      "originalManifestSha256": "d3bf422f44e700d7ecfcb72e4ef80870952a328228750d6ebaa6af7f912e6b3d",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/snowmobile/snowmobile.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/snowmobile/snowmobile.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/snowmobile/snowmobile.glb",
+      "bytes": 1978420,
+      "sha256": "34ff826815f885d3c17b42aee14a7a1b902917b0d0a2bd2c2d11366ca6ada45c",
+      "originalManifestSha256": "34ff826815f885d3c17b42aee14a7a1b902917b0d0a2bd2c2d11366ca6ada45c",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/trees/trees.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/trees/trees.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/trees/trees.glb",
+      "bytes": 280640,
+      "sha256": "ba59cc9789d5060a099d9b7604b5bab54dee0983400397f8ef9d71de3bfc352f",
+      "originalManifestSha256": "ba59cc9789d5060a099d9b7604b5bab54dee0983400397f8ef9d71de3bfc352f",
+      "matchesOriginalManifest": true,
+      "modified": false
+    },
+    {
+      "path": "public/models/truck/pickup.glb",
+      "category": "model_with_embedded_textures",
+      "sourcePath": "models/truck/pickup.glb",
+      "sourceUrl": "https://eric1hua.github.io/hemu-ski/models/truck/pickup.glb",
+      "bytes": 3624744,
+      "sha256": "e79c6eb212f8b57d4124c527bfa3fe2b02d2c70d526dcc9daada6554c8857276",
+      "originalManifestSha256": "e79c6eb212f8b57d4124c527bfa3fe2b02d2c70d526dcc9daada6554c8857276",
+      "matchesOriginalManifest": true,
+      "modified": false
+    }
+  ]
+}

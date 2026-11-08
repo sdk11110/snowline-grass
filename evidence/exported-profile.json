@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "name": "雪原工坊",
+  "accent": "#dcb847",
+  "settings": {
+    "timeOfDay": 10.5,
+    "weather": "clear",
+    "dayCycle": true,
+    "aurora": false,
+    "cameraMode": "thirdPerson",
+    "mouseLook": false,
+    "rider": "male",
+    "gear": "board",
+    "realisticRiding": false,
+    "gravityScale": 0.75,
+    "dragScale": 1.5,
+    "steeringScale": 1.15,
+    "maxSpeed": 15,
+    "graphics": "auto",
+    "music": true,
+    "sfx": true
+  }
+}

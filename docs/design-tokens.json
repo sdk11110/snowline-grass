@@ -1,0 +1,499 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T14:02:00.076126+00:00",
+  "title": "Design System: 雪线漫游 · Snowline Roam",
+  "source": [
+    "src/styles/experience.css",
+    "src/styles/studio.css",
+    "src/experience/opening.js",
+    "src/experience/destinations.js",
+    "src/experience/experience.js",
+    "src/studio.js"
+  ],
+  "scope": "Implemented opening, destination controls and customization panel. Inherited game HUD is context; the generated concept image is not runtime evidence.",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "工坊金色",
+        "canonical": "#dcb847",
+        "tonalRamp": [
+          "oklch(15% 0.1351 91.12)",
+          "oklch(26% 0.1351 91.12)",
+          "oklch(38% 0.1351 91.12)",
+          "oklch(50% 0.1351 91.12)",
+          "oklch(62% 0.1351 91.12)",
+          "oklch(74% 0.1351 91.12)",
+          "oklch(86% 0.1351 91.12)",
+          "oklch(95% 0.1351 91.12)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "工坊墨蓝",
+        "canonical": "#25343c",
+        "tonalRamp": [
+          "oklch(15% 0.0245 231.79)",
+          "oklch(26% 0.0245 231.79)",
+          "oklch(38% 0.0245 231.79)",
+          "oklch(50% 0.0245 231.79)",
+          "oklch(62% 0.0245 231.79)",
+          "oklch(74% 0.0245 231.79)",
+          "oklch(86% 0.0245 231.79)",
+          "oklch(95% 0.0245 231.79)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "工坊纸",
+        "canonical": "#faf7ef",
+        "tonalRamp": [
+          "oklch(15% 0.0110 89.72)",
+          "oklch(26% 0.0110 89.72)",
+          "oklch(38% 0.0110 89.72)",
+          "oklch(50% 0.0110 89.72)",
+          "oklch(62% 0.0110 89.72)",
+          "oklch(74% 0.0110 89.72)",
+          "oklch(86% 0.0110 89.72)",
+          "oklch(95% 0.0110 89.72)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "工坊说明色",
+        "canonical": "#576a70",
+        "tonalRamp": [
+          "oklch(15% 0.0247 218.90)",
+          "oklch(26% 0.0247 218.90)",
+          "oklch(38% 0.0247 218.90)",
+          "oklch(50% 0.0247 218.90)",
+          "oklch(62% 0.0247 218.90)",
+          "oklch(74% 0.0247 218.90)",
+          "oklch(86% 0.0247 218.90)",
+          "oklch(95% 0.0247 218.90)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "字段白",
+        "canonical": "#fffdf8",
+        "tonalRamp": [
+          "oklch(15% 0.0069 88.64)",
+          "oklch(26% 0.0069 88.64)",
+          "oklch(38% 0.0069 88.64)",
+          "oklch(50% 0.0069 88.64)",
+          "oklch(62% 0.0069 88.64)",
+          "oklch(74% 0.0069 88.64)",
+          "oklch(86% 0.0069 88.64)",
+          "oklch(95% 0.0069 88.64)"
+        ]
+      },
+      "control": {
+        "role": "neutral",
+        "displayName": "蓝绿控制色",
+        "canonical": "#467a8a",
+        "tonalRamp": [
+          "oklch(15% 0.0609 219.78)",
+          "oklch(26% 0.0609 219.78)",
+          "oklch(38% 0.0609 219.78)",
+          "oklch(50% 0.0609 219.78)",
+          "oklch(62% 0.0609 219.78)",
+          "oklch(74% 0.0609 219.78)",
+          "oklch(86% 0.0609 219.78)",
+          "oklch(95% 0.0609 219.78)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "工坊焦点蓝",
+        "canonical": "#286788",
+        "tonalRamp": [
+          "oklch(15% 0.0827 235.02)",
+          "oklch(26% 0.0827 235.02)",
+          "oklch(38% 0.0827 235.02)",
+          "oklch(50% 0.0827 235.02)",
+          "oklch(62% 0.0827 235.02)",
+          "oklch(74% 0.0827 235.02)",
+          "oklch(86% 0.0827 235.02)",
+          "oklch(95% 0.0827 235.02)"
+        ]
+      },
+      "error-ink": {
+        "role": "neutral",
+        "displayName": "暖色错误文字",
+        "canonical": "#8f3b24",
+        "tonalRamp": [
+          "oklch(15% 0.1198 36.18)",
+          "oklch(26% 0.1198 36.18)",
+          "oklch(38% 0.1198 36.18)",
+          "oklch(50% 0.1198 36.18)",
+          "oklch(62% 0.1198 36.18)",
+          "oklch(74% 0.1198 36.18)",
+          "oklch(86% 0.1198 36.18)",
+          "oklch(95% 0.1198 36.18)"
+        ]
+      },
+      "error-paper": {
+        "role": "neutral",
+        "displayName": "暖色错误底",
+        "canonical": "#f8e9dd",
+        "tonalRamp": [
+          "oklch(15% 0.0229 61.23)",
+          "oklch(26% 0.0229 61.23)",
+          "oklch(38% 0.0229 61.23)",
+          "oklch(50% 0.0229 61.23)",
+          "oklch(62% 0.0229 61.23)",
+          "oklch(74% 0.0229 61.23)",
+          "oklch(86% 0.0229 61.23)",
+          "oklch(95% 0.0229 61.23)"
+        ]
+      },
+      "atlas-ink": {
+        "role": "neutral",
+        "displayName": "地图墨绿",
+        "canonical": "#263e35",
+        "tonalRamp": [
+          "oklch(15% 0.0340 168.74)",
+          "oklch(26% 0.0340 168.74)",
+          "oklch(38% 0.0340 168.74)",
+          "oklch(50% 0.0340 168.74)",
+          "oklch(62% 0.0340 168.74)",
+          "oklch(74% 0.0340 168.74)",
+          "oklch(86% 0.0340 168.74)",
+          "oklch(95% 0.0340 168.74)"
+        ]
+      },
+      "atlas-action": {
+        "role": "primary",
+        "displayName": "森林行动色",
+        "canonical": "#315044",
+        "tonalRamp": [
+          "oklch(15% 0.0423 167.84)",
+          "oklch(26% 0.0423 167.84)",
+          "oklch(38% 0.0423 167.84)",
+          "oklch(50% 0.0423 167.84)",
+          "oklch(62% 0.0423 167.84)",
+          "oklch(74% 0.0423 167.84)",
+          "oklch(86% 0.0423 167.84)",
+          "oklch(95% 0.0423 167.84)"
+        ]
+      },
+      "atlas-action-ink": {
+        "role": "neutral",
+        "displayName": "行动文字纸色",
+        "canonical": "#f7f3e6",
+        "tonalRamp": [
+          "oklch(15% 0.0177 92.68)",
+          "oklch(26% 0.0177 92.68)",
+          "oklch(38% 0.0177 92.68)",
+          "oklch(50% 0.0177 92.68)",
+          "oklch(62% 0.0177 92.68)",
+          "oklch(74% 0.0177 92.68)",
+          "oklch(86% 0.0177 92.68)",
+          "oklch(95% 0.0177 92.68)"
+        ]
+      },
+      "atlas-muted": {
+        "role": "neutral",
+        "displayName": "地图说明绿",
+        "canonical": "#53685d",
+        "tonalRamp": [
+          "oklch(15% 0.0307 162.24)",
+          "oklch(26% 0.0307 162.24)",
+          "oklch(38% 0.0307 162.24)",
+          "oklch(50% 0.0307 162.24)",
+          "oklch(62% 0.0307 162.24)",
+          "oklch(74% 0.0307 162.24)",
+          "oklch(86% 0.0307 162.24)",
+          "oklch(95% 0.0307 162.24)"
+        ]
+      },
+      "atlas-focus": {
+        "role": "neutral",
+        "displayName": "地图焦点赭色",
+        "canonical": "#b85b32",
+        "tonalRamp": [
+          "oklch(15% 0.1323 43.07)",
+          "oklch(26% 0.1323 43.07)",
+          "oklch(38% 0.1323 43.07)",
+          "oklch(50% 0.1323 43.07)",
+          "oklch(62% 0.1323 43.07)",
+          "oklch(74% 0.1323 43.07)",
+          "oklch(86% 0.1323 43.07)",
+          "oklch(95% 0.1323 43.07)"
+        ]
+      },
+      "snow-route": {
+        "role": "secondary",
+        "displayName": "雪岭路线赭红",
+        "canonical": "#c25d38",
+        "tonalRamp": [
+          "oklch(15% 0.1395 40.12)",
+          "oklch(26% 0.1395 40.12)",
+          "oklch(38% 0.1395 40.12)",
+          "oklch(50% 0.1395 40.12)",
+          "oklch(62% 0.1395 40.12)",
+          "oklch(74% 0.1395 40.12)",
+          "oklch(86% 0.1395 40.12)",
+          "oklch(95% 0.1395 40.12)"
+        ]
+      },
+      "snow-paper": {
+        "role": "neutral",
+        "displayName": "雪岭纸",
+        "canonical": "#f0eee3",
+        "tonalRamp": [
+          "oklch(15% 0.0148 98.29)",
+          "oklch(26% 0.0148 98.29)",
+          "oklch(38% 0.0148 98.29)",
+          "oklch(50% 0.0148 98.29)",
+          "oklch(62% 0.0148 98.29)",
+          "oklch(74% 0.0148 98.29)",
+          "oklch(86% 0.0148 98.29)",
+          "oklch(95% 0.0148 98.29)"
+        ]
+      },
+      "meadow-route": {
+        "role": "secondary",
+        "displayName": "青岚路线草绿",
+        "canonical": "#477051",
+        "tonalRamp": [
+          "oklch(15% 0.0675 151.12)",
+          "oklch(26% 0.0675 151.12)",
+          "oklch(38% 0.0675 151.12)",
+          "oklch(50% 0.0675 151.12)",
+          "oklch(62% 0.0675 151.12)",
+          "oklch(74% 0.0675 151.12)",
+          "oklch(86% 0.0675 151.12)",
+          "oklch(95% 0.0675 151.12)"
+        ]
+      },
+      "meadow-paper": {
+        "role": "neutral",
+        "displayName": "青岚纸",
+        "canonical": "#eeeedd",
+        "tonalRamp": [
+          "oklch(15% 0.0225 106.82)",
+          "oklch(26% 0.0225 106.82)",
+          "oklch(38% 0.0225 106.82)",
+          "oklch(50% 0.0225 106.82)",
+          "oklch(62% 0.0225 106.82)",
+          "oklch(74% 0.0225 106.82)",
+          "oklch(86% 0.0225 106.82)",
+          "oklch(95% 0.0225 106.82)"
+        ]
+      },
+      "ocean-route": {
+        "role": "secondary",
+        "displayName": "潮汐路线海青",
+        "canonical": "#217a89",
+        "tonalRamp": [
+          "oklch(15% 0.0832 211.46)",
+          "oklch(26% 0.0832 211.46)",
+          "oklch(38% 0.0832 211.46)",
+          "oklch(50% 0.0832 211.46)",
+          "oklch(62% 0.0832 211.46)",
+          "oklch(74% 0.0832 211.46)",
+          "oklch(86% 0.0832 211.46)",
+          "oklch(95% 0.0832 211.46)"
+        ]
+      },
+      "ocean-paper": {
+        "role": "neutral",
+        "displayName": "潮汐纸",
+        "canonical": "#e6eeE7",
+        "tonalRamp": [
+          "oklch(15% 0.0126 149.24)",
+          "oklch(26% 0.0126 149.24)",
+          "oklch(38% 0.0126 149.24)",
+          "oklch(50% 0.0126 149.24)",
+          "oklch(62% 0.0126 149.24)",
+          "oklch(74% 0.0126 149.24)",
+          "oklch(86% 0.0126 149.24)",
+          "oklch(95% 0.0126 149.24)"
+        ]
+      }
+    },
+    "tonalRampSource": "Synthesized OKLCH lightness references for swatch previews only; these are not shipped runtime tokens or additional palette commitments.",
+    "typographyMeta": {
+      "title": {
+        "displayName": "工坊标题",
+        "purpose": "Compact panel heading, not the opening display title."
+      },
+      "body": {
+        "displayName": "工坊正文",
+        "purpose": "Self-hosted Patrick Hand for Latin; Chinese uses the available fallback."
+      },
+      "label": {
+        "displayName": "字段标签",
+        "purpose": "Settings labels and category tabs."
+      },
+      "small": {
+        "displayName": "辅助文字",
+        "purpose": "Settings feedback and secondary copy."
+      }
+    },
+    "shadows": [
+      {
+        "name": "panel",
+        "value": "0 8px 28px #14232c30",
+        "purpose": "Separate the paper panel from the 3D scene."
+      },
+      {
+        "name": "launcher",
+        "value": "0 4px 12px #20303924",
+        "purpose": "Lift the collapsed launcher."
+      },
+      {
+        "name": "scene-toolbar",
+        "value": "0 3px 10px #263e3524",
+        "purpose": "Separate the destination button from the live scene."
+      }
+    ],
+    "motion": [
+      {
+        "name": "paper-departure",
+        "value": "880ms cubic-bezier(.16,1,.3,1); two half-sheets translateX(-104%/104%) and rotateY(-14deg/14deg)",
+        "purpose": "One focal transition from the printed atlas into the actual scene."
+      },
+      {
+        "name": "atlas-departure",
+        "value": "680ms cubic-bezier(.16,1,.3,1); scale 1 to 1.3 with opacity 1 to 0",
+        "purpose": "Atlas disappears while the paper opens."
+      },
+      {
+        "name": "reduced-departure",
+        "value": "180ms opacity 1 to 0",
+        "purpose": "prefers-reduced-motion: reduce path; no paper rotation or translation."
+      },
+      {
+        "name": "panel-reveal",
+        "value": "0.18s ease-out; translateY(-4px) to 0; opacity .7 to 1",
+        "purpose": "Panel entry only, gated by prefers-reduced-motion: no-preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "opening-compact",
+        "value": "760px"
+      },
+      {
+        "name": "studio-compact",
+        "value": "700px"
+      },
+      {
+        "name": "opening-short-desktop",
+        "value": "max-height:700px and min-width:761px"
+      }
+    ],
+    "accentForeground": {
+      "input": "Any #RRGGBB accent",
+      "method": "Linear-sRGB relative luminance; choose the higher contrast of #000000 and #ffffff.",
+      "hover": "Do not apply brightness filters to the export button."
+    },
+    "evidence": {
+      "verifiedOpening": "evidence/05_snowline_opening.jpg",
+      "conceptOnly": "docs/art-direction/grass-and-surf-concept.png",
+      "exclusions": "Review images for grass/surf are defect evidence, not a palette or detail-quality specification."
+    }
+  },
+  "components": [
+    {
+      "name": "Departure button",
+      "kind": "button",
+      "refersTo": "destination-action",
+      "description": "Selected destination entry; disabled until the real engine is ready.",
+      "html": "<button class=\"ds-depart\"><span>滑向雪岭</span><svg viewBox=\"0 0 32 20\" aria-hidden=\"true\"><path d=\"M2 10h27M21 2l8 8-8 8\"/></svg></button>",
+      "css": ".ds-depart{display:flex;align-items:center;justify-content:space-between;gap:35px;min-height:56px;min-width:245px;padding:10px 23px;border:1px solid #315044;background:#315044;color:#f7f3e6;font:18px \"Patrick Hand\",\"KaiTi\",\"STKaiti\",serif;cursor:pointer;transition:background .16s,border-color .16s}.ds-depart svg{width:32px;height:20px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}.ds-depart:hover:not(:disabled){background:#41634f;border-color:#41634f}.ds-depart:active:not(:disabled){background:#213d31}.ds-depart:disabled{background:#64756a;border-color:#64756a;color:#d3d9cc;cursor:wait}.ds-depart:focus-visible{outline:3px solid #b85b32;outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-depart{transition:none}}"
+    },
+    {
+      "name": "Export button",
+      "kind": "button",
+      "refersTo": "export-button",
+      "description": "Primary profile action; arbitrary accent retains readable text.",
+      "html": "<button class=\"ds-export\">导出配置</button>",
+      "css": ".ds-export{font:12px 'Patrick Hand',system-ui,sans-serif;background:var(--lab-accent,#dcb847);color:var(--lab-accent-ink,#000);border:1px solid #7b6f4f;border-radius:2px;padding:6px 2px;cursor:pointer}.ds-export:hover{box-shadow:inset 0 0 0 1px currentColor}.ds-export:focus-visible{outline:3px solid #286788;outline-offset:3px}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "secondary-button",
+      "description": "Import and reset actions.",
+      "html": "<button class=\"ds-secondary\">导入配置</button>",
+      "css": ".ds-secondary{font:12px 'Patrick Hand',system-ui,sans-serif;background:#fffdf8;color:#25343c;border:1px solid #647776;border-radius:2px;padding:6px 2px;cursor:pointer}.ds-secondary:hover{filter:brightness(.96)}.ds-secondary:focus-visible{outline:3px solid #286788;outline-offset:3px}"
+    },
+    {
+      "name": "Select field",
+      "kind": "input",
+      "refersTo": "select",
+      "description": "Named choices for game settings.",
+      "html": "<label class=\"ds-field\">天气<select><option>晴天</option><option>降雪</option></select></label>",
+      "css": ".ds-field{display:block;font:14px 'Patrick Hand',system-ui,sans-serif;color:#25343c}.ds-field select{display:block;width:100%;margin-top:7px;padding:6px 8px;font:15px 'Patrick Hand',system-ui,sans-serif;color:inherit;background:#fffdf8;border:1px solid #94a09d;border-radius:2px}.ds-field select:focus-visible{outline:3px solid #286788;outline-offset:3px}.ds-field select:disabled{opacity:.45;cursor:wait}"
+    },
+    {
+      "name": "Category navigation",
+      "kind": "nav",
+      "description": "Five categories with a selected paper tab.",
+      "html": "<nav class=\"ds-tabs\"><button aria-selected=\"true\">世界</button><button>操控</button><button>人物</button><button>画面</button><button>工程</button></nav>",
+      "css": ".ds-tabs{display:flex;padding:0 9px;background:#eceee5;border-block:1px solid #a9b3b1}.ds-tabs button{flex:1;border:0;background:transparent;padding:9px 3px;font:14px 'Patrick Hand',system-ui,sans-serif;color:#25343c;cursor:pointer}.ds-tabs button[aria-selected=true]{background:#faf7ef;box-shadow:inset 0 -3px var(--lab-accent,#dcb847)}.ds-tabs button:hover{background:#f5f1e6}.ds-tabs button:focus-visible{outline:3px solid #286788;outline-offset:3px}"
+    },
+    {
+      "name": "Paper panel",
+      "kind": "custom",
+      "description": "A compact scene-preserving settings container.",
+      "html": "<section class=\"ds-panel\"><h2>漫游工坊</h2><p>让每一次出发，都有自己的节奏。</p></section>",
+      "css": ".ds-panel{width:318px;max-width:calc(100vw - 20px);border:2px solid #25343c;border-radius:3px;background:#faf7ef;color:#25343c;box-shadow:0 8px 28px #14232c30;font:16px/1.4 'Patrick Hand',system-ui,sans-serif;padding:16px 17px 12px}.ds-panel h2{font-size:25px;font-weight:400;line-height:1.2;margin:0 0 4px}.ds-panel p{font-size:13px;color:#576a70;margin:0}"
+    },
+    {
+      "name": "Destination selector",
+      "kind": "nav",
+      "description": "Three continuous destination rows; route color and pressed state identify the selected scene.",
+      "html": "<nav class=\"ds-destinations\" aria-label=\"选择目的地\"><button aria-pressed=\"true\"><span>雪岭 <small>雪山滑行</small></span><small>高山 · 林间雪道</small></button><button aria-pressed=\"false\"><span>青岚 <small>草场漫游</small></span><small>草坡 · 山地滑行</small></button><button aria-pressed=\"false\"><span>潮汐 <small>海上冲浪</small></span><small>海湾 · 自由冲浪</small></button></nav>",
+      "css": ".ds-destinations{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid #49635766;color:#263e35;background:var(--roam-paper,#f0eee3);font-family:\"Patrick Hand\",\"KaiTi\",\"STKaiti\",serif}.ds-destinations button{display:grid;gap:8px;min-height:108px;padding:22px 24px 18px;border:0;border-inline-end:1px solid #49635740;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer;transition:background .18s}.ds-destinations button:last-child{border-inline-end:0}.ds-destinations span{font-size:25px;letter-spacing:.08em}.ds-destinations small{font-size:12px;color:#53685d;letter-spacing:.06em}.ds-destinations span small{margin-left:16px;font-size:13px;letter-spacing:0}.ds-destinations button[aria-pressed=true]{background:#faf8ed90;box-shadow:inset 0 -3px var(--roam-route,#c25d38)}.ds-destinations button:hover{background:#faf8ed}.ds-destinations button:focus-visible{outline:3px solid #b85b32;outline-offset:6px}@media(max-width:760px){.ds-destinations{grid-template-columns:1fr}.ds-destinations button{min-height:64px;padding:10px 11px;border-inline-end:0;border-block-end:1px solid #49635740}.ds-destinations span{font-size:22px}}@media(prefers-reduced-motion:reduce){.ds-destinations button{transition:none}}"
+    },
+    {
+      "name": "Scene toolbar",
+      "kind": "nav",
+      "description": "A compact paper button for returning to destination selection without obscuring the rider.",
+      "html": "<nav class=\"ds-scene-toolbar\"><button><svg viewBox=\"0 0 36 28\" aria-hidden=\"true\"><path d=\"m2 23 10-18 8 13 5-8 9 15H2\"/><path d=\"m8 12 4 3 3-3m9 9c4-4 6 3 10 0\"/></svg><span>雪线漫游</span><small>雪岭 · 换个天地</small></button></nav>",
+      "css": ".ds-scene-toolbar{color:#263e35;font:15px \"Patrick Hand\",\"KaiTi\",serif}.ds-scene-toolbar button{display:flex;align-items:center;gap:13px;padding:8px 13px;border:1.5px solid #304b3f;background:#f7f3e8;color:inherit;font:inherit;cursor:pointer;box-shadow:0 3px 10px #263e3524}.ds-scene-toolbar svg{width:28px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.ds-scene-toolbar small{border-left:1px solid #304b3f40;padding-left:11px;font-size:12px}.ds-scene-toolbar button:focus-visible{outline:3px solid #b85b32;outline-offset:6px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "展开的山野地图",
+    "overview": "淡纸色、细墨线、等高线和手写字连接目的地选择与三维场景。开场中的地图是可进入世界的引子；进入以后，界面缩回边缘，把空间留给滑行、草浪和海面。\n\n本记录合并既有定制面板的已确认规则与新开场、目的地工具栏。雪场保留既有卡通光照、环境与操作基线；新场景仍使用同一渲染器、人物系统和 toon 材质体系。草、水、衣装的细节由对应场景模块维护，不把一张概念图的细节冒充为已经完成的渲染规范。",
+    "keyCharacteristics": [
+      "纸张与墨线贯穿开场和浮层。",
+      "目的地有各自的轻微纸色和路线色变化。",
+      "游戏场景居中，常用控制靠边。",
+      "定制值显示真实应用结果。",
+      "空间转场集中在进入世界的一个时刻。"
+    ],
+    "rules": [
+      {
+        "name": "The Accent Foreground Rule",
+        "body": "根据强调色的线性亮度，在纯黑与纯白中选对比度更高者；导出按钮 hover 不改变背景或文字亮度。",
+        "section": "colors"
+      },
+      {
+        "name": "The Scoped Palette Rule",
+        "body": "目的地纸色只服务开场与目的地识别；工坊强调色只服务定制操作。新增场景不能永久改写雪场的原材质或色彩状态。",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do 保留纸张、细墨线、线性图标及清楚的选中状态。",
+      "Do 让游戏中央保持可见，常用控制停在边缘，定制面板可以收起。",
+      "Do 将任意工坊强调色与其黑白前景计算规则一同使用。",
+      "Do 保留减少动态、跳过过场及重新进入的行为。",
+      "Do 分开存放概念设计图与真实运行截图，并保留资源来源。"
+    ],
+    "donts": [
+      "Don't 把开场布局、纸张折叠或某种目的地色套到所有新界面。",
+      "Don't 为不适用的场景显示仍会操作雪场的导航入口。",
+      "Don't 把未生效设置、过程性调试内容或待修的草与水花表现写成规范。",
+      "Don't 将复用人物的材质改色说成重新制作了独立服装网格。"
+    ],
+    "notCanonized": "平台楷体中文展示字缺少项目自带字库；关闭按钮的乘号字形与原游戏菜单的硬偏移块影属于当前实现细节，不作为新界面的字体、图标或阴影模板。"
+  }
+}

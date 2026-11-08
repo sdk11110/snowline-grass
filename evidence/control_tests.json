@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-11-08T14:48:17.278Z",
+  "scope": "Behavior tests of the customization adapter with a faithful interface mock; this is not a GPU, gameplay or physics-solver verification.",
+  "controls": [
+    "timeOfDay",
+    "weather",
+    "dayCycle",
+    "aurora",
+    "cameraMode",
+    "mouseLook",
+    "rider",
+    "gear",
+    "realisticRiding",
+    "gravityScale",
+    "dragScale",
+    "steeringScale",
+    "maxSpeed",
+    "graphics",
+    "music",
+    "sfx"
+  ],
+  "summary": {
+    "passed": 11,
+    "failed": 0
+  },
+  "results": [
+    {
+      "name": "not-ready and unknown controls report unsupported without mutation",
+      "status": "passed"
+    },
+    {
+      "name": "construction is side-effect free and explicit initialization uses the supplied profile",
+      "status": "passed"
+    },
+    {
+      "name": "partial patches leave unrelated runtime settings intact",
+      "status": "passed"
+    },
+    {
+      "name": "rider loads finish before first-person and gear application",
+      "status": "passed"
+    },
+    {
+      "name": "invalid numbers, choices and booleans are rejected without false success",
+      "status": "passed"
+    },
+    {
+      "name": "engine rejection and missing hooks are visible",
+      "status": "passed"
+    },
+    {
+      "name": "readback catches silent failures and rider/physics gear disagreement",
+      "status": "passed"
+    },
+    {
+      "name": "snapshots read current engine state rather than a requested profile",
+      "status": "passed"
+    },
+    {
+      "name": "queued rider changes are serialized and no-op profiles do not reload models",
+      "status": "passed"
+    },
+    {
+      "name": "one failed change does not discard independent controls or later requests",
+      "status": "passed"
+    },
+    {
+      "name": "reset restores engine defaults rather than the saved initialization profile",
+      "status": "passed"
+    }
+  ]
+}

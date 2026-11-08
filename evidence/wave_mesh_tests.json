@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-11-08T14:48:17.639Z",
+  "scope": "Actual biomes.js ocean indexed mesh, live mode controller and SurfSolver, CPU analytic wave evaluation at rendered vertices followed by barycentric triangle interpolation. Covers a 40-second carving route. Does not compile GLSL or validate browser graphics.",
+  "summary": {
+    "passed": 2,
+    "failed": 0
+  },
+  "measurements": {
+    "seconds": 40,
+    "frames": 4800,
+    "meshVertices": 22785,
+    "meshTriangles": 45056,
+    "actualNearTrianglesSampled": 8712,
+    "maxAnalyticToTriangleError": 0.041112067030073085,
+    "maxTriangleWaterAboveBoard": 0.074380155283996,
+    "framesWaterMoreThan10cmAboveBoard": 0,
+    "worstSample": {
+      "time": 35.65833333333195,
+      "position": [
+        11835.55665199291,
+        -1.9905950020823426,
+        -11868.648845094058
+      ],
+      "analytic": -1.950605415447853,
+      "triangleSurface": -1.9162148467983466
+    }
+  },
+  "checks": [
+    {
+      "name": "deformed near-water triangles stay within 6cm of the analytic wave",
+      "passed": true
+    },
+    {
+      "name": "visible water does not swallow the board by more than 10cm",
+      "passed": true
+    }
+  ]
+}

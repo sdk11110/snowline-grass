@@ -1,0 +1,57 @@
+[
+  {
+    "Path": "D:\\ai\\tep1\\8.22\\CoastalVisualProbe",
+    "Bytes": 2890664687.0,
+    "Deleted": true
+  },
+  {
+    "Path": "D:\\ai\\tep1\\8.22\\hemu-ski-local",
+    "Bytes": 65518439.0,
+    "Deleted": true
+  },
+  {
+    "Path": "D:\\ai\\tep1\\8.22\\snowfield-lab\\.npm-cache",
+    "Bytes": 7971559.0,
+    "Deleted": true
+  },
+  {
+    "Path": "D:\\ai\\tep1\\8.22\\snowfield-lab\\tools\\.npm-cache",
+    "Bytes": 5880831.0,
+    "Deleted": true
+  },
+  {
+    "Path": "D:\\ai\\tep1\\8.22\\snowfield-lab\\tools\\ast-runtime",
+    "Bytes": 11519175.0,
+    "Deleted": true
+  },
+  {
+    "Path": "D:\\ai\\tep1\\8.22\\snowfield-lab\\analysis",
+    "Bytes": 2028902.0,
+    "Deleted": true
+  },
+  {
+    "Path": "D:\\ai\\tep1\\8.22\\snowfield-lab\\.impeccable",
+    "Bytes": 670.0,
+    "Deleted": true
+  },
+  {
+    "Path": "D:\\ai\\tep1\\8.22\\snowfield-lab\\tools\\recover-source.mjs",
+    "Bytes": 30490,
+    "Deleted": true
+  },
+  {
+    "Path": "D:\\ai\\tep1\\8.22\\snowfield-lab\\tools\\prepare-shell.py",
+    "Bytes": 1448,
+    "Deleted": true
+  },
+  {
+    "Path": "D:\\ai\\tep1\\8.22\\snowfield-lab\\tools\\hydrate-local-deps.mjs",
+    "Bytes": 3811,
+    "Deleted": true
+  },
+  {
+    "Path": "D:\\ai\\tep1\\8.22\\_pack_snowfield.py",
+    "Bytes": 2358,
+    "Deleted": true
+  }
+]

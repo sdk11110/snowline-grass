@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-11-08T14:10:09.986770+00:00",
+  "product": "雪线漫游 / Snowline Roam 0.2.0",
+  "testedBuild": "Vite production preview at http://127.0.0.1:4187/ (temporary server stopped after verification)",
+  "developmentUrl": "http://127.0.0.1:5187/",
+  "screenshots": {
+    "opening": "05_snowline_opening.jpg",
+    "snow": "06_snow_baseline.jpg",
+    "grass": "07_grass_valley.jpg",
+    "ocean": "08_ocean_surf.jpg",
+    "mobileOpening": "09_mobile_opening.jpg",
+    "mobileStudio": "10_mobile_game_and_studio.jpg",
+    "snowRestoration": "11_snow_restored.jpg"
+  },
+  "browserChecks": [
+    "Production page started with local assets and actual load progress",
+    "Selected snow, meadow, ocean and returned to snow through the new opening",
+    "Keyboard movement and turning in all three destinations; current-scene R reset",
+    "Female lightweight swim body and dedicated longboard shown on ocean",
+    "Ocean F retained surfing posture and displayed appropriate feedback",
+    "Ocean studio character tab showed female, disabled gear, selected surfboard",
+    "Returning to snow showed male, enabled board/ski selector and original snow outfit",
+    "390x844 opening and stable studio panel fit the viewport; document horizontal overflow 0",
+    "1280x800 desktop opening and gameplay; viewport override reset after verification",
+    "No browser error-level messages in tested production path"
+  ],
+  "automatedChecks": {
+    "runtimeControls": 11,
+    "originalSnowPhysics": 9,
+    "biomePhysics": 15,
+    "actualWaterMesh": 2,
+    "assetHashes": 59
+  },
+  "limits": [
+    "Concept image is an art direction target, not a screenshot",
+    "Seasonal adaptation of fused winter meshes retains fused hat/goggles; ocean default uses the real separate swim asset",
+    "Reduced-motion path reviewed in source; OS reduced-motion preference was not changed for this task",
+    "Touch-size layout was checked; mobile touch hardware was not emulated",
+    "Original retained trails, vehicles, animals and special actions were not individually replayed",
+    "No hardware FPS benchmark or performance guarantee"
+  ],
+  "designScan": {
+    "warnings": 2,
+    "advisories": 42,
+    "disposition": "No material UI blockers. Warnings are the implemented platform KaiTi dependency; DESIGN.md records it as a current limitation rather than declaring a portable font standard."
+  }
+}

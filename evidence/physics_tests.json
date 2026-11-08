@@ -1,0 +1,569 @@
+{
+  "checkedAt": "2026-11-08T14:48:17.269Z",
+  "scope": "Actual recovered SnowboardPhysics step/air integration with actual project Three Vector3 math, running at fixed 1/120s on an obstacle-free analytic plane. This is solver verification, not browser/rendering or full gameplay verification.",
+  "source": "src/recovered/physics/skier.js",
+  "originalReference": "tools/fixtures/original-skier-class.txt: unchanged public-build Wc class expression, used only as an independent solver baseline",
+  "defaultsRestored": {
+    "gravityScale": 1,
+    "dragScale": 1,
+    "steeringScale": 1,
+    "maxSpeed": 0
+  },
+  "exclusions": [
+    "Vehicle, animal and boat solvers",
+    "Browser input and graphics",
+    "Collision-rich terrain and full gameplay coverage"
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0
+  },
+  "results": [
+    {
+      "name": "ground gravity changes downhill acceleration and displacement",
+      "status": "passed",
+      "measurements": {
+        "low": {
+          "speed": 1.3995095513654356,
+          "position": [
+            0,
+            -0.26427449758095783,
+            -1.0570979903238313
+          ],
+          "velocity": [
+            0,
+            -0.3394309237847339,
+            -1.3577236951389355
+          ],
+          "yaw": 0,
+          "distance": 1.0896316676833273,
+          "firstStepDistance": 0.00007104775099398428,
+          "peakSpeed": 1.3995095513654356,
+          "peakMovementSpeed": 1.4009104618272548,
+          "grounded": true,
+          "duration": 1.5,
+          "steps": 180
+        },
+        "high": {
+          "speed": 4.173780614474535,
+          "position": [
+            0,
+            -0.7904428420078536,
+            -3.1617713680314146
+          ],
+          "velocity": [
+            0,
+            -1.0122904900961114,
+            -4.0491619603844455
+          ],
+          "yaw": 0,
+          "distance": 3.2590793286117945,
+          "firstStepDistance": 0.00021314308099137377,
+          "peakSpeed": 4.173780614474535,
+          "peakMovementSpeed": 4.177958573047601,
+          "grounded": true,
+          "duration": 1.5,
+          "steps": 180
+        }
+      }
+    },
+    {
+      "name": "airborne gravity changes vertical velocity by the expected amount",
+      "status": "passed",
+      "measurements": {
+        "low": {
+          "speed": 2.4525000000000023,
+          "position": [
+            0,
+            99.37665625,
+            0
+          ],
+          "velocity": [
+            0,
+            -2.4525000000000023,
+            0
+          ],
+          "yaw": 0,
+          "distance": 0.6233437500000036,
+          "firstStepDistance": 0.0003406250000068667,
+          "peakSpeed": 2.4525000000000023,
+          "peakMovementSpeed": 2.4524999999999864,
+          "grounded": false,
+          "duration": 0.5,
+          "steps": 60
+        },
+        "high": {
+          "speed": 7.357500000000009,
+          "position": [
+            0,
+            98.12996874999999,
+            0
+          ],
+          "velocity": [
+            0,
+            -7.357500000000009,
+            0
+          ],
+          "yaw": 0,
+          "distance": 1.870031250000011,
+          "firstStepDistance": 0.0010218750000063892,
+          "peakSpeed": 7.357500000000009,
+          "peakMovementSpeed": 7.357499999999959,
+          "grounded": false,
+          "duration": 0.5,
+          "steps": 60
+        }
+      }
+    },
+    {
+      "name": "ground drag changes actual glide speed and travelled distance",
+      "status": "passed",
+      "measurements": {
+        "low": {
+          "speed": 9.081951599581751,
+          "position": [
+            0,
+            0,
+            -20.95272052058681
+          ],
+          "velocity": [
+            0,
+            0,
+            -9.081951599581751
+          ],
+          "yaw": 0,
+          "distance": 20.95272052058681,
+          "firstStepDistance": 0.09998353906249999,
+          "peakSpeed": 11.986026662812499,
+          "peakMovementSpeed": 11.9980246875,
+          "grounded": true,
+          "duration": 2,
+          "steps": 240
+        },
+        "high": {
+          "speed": 5.918922527599345,
+          "position": [
+            0,
+            0,
+            -17.227931019912123
+          ],
+          "velocity": [
+            0,
+            0,
+            -5.918922527599345
+          ],
+          "yaw": 0,
+          "distance": 17.227931019912123,
+          "firstStepDistance": 0.09980246875000001,
+          "peakSpeed": 11.964319953750001,
+          "peakMovementSpeed": 11.97629625,
+          "grounded": true,
+          "duration": 2,
+          "steps": 240
+        }
+      }
+    },
+    {
+      "name": "air drag affects airborne velocity rather than a HUD field",
+      "status": "passed",
+      "measurements": {
+        "low": {
+          "speed": 20.037556963424958,
+          "position": [
+            0,
+            99.68832812499998,
+            -9.999999999999998
+          ],
+          "velocity": [
+            0,
+            -1.2262500000000012,
+            -20
+          ],
+          "yaw": 0,
+          "distance": 10.006419198796662,
+          "firstStepDistance": 0.16666675368568692,
+          "peakSpeed": 20.037556963424958,
+          "peakMovementSpeed": 20.03755696342494,
+          "grounded": false,
+          "duration": 0.5,
+          "steps": 60
+        },
+        "high": {
+          "speed": 17.575235454310036,
+          "position": [
+            0,
+            99.7019659039922,
+            -9.347393717081014
+          ],
+          "velocity": [
+            0,
+            -1.1494805467797415,
+            -17.53760518848031
+          ],
+          "yaw": 0,
+          "distance": 9.353815313945224,
+          "firstStepDistance": 0.16627786439070918,
+          "peakSpeed": 19.9533437268851,
+          "peakMovementSpeed": 19.9533437268851,
+          "grounded": false,
+          "duration": 0.5,
+          "steps": 60
+        }
+      }
+    },
+    {
+      "name": "ground steering changes heading and lateral displacement",
+      "status": "passed",
+      "measurements": {
+        "low": {
+          "speed": 9.466613196762689,
+          "position": [
+            -0.6990965023237902,
+            0,
+            -9.548001875849083
+          ],
+          "velocity": [
+            -1.7647081589741413,
+            0,
+            -9.300675810432894
+          ],
+          "yaw": 0.21982378004220499,
+          "distance": 9.590443741604101,
+          "firstStepDistance": 0.08328078981142653,
+          "peakSpeed": 9.983701082593813,
+          "peakMovementSpeed": 9.993694777371184,
+          "grounded": true,
+          "duration": 1,
+          "steps": 120
+        },
+        "high": {
+          "speed": 12.856436929373247,
+          "position": [
+            -3.191637636490502,
+            0,
+            -10.213059594074824
+          ],
+          "velocity": [
+            -8.198547878441756,
+            0,
+            -9.90311987223473
+          ],
+          "yaw": 0.791205621933206,
+          "distance": 10.974063089677415,
+          "firstStepDistance": 0.08328218970967484,
+          "peakSpeed": 12.856436929373247,
+          "peakMovementSpeed": 12.869306235608889,
+          "grounded": true,
+          "duration": 1,
+          "steps": 120
+        }
+      }
+    },
+    {
+      "name": "steering also reaches the original airborne turn path",
+      "status": "passed",
+      "measurements": {
+        "low": {
+          "speed": 10.957679030513347,
+          "position": [
+            0,
+            98.7610005875234,
+            -4.955125631634051
+          ],
+          "velocity": [
+            0,
+            -4.859575901259316,
+            -9.821163464460392
+          ],
+          "yaw": 0.246684372438346,
+          "distance": 5.153529355613409,
+          "firstStepDistance": 0.08331181071627457,
+          "peakSpeed": 10.957679030513347,
+          "peakMovementSpeed": 10.957679030513507,
+          "grounded": false,
+          "duration": 0.5,
+          "steps": 60
+        },
+        "high": {
+          "speed": 10.957679030513347,
+          "position": [
+            0,
+            98.7610005875234,
+            -4.955125631634051
+          ],
+          "velocity": [
+            0,
+            -4.859575901259316,
+            -9.821163464460392
+          ],
+          "yaw": 0.986737489753384,
+          "distance": 5.153529355613409,
+          "firstStepDistance": 0.08331181071627457,
+          "peakSpeed": 10.957679030513347,
+          "peakMovementSpeed": 10.957679030513507,
+          "grounded": false,
+          "duration": 0.5,
+          "steps": 60
+        }
+      }
+    },
+    {
+      "name": "speed caps constrain velocity and movement before integration",
+      "status": "passed",
+      "measurements": {
+        "low": {
+          "speed": 4.499653114374095,
+          "position": [
+            0,
+            0,
+            -2.3744421898200843
+          ],
+          "velocity": [
+            0,
+            0,
+            -4.499653114374095
+          ],
+          "yaw": 0,
+          "distance": 2.3744421898200843,
+          "firstStepDistance": 0.041666666666666664,
+          "peakSpeed": 4.995,
+          "peakMovementSpeed": 5,
+          "grounded": true,
+          "duration": 0.5,
+          "steps": 60
+        },
+        "high": {
+          "speed": 13.554262940813985,
+          "position": [
+            0,
+            0,
+            -7.135037371653287
+          ],
+          "velocity": [
+            0,
+            0,
+            -13.554262940813985
+          ],
+          "yaw": 0,
+          "distance": 7.135037371653287,
+          "firstStepDistance": 0.125,
+          "peakSpeed": 14.985,
+          "peakMovementSpeed": 15,
+          "grounded": true,
+          "duration": 0.5,
+          "steps": 60
+        },
+        "original": {
+          "speed": 22.241575498038056,
+          "position": [
+            0,
+            0,
+            -11.792397416774202
+          ],
+          "velocity": [
+            0,
+            0,
+            -22.241575498038056
+          ],
+          "yaw": 0,
+          "distance": 11.792397416774202,
+          "firstStepDistance": 0.20812719791666667,
+          "peakSpeed": 24.95028848625,
+          "peakMovementSpeed": 24.97526375,
+          "grounded": true,
+          "duration": 0.5,
+          "steps": 60
+        }
+      }
+    },
+    {
+      "name": "speed caps remain active during sustained downhill acceleration",
+      "status": "passed",
+      "measurements": {
+        "capped": {
+          "speed": 3.996,
+          "position": [
+            0,
+            -8.740030502946544,
+            -15.890964550811898
+          ],
+          "velocity": [
+            0,
+            -1.9257473240895349,
+            -3.501358771071881
+          ],
+          "yaw": 0,
+          "distance": 18.135900516588578,
+          "firstStepDistance": 0.00030741442251032116,
+          "peakSpeed": 3.9960000000000004,
+          "peakMovementSpeed": 4.000000000000035,
+          "grounded": true,
+          "duration": 5,
+          "steps": 600
+        },
+        "original": {
+          "speed": 14.955895219247555,
+          "position": [
+            0,
+            -20.89381700494835,
+            -37.988758190815176
+          ],
+          "velocity": [
+            0,
+            -7.207526325783145,
+            -13.104593319605717
+          ],
+          "yaw": 0,
+          "distance": 43.35547644665546,
+          "firstStepDistance": 0.00030741442251032116,
+          "peakSpeed": 14.955895219247555,
+          "peakMovementSpeed": 14.970866085333363,
+          "grounded": true,
+          "duration": 5,
+          "steps": 600
+        }
+      }
+    },
+    {
+      "name": "default tuning preserves original skiing, airborne and walking trajectories",
+      "status": "passed",
+      "measurements": [
+        {
+          "name": "ground carving",
+          "original": {
+            "speed": 17.167883360123582,
+            "position": [
+              -7.499339884209031,
+              -6.63949907882676,
+              -26.55799631530704
+            ],
+            "velocity": [
+              -8.692745285386234,
+              -3.59061192941524,
+              -14.36244771766096
+            ],
+            "yaw": 0.5580431955900953,
+            "distance": 28.78435812466165,
+            "firstStepDistance": 0.10010078286929547,
+            "peakSpeed": 17.167883360123582,
+            "peakMovementSpeed": 17.18506842855221,
+            "grounded": true,
+            "duration": 2,
+            "steps": 240
+          },
+          "recovered": {
+            "speed": 17.167883360123582,
+            "position": [
+              -7.499339884209031,
+              -6.63949907882676,
+              -26.55799631530704
+            ],
+            "velocity": [
+              -8.692745285386234,
+              -3.59061192941524,
+              -14.36244771766096
+            ],
+            "yaw": 0.5580431955900953,
+            "distance": 28.78435812466165,
+            "firstStepDistance": 0.10010078286929547,
+            "peakSpeed": 17.167883360123582,
+            "peakMovementSpeed": 17.18506842855221,
+            "grounded": true,
+            "duration": 2,
+            "steps": 240
+          }
+        },
+        {
+          "name": "airborne turn",
+          "original": {
+            "speed": 12.708753418799981,
+            "position": [
+              0,
+              98.76241830831142,
+              -5.9359160537738
+            ],
+            "velocity": [
+              0,
+              -4.85157395326428,
+              -11.746260836362685
+            ],
+            "yaw": 0.493368744876692,
+            "distance": 6.1029334805595665,
+            "firstStepDistance": 0.09996731885653386,
+            "peakSpeed": 12.708753418799981,
+            "peakMovementSpeed": 12.70875341880025,
+            "grounded": false,
+            "duration": 0.5,
+            "steps": 60
+          },
+          "recovered": {
+            "speed": 12.708753418799981,
+            "position": [
+              0,
+              98.76241830831142,
+              -5.9359160537738
+            ],
+            "velocity": [
+              0,
+              -4.85157395326428,
+              -11.746260836362685
+            ],
+            "yaw": 0.493368744876692,
+            "distance": 6.1029334805595665,
+            "firstStepDistance": 0.09996731885653386,
+            "peakSpeed": 12.708753418799981,
+            "peakMovementSpeed": 12.70875341880025,
+            "grounded": false,
+            "duration": 0.5,
+            "steps": 60
+          }
+        },
+        {
+          "name": "walking",
+          "original": {
+            "speed": 3.9915796322506263,
+            "position": [
+              -3.110774248190778,
+              0,
+              -6.5176560495031
+            ],
+            "velocity": [
+              -3.1934442199342974,
+              0,
+              -2.394707074939704
+            ],
+            "yaw": 0.9901365776592136,
+            "distance": 7.503670922782815,
+            "firstStepDistance": 0.0021497671656127413,
+            "peakSpeed": 3.9915796322506263,
+            "peakMovementSpeed": 3.991579632250598,
+            "grounded": true,
+            "duration": 2,
+            "steps": 240
+          },
+          "recovered": {
+            "speed": 3.9915796322506263,
+            "position": [
+              -3.110774248190778,
+              0,
+              -6.5176560495031
+            ],
+            "velocity": [
+              -3.1934442199342974,
+              0,
+              -2.394707074939704
+            ],
+            "yaw": 0.9901365776592136,
+            "distance": 7.503670922782815,
+            "firstStepDistance": 0.0021497671656127413,
+            "peakSpeed": 3.9915796322506263,
+            "peakMovementSpeed": 3.991579632250598,
+            "grounded": true,
+            "duration": 2,
+            "steps": 240
+          }
+        }
+      ]
+    }
+  ]
+}

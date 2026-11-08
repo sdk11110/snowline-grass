@@ -1,0 +1,19 @@
+{
+  "name": "snowline-roam",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Snowline Roam: customizable snow, meadow and ocean riding.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5187 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4187 --strictPort",
+    "check": "node tools/check-project.mjs"
+  },
+  "devDependencies": {
+    "vite": "7.3.7"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

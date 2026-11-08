@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-11-08T14:42:27.107Z",
+  "scope": "Actual Three Object3D add/remove events, createBiomeWorlds material lifecycle and retention counters; actual grass geometry connectivity, active transforms and generated shader contracts. No renderer, browser, full DOM or GPU shader compilation is simulated.",
+  "summary": {
+    "passed": 10,
+    "failed": 0
+  },
+  "measurements": {
+    "grass": [
+      {
+        "name": "Soft curved tussock grass · near",
+        "verticesPerTuft": 220,
+        "bladeComponents": 22,
+        "activeInstancesChecked": 8936
+      },
+      {
+        "name": "Continuous grass fleece · middle distance",
+        "verticesPerTuft": 48,
+        "bladeComponents": 8,
+        "activeInstancesChecked": 15241
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "snow initialization leaves source materials and geometry untouched",
+      "passed": true
+    },
+    {
+      "name": "entering meadow patches terrain, forest and a Mesh backdrop root once",
+      "passed": true
+    },
+    {
+      "name": "a new direct LOD is painted synchronously before any next update or render",
+      "passed": true
+    },
+    {
+      "name": "new nested groups and later deep children are watched immediately",
+      "passed": true
+    },
+    {
+      "name": "removing direct and nested LODs restores source materials and drops retention records",
+      "passed": true
+    },
+    {
+      "name": "forest and backdrop subtree additions use the same reversible lifecycle",
+      "passed": true
+    },
+    {
+      "name": "returning to snow restores exact original references and defers new seasonal paint",
+      "passed": true
+    },
+    {
+      "name": "active near and middle grass have finite ranges and one stable seed per connected blade",
+      "passed": true
+    },
+    {
+      "name": "grass fading discards complete stable blades without collapsing their geometry or writing outline depth",
+      "passed": true
+    },
+    {
+      "name": "destroy restores originals and unbinds root and descendant lifecycle listeners",
+      "passed": true
+    }
+  ]
+}

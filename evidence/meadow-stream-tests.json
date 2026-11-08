@@ -1,0 +1,152 @@
+{
+  "at": "2026-11-08T14:42:10.352Z",
+  "kind": "After: stable cached world grass streaming, CPU-only measurements",
+  "scope": "Actual createMeadowDetails, project Three objects, shipped 900-cell DEM; constant off-trail route field. Render/GPU, edited ground wrappers and browser frame rate are excluded.",
+  "baseline": {
+    "at": "2026-11-08T14:17:49.422Z",
+    "kind": "Before: synchronous whole-field grass population, CPU only",
+    "scope": "Actual original meadow factory and Three geometry; real shipped 900-cell DEM; constant off-trail route sampling. Excludes browser/GPU and edited ground wrappers.",
+    "rebuild": {
+      "samples": 70,
+      "averageMs": 5.6285942857142865,
+      "p95Ms": 6.473099999999988,
+      "maxMs": 6.545400000000001
+    },
+    "heightSamples": 7365250,
+    "tufts": 19622
+  },
+  "summary": {
+    "passed": 10,
+    "failed": 0
+  },
+  "results": [
+    {
+      "name": "near and mid grass use complete finite draw ranges",
+      "status": "passed",
+      "startupFrames": 51,
+      "near": 9071,
+      "mid": 15239
+    },
+    {
+      "name": "every active grass matrix has finite positive non-degenerate basis",
+      "status": "passed",
+      "activeMatrices": 24310,
+      "zeroScaleCount": 0
+    },
+    {
+      "name": "overlapping world grass retains exact transforms and colors after crossing cells",
+      "status": "passed",
+      "unchangedCells": 20942
+    },
+    {
+      "name": "idle updates do not resubmit instance buffers",
+      "status": "passed"
+    },
+    {
+      "name": "resetting and reusing cached tiles leaves no stale slots or flowers",
+      "status": "passed"
+    },
+    {
+      "name": "teleports repopulate the new location with the same persistent mesh objects",
+      "status": "passed"
+    },
+    {
+      "name": "destroy removes its scene group and releases the cell cache",
+      "status": "passed"
+    },
+    {
+      "name": "map preparation waits for complete near and middle grass before revealing",
+      "status": "passed"
+    },
+    {
+      "name": "30 Hz streaming keeps up with 25 m/s for two minutes",
+      "status": "passed",
+      "speedMetersPerSecond": 25,
+      "simulationFps": 30,
+      "seconds": 120,
+      "update": {
+        "samples": 3600,
+        "averageMs": 0.27251938888888955,
+        "p95Ms": 0.8745000000000118,
+        "maxMs": 9.870999999999981
+      },
+      "maxPendingTiles": 18,
+      "endPendingTiles": 0,
+      "minNearTufts": 8660,
+      "maxUploadedInstancesPerFrame": 1927,
+      "meanUploadedInstancesPerFrame": 458.5863888888889,
+      "worstNearbyCoverageGapMeters": 0.5895058043609812,
+      "cacheTiles": 1400,
+      "maxBuiltCellsPerFrame": 558,
+      "totalBuiltCells": 882496,
+      "totalUploadedInstances": 1650911
+    },
+    {
+      "name": "30 Hz streaming keeps up with 45 m/s for two minutes",
+      "status": "passed",
+      "speedMetersPerSecond": 45,
+      "simulationFps": 30,
+      "seconds": 120,
+      "update": {
+        "samples": 3600,
+        "averageMs": 0.6797250833333327,
+        "p95Ms": 1.5104000000001179,
+        "maxMs": 12.802999999999884
+      },
+      "maxPendingTiles": 17,
+      "endPendingTiles": 0,
+      "minNearTufts": 8621,
+      "maxUploadedInstancesPerFrame": 1919,
+      "meanUploadedInstancesPerFrame": 825.6941666666667,
+      "worstNearbyCoverageGapMeters": 0.5835748776390683,
+      "cacheTiles": 1400,
+      "maxBuiltCellsPerFrame": 564,
+      "totalBuiltCells": 1589248,
+      "totalUploadedInstances": 2972499
+    }
+  ],
+  "benchmarks": [
+    {
+      "speedMetersPerSecond": 25,
+      "simulationFps": 30,
+      "seconds": 120,
+      "update": {
+        "samples": 3600,
+        "averageMs": 0.27251938888888955,
+        "p95Ms": 0.8745000000000118,
+        "maxMs": 9.870999999999981
+      },
+      "maxPendingTiles": 18,
+      "endPendingTiles": 0,
+      "minNearTufts": 8660,
+      "maxUploadedInstancesPerFrame": 1927,
+      "meanUploadedInstancesPerFrame": 458.5863888888889,
+      "worstNearbyCoverageGapMeters": 0.5895058043609812,
+      "cacheTiles": 1400,
+      "maxBuiltCellsPerFrame": 558,
+      "totalBuiltCells": 882496,
+      "totalUploadedInstances": 1650911
+    },
+    {
+      "speedMetersPerSecond": 45,
+      "simulationFps": 30,
+      "seconds": 120,
+      "update": {
+        "samples": 3600,
+        "averageMs": 0.6797250833333327,
+        "p95Ms": 1.5104000000001179,
+        "maxMs": 12.802999999999884
+      },
+      "maxPendingTiles": 17,
+      "endPendingTiles": 0,
+      "minNearTufts": 8621,
+      "maxUploadedInstancesPerFrame": 1919,
+      "meanUploadedInstancesPerFrame": 825.6941666666667,
+      "worstNearbyCoverageGapMeters": 0.5835748776390683,
+      "cacheTiles": 1400,
+      "maxBuiltCellsPerFrame": 564,
+      "totalBuiltCells": 1589248,
+      "totalUploadedInstances": 2972499
+    }
+  ]
+}

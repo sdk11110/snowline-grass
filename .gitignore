@@ -1,0 +1,8 @@
+node_modules/
+dist/
+tools/ast-runtime/node_modules/
+evidence/*.log
+evidence/*.jsonl
+.DS_Store
+.npm-cache/
+tools/.npm-cache/

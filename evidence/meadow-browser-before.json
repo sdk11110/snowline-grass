@@ -1,0 +1,30 @@
+{
+  "mode": "meadow",
+  "viewport": [
+    631,
+    675
+  ],
+  "frame": {
+    "samples": 1800,
+    "meanMs": 6.333,
+    "p95Ms": 7.4,
+    "maxMs": 20.3
+  },
+  "estimatedFps": 157.9,
+  "worldUpdate": {
+    "samples": 1800,
+    "meanMs": 0.111,
+    "p95Ms": 0.1,
+    "maxMs": 11.2
+  },
+  "terrainPatches": 990,
+  "oceanTime": 0,
+  "grassTufts": 19533,
+  "activeSpray": 0,
+  "renderer": {
+    "calls": 1,
+    "triangles": 2,
+    "geometries": 773
+  },
+  "note": "帧间隔含渲染等待；worldUpdate为CPU计时。"
+}

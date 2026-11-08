@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-08T14:17:49.422Z",
+  "kind": "Before: synchronous whole-field grass population, CPU only",
+  "scope": "Actual original meadow factory and Three geometry; real shipped 900-cell DEM; constant off-trail route sampling. Excludes browser/GPU and edited ground wrappers.",
+  "rebuild": {
+    "samples": 70,
+    "averageMs": 5.6285942857142865,
+    "p95Ms": 6.473099999999988,
+    "maxMs": 6.545400000000001
+  },
+  "heightSamples": 7365250,
+  "tufts": 19622
+}

@@ -1,0 +1,7582 @@
+{
+  "provenance": "Recovered/adapted from the currently published Hemu Ski production modules. No original source repository was obtained.",
+  "sourceBase": "https://eric1hua.github.io/hemu-ski/assets/",
+  "thirdPartyThreeRevision": "186",
+  "initialization": "Top-level initializer order is retained. Extracted code receives an explicit accessor context, retaining live reads/writes across feature boundaries. No circular feature imports.",
+  "modules": [
+    {
+      "file": "src/vendor/three/webgl-renderer.js",
+      "bytes": 416719,
+      "source": "names-Bi68pVgn.js",
+      "category": "third-party-vendor",
+      "bindingCount": 181,
+      "notice": "Bundled Three.js r186 / MIT; same published implementation, no version substitution.",
+      "sha256": "2051efeac1dba4cfea93e318bf84dafb09f9d8b9d8ba2967b71c3ca501d63a15"
+    },
+    {
+      "file": "src/vendor/three/gltf-loader.js",
+      "bytes": 59835,
+      "source": "model-loader-DSq0b4m1.js",
+      "category": "third-party-vendor",
+      "bindingCount": 56,
+      "notice": "Bundled Three.js r186 / MIT; same published implementation, no version substitution.",
+      "sha256": "9861ed819e39226aa53421c8db5bc79f316f2843f27956b7324ff885e07bf277"
+    },
+    {
+      "file": "src/recovered/ui/loading.js",
+      "bytes": 1845,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "setLoadingProgress",
+          "reads": [
+            "loadingProgress",
+            "loadingFootsteps",
+            "loadingProgressElement"
+          ],
+          "writes": [
+            "loadingProgress"
+          ]
+        },
+        {
+          "name": "setLoadingArrival",
+          "reads": [
+            "loadingElement"
+          ],
+          "writes": []
+        },
+        {
+          "name": "finishLoading",
+          "reads": [
+            "setLoadingProgress",
+            "loadingElement"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "38e6c7040e8e24268d6bc63ad6e79f644f567a9e87466bd224ea5ad9db191c55"
+    },
+    {
+      "file": "src/recovered/render/graphics-settings.js",
+      "bytes": 5412,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Ji",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "graphicsSettingOptions",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Qi",
+          "reads": [
+            "isMobileModelProfile",
+            "Ji",
+            "Yi"
+          ],
+          "writes": []
+        },
+        {
+          "name": "$i",
+          "reads": [
+            "Ji",
+            "graphicsSettingOptions"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ea",
+          "reads": [
+            "qi",
+            "graphicsModes",
+            "$i",
+            "Qi"
+          ],
+          "writes": []
+        },
+        {
+          "name": "createGraphicsController",
+          "reads": [
+            "ea",
+            "Qi",
+            "Ji",
+            "qi",
+            "graphicsModes",
+            "$i"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "d2bed3bb489f051d271ca17ab0d6efc66cf73e76ea22fd7f8046de2801774f04"
+    },
+    {
+      "file": "src/recovered/world/lifts.js",
+      "bytes": 45264,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "liftEndpointPositions",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Po",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Yo",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Xo",
+          "reads": [
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Zo",
+          "reads": [
+            "Vector3",
+            "Io",
+            "Ro",
+            "es",
+            "Ho",
+            "Uo",
+            "Bo",
+            "Wo",
+            "Vo",
+            "zo",
+            "$o",
+            "Qo",
+            "Ko",
+            "Lo"
+          ],
+          "writes": []
+        },
+        {
+          "name": "$o",
+          "reads": [
+            "Io",
+            "Lo"
+          ],
+          "writes": []
+        },
+        {
+          "name": "es",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "ts",
+          "reads": [
+            "Zo",
+            "Vector3",
+            "Go",
+            "Qo",
+            "Ro",
+            "MathUtils",
+            "Ko",
+            "Vo",
+            "qo",
+            "rs",
+            "Jo"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ns",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "rs",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "is",
+          "reads": [
+            "Ro",
+            "Xo"
+          ],
+          "writes": []
+        },
+        {
+          "name": "as",
+          "reads": [
+            "ts",
+            "Qo",
+            "es",
+            "MathUtils",
+            "Lo",
+            "Io"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ac",
+          "reads": [
+            "Vector3",
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "oc",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "lc",
+          "reads": [
+            "oc",
+            "sc",
+            "cc"
+          ],
+          "writes": []
+        },
+        {
+          "name": "crossedCircularDistance",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "dc",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "fc",
+          "reads": [
+            "createToonMaterial",
+            "Ke"
+          ],
+          "writes": []
+        },
+        {
+          "name": "pc",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "mc",
+          "reads": [
+            "g",
+            "c",
+            "W",
+            "fc",
+            "d"
+          ],
+          "writes": []
+        },
+        {
+          "name": "_c",
+          "reads": [
+            "hc"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Cc",
+          "reads": [
+            "loadGLTF",
+            "xc",
+            "wc",
+            "Tc",
+            "vc",
+            "bc",
+            "createToonMaterial",
+            "gc",
+            "Ec",
+            "yc"
+          ],
+          "writes": [
+            "Sc"
+          ]
+        },
+        {
+          "name": "wc",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Tc",
+          "reads": [
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ec",
+          "reads": [
+            "K",
+            "he",
+            "MathUtils",
+            "qe"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Dc",
+          "reads": [
+            "qe",
+            "he",
+            "Se"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Pc",
+          "reads": [
+            "loadGLTF",
+            "jc",
+            "Nc"
+          ],
+          "writes": [
+            "Nc"
+          ]
+        },
+        {
+          "name": "createCableway",
+          "reads": [
+            "g",
+            "mt",
+            "d",
+            "W",
+            "x",
+            "liftEndpointPositions",
+            "Ic",
+            "Vector3",
+            "_c",
+            "Dc",
+            "ac",
+            "c",
+            "fc",
+            "He",
+            "Le",
+            "ns",
+            "Ce",
+            "z",
+            "Fo",
+            "ts",
+            "Yo",
+            "mc",
+            "Oc",
+            "kc",
+            "is",
+            "Ac",
+            "Pc",
+            "MathUtils",
+            "pt",
+            "Mc",
+            "ge",
+            "Bc",
+            "Lc",
+            "Cc",
+            "de",
+            "ce",
+            "je",
+            "dc",
+            "lc"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ic",
+          "reads": [
+            "qe",
+            "D",
+            "he",
+            "z",
+            "i",
+            "c",
+            "createToonMaterial"
+          ],
+          "writes": []
+        },
+        {
+          "name": "zc",
+          "reads": [
+            "K",
+            "i"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Bc",
+          "reads": [
+            "Rc",
+            "zc",
+            "W",
+            "fc",
+            "mt"
+          ],
+          "writes": []
+        },
+        {
+          "name": "createRideGondola",
+          "reads": [
+            "g",
+            "c",
+            "Bc",
+            "Lc",
+            "Cc",
+            "_c"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "65ca29bb632e686e5b5a15c0c489de94c2bf8ff55e2b3359c773aa17658c6404"
+    },
+    {
+      "file": "src/recovered/world/locations.js",
+      "bytes": 9714,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "summitObjectLayout",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "findSummitObject",
+          "reads": [
+            "summitObjectLayout"
+          ],
+          "writes": []
+        },
+        {
+          "name": "serviceCentreLocations",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "ga",
+          "reads": [
+            "liftEndpointPositions",
+            "summitObjectLayout"
+          ],
+          "writes": []
+        },
+        {
+          "name": "va",
+          "reads": [
+            "ga",
+            "summitObjectLayout"
+          ],
+          "writes": [
+            "_a"
+          ]
+        },
+        {
+          "name": "Ca",
+          "reads": [
+            "Sa",
+            "findSummitObject",
+            "_a",
+            "ha",
+            "ba"
+          ],
+          "writes": []
+        },
+        {
+          "name": "wa",
+          "reads": [
+            "xa",
+            "ya",
+            "ba",
+            "Sa"
+          ],
+          "writes": [
+            "Sa"
+          ]
+        }
+      ],
+      "sha256": "c60c7f3073a882c4c47eb89b24d89c062ea7afd4255bf5104403a39f93686d00"
+    },
+    {
+      "file": "src/recovered/world/data.js",
+      "bytes": 2464,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "decodeHeightU16",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "loadOptionalWorldEdits",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "loadWorldData",
+          "reads": [
+            "worldDataBase",
+            "loadOptionalWorldEdits",
+            "editsDataDirectory",
+            "Heightfield",
+            "decodeHeightU16",
+            "wa",
+            "va"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "91a74e086591df32392b38af4a31ff8daec6063ba66424f9c62c23a5752b10b3"
+    },
+    {
+      "file": "src/recovered/world/heightfield.js",
+      "bytes": 2953,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Heightfield",
+          "reads": [
+            "Vector3"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "63645dab2084b896f6ee17f9f3d378de18e169924f23f06b434756ea706befba"
+    },
+    {
+      "file": "src/recovered/world/pistes.js",
+      "bytes": 4035,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "PisteDistanceField",
+          "reads": [],
+          "writes": []
+        }
+      ],
+      "sha256": "005265d2f26ceed310bee124e07ce77ad6dc551351e60a32edab0f3b2e2a88fb"
+    },
+    {
+      "file": "src/recovered/world/terrain.js",
+      "bytes": 22691,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Ta",
+          "reads": [
+            "createToonMaterial",
+            "K",
+            "J"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ea",
+          "reads": [
+            "K"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Da",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Oa",
+          "reads": [
+            "Da"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ka",
+          "reads": [
+            "z",
+            "et"
+          ],
+          "writes": []
+        },
+        {
+          "name": "createTerrainLod",
+          "reads": [
+            "ja",
+            "createToonMaterial",
+            "g",
+            "c",
+            "Pa",
+            "Fa",
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ja",
+          "reads": [
+            "K",
+            "Ma",
+            "Ea",
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ma",
+          "reads": [
+            "Oa",
+            "Ea",
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Na",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Pa",
+          "reads": [
+            "Na",
+            "z",
+            "et",
+            "Me",
+            "Oe"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Fa",
+          "reads": [
+            "z",
+            "et"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ia",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "La",
+          "reads": [
+            "Ia"
+          ],
+          "writes": []
+        },
+        {
+          "name": "createBackdropTerrain",
+          "reads": [
+            "Heightfield",
+            "ka",
+            "Ia",
+            "et",
+            "La",
+            "c",
+            "Ta"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ba",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "raisePisteBanks",
+          "reads": [
+            "za",
+            "Ua",
+            "Ba",
+            "Oa",
+            "Heightfield"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ha",
+          "reads": [
+            "serviceCentreLocations",
+            "hotSpringLocation"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "1c1412e7c2709c87de67f42fabf41ad5a41847dec4094c43181878c367b6f22c"
+    },
+    {
+      "file": "src/recovered/world/landmarks.js",
+      "bytes": 4287,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Ua",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Wa",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Ga",
+          "reads": [
+            "Wa"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ka",
+          "reads": [
+            "Wa"
+          ],
+          "writes": []
+        },
+        {
+          "name": "qa",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Ja",
+          "reads": [
+            "ga",
+            "summitObjectLayout",
+            "Ka",
+            "Ga",
+            "qa",
+            "Ca"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "a3c13ea6cbffdc7b8fb53cb9950bfea2ca3166c33ff57666bbdc0aae214f8029"
+    },
+    {
+      "file": "src/recovered/world/structures.js",
+      "bytes": 32792,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Ya",
+          "reads": [
+            "createToonMaterial"
+          ],
+          "writes": []
+        },
+        {
+          "name": "X",
+          "reads": [
+            "Ya"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Qa",
+          "reads": [
+            "W"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Z",
+          "reads": [
+            "c"
+          ],
+          "writes": []
+        },
+        {
+          "name": "$a",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "eo",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "to",
+          "reads": [
+            "Z",
+            "Qa",
+            "S",
+            "L",
+            "F"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ao",
+          "reads": [
+            "g",
+            "no",
+            "Z",
+            "d",
+            "ro",
+            "X",
+            "st",
+            "io",
+            "Qa",
+            "oo",
+            "so",
+            "$a"
+          ],
+          "writes": []
+        },
+        {
+          "name": "createYurtInteriorBounds",
+          "reads": [
+            "no",
+            "Ga"
+          ],
+          "writes": []
+        },
+        {
+          "name": "lo",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "uo",
+          "reads": [
+            "g",
+            "Z",
+            "Qa",
+            "X",
+            "lo",
+            "Ya",
+            "d",
+            "$a"
+          ],
+          "writes": []
+        },
+        {
+          "name": "mo",
+          "reads": [
+            "loadGLTF",
+            "Vector3",
+            "createToonMaterial",
+            "po"
+          ],
+          "writes": [
+            "po"
+          ]
+        },
+        {
+          "name": "ho",
+          "reads": [
+            "g",
+            "fo",
+            "mo",
+            "$a"
+          ],
+          "writes": []
+        },
+        {
+          "name": "_o",
+          "reads": [
+            "g",
+            "Z",
+            "d",
+            "X",
+            "st",
+            "Qa",
+            "Vector3",
+            "z",
+            "go",
+            "i",
+            "mt",
+            "Xa",
+            "De",
+            "Ke",
+            "$a",
+            "eo"
+          ],
+          "writes": []
+        },
+        {
+          "name": "vo",
+          "reads": [
+            "g",
+            "Z",
+            "Qa",
+            "X",
+            "to",
+            "$a"
+          ],
+          "writes": []
+        },
+        {
+          "name": "yo",
+          "reads": [
+            "g",
+            "Z",
+            "Qa",
+            "X",
+            "ot",
+            "jo",
+            "c",
+            "me",
+            "$a"
+          ],
+          "writes": []
+        },
+        {
+          "name": "xo",
+          "reads": [
+            "bo"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Co",
+          "reads": [
+            "bo"
+          ],
+          "writes": []
+        },
+        {
+          "name": "createCabinInteriorBounds",
+          "reads": [
+            "bo",
+            "Ga",
+            "So"
+          ],
+          "writes": []
+        },
+        {
+          "name": "To",
+          "reads": [
+            "g",
+            "bo",
+            "Co",
+            "xo",
+            "loadGLTF",
+            "Eo",
+            "ot",
+            "createToonMaterial",
+            "$a"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Do",
+          "reads": [
+            "g",
+            "Z",
+            "d",
+            "X",
+            "Qa",
+            "x",
+            "$a"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Oo",
+          "reads": [
+            "g",
+            "Xe",
+            "K",
+            "i",
+            "Z",
+            "Za",
+            "d",
+            "X",
+            "Qa",
+            "$a"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ko",
+          "reads": [
+            "g",
+            "Z",
+            "Qa",
+            "X",
+            "d",
+            "$a"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ao",
+          "reads": [
+            "ao",
+            "uo",
+            "ho",
+            "_o",
+            "vo",
+            "yo",
+            "To",
+            "Do",
+            "Oo",
+            "ko"
+          ],
+          "writes": []
+        },
+        {
+          "name": "jo",
+          "reads": [
+            "qe",
+            "he"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Mo",
+          "reads": [
+            "qe",
+            "he",
+            "Le",
+            "Se"
+          ],
+          "writes": []
+        },
+        {
+          "name": "No",
+          "reads": [
+            "g",
+            "summitObjectLayout",
+            "Ca",
+            "Ao",
+            "Mo"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Uc",
+          "reads": [
+            "qe",
+            "he"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Wc",
+          "reads": [
+            "g",
+            "createToonMaterial",
+            "c",
+            "W",
+            "fc",
+            "d",
+            "me",
+            "ot",
+            "Uc"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Gc",
+          "reads": [
+            "g",
+            "createToonMaterial",
+            "c",
+            "d",
+            "W",
+            "Uc",
+            "me",
+            "ot"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "bbf042d70edf29841eea0c2a982c32f73def7326d057f13a9bd4382b5afae68b"
+    },
+    {
+      "file": "src/recovered/world/water.js",
+      "bytes": 17372,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "ds",
+          "reads": [
+            "ls"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ps",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "ms",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "hs",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "gs",
+          "reads": [
+            "hs"
+          ],
+          "writes": []
+        },
+        {
+          "name": "_s",
+          "reads": [
+            "os",
+            "ps",
+            "ms",
+            "gs"
+          ],
+          "writes": []
+        },
+        {
+          "name": "lakeContainingPoint",
+          "reads": [
+            "hs"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ys",
+          "reads": [
+            "lakeContainingPoint"
+          ],
+          "writes": []
+        },
+        {
+          "name": "nearestLakeShore",
+          "reads": [
+            "gs",
+            "bs"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ss",
+          "reads": [
+            "MathUtils",
+            "nearestLakeShore"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ws",
+          "reads": [
+            "g",
+            "Ds",
+            "os",
+            "L",
+            "Ts",
+            "Cs",
+            "Es",
+            "ks",
+            "c"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ts",
+          "reads": [
+            "z",
+            "et",
+            "ie"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Es",
+          "reads": [
+            "_e"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ds",
+          "reads": [
+            "hs"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ks",
+          "reads": [
+            "createToonMaterial",
+            "L",
+            "K",
+            "fs",
+            "Os",
+            "us"
+          ],
+          "writes": []
+        },
+        {
+          "name": "WaterRipples",
+          "reads": [
+            "g",
+            "ut",
+            "Cs",
+            "L",
+            "c",
+            "ot",
+            "fs"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "9e23e4e751f03466741ca771792cb6049d05e64b69c2d3faa1f0773df007a2c7"
+    },
+    {
+      "file": "src/recovered/world/forest.js",
+      "bytes": 19741,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Ls",
+          "reads": [
+            "K"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Rs",
+          "reads": [
+            "K",
+            "et"
+          ],
+          "writes": []
+        },
+        {
+          "name": "zs",
+          "reads": [
+            "st",
+            "Rs"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Bs",
+          "reads": [
+            "d",
+            "Rs",
+            "Ps",
+            "Ns",
+            "js",
+            "Ms",
+            "zs",
+            "mt",
+            "Fs"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Vs",
+          "reads": [
+            "createToonMaterial",
+            "Ns"
+          ],
+          "writes": []
+        },
+        {
+          "name": "loadTreeModelLibrary",
+          "reads": [
+            "loadGLTF",
+            "Is",
+            "z",
+            "et"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Us",
+          "reads": [
+            "Bs",
+            "Is",
+            "Fs"
+          ],
+          "writes": []
+        },
+        {
+          "name": "forestPlacementDefaults",
+          "reads": [
+            "serviceCentreLocations",
+            "hotSpringLocation"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Gs",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Ys",
+          "reads": [
+            "Js"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Xs",
+          "reads": [
+            "MathUtils",
+            "Js",
+            "Oa"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Zs",
+          "reads": [
+            "Js",
+            "Oa",
+            "ic"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Qs",
+          "reads": [
+            "Gs",
+            "Vector3",
+            "ic",
+            "Oa",
+            "Js",
+            "Ks",
+            "qs",
+            "Ys",
+            "Xs",
+            "Zs",
+            "ec"
+          ],
+          "writes": []
+        },
+        {
+          "name": "$s",
+          "reads": [
+            "Vector3",
+            "Zs",
+            "Ys",
+            "ec"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ec",
+          "reads": [
+            "ic"
+          ],
+          "writes": []
+        },
+        {
+          "name": "placeForestTrees",
+          "reads": [
+            "$s",
+            "Qs",
+            "forestPlacementDefaults"
+          ],
+          "writes": []
+        },
+        {
+          "name": "nc",
+          "reads": [
+            "Gs",
+            "ic",
+            "Ks",
+            "qs",
+            "ec"
+          ],
+          "writes": []
+        },
+        {
+          "name": "createForestBatches",
+          "reads": [
+            "Us",
+            "Bs",
+            "createToonMaterial",
+            "Vs",
+            "Is",
+            "xe",
+            "Vector3",
+            "T",
+            "Ls",
+            "ce",
+            "g",
+            "K",
+            "z",
+            "ve",
+            "ge",
+            "ic"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ic",
+          "reads": [],
+          "writes": []
+        }
+      ],
+      "sha256": "3ae098b9a64967d8bacaeb6bfafbc9b9c8ce1dfc3351bc3e0fe271a226848f2d"
+    },
+    {
+      "file": "src/recovered/world/markers.js",
+      "bytes": 2075,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Hc",
+          "reads": [
+            "d",
+            "pc",
+            "g",
+            "createToonMaterial",
+            "ce",
+            "ge"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "4d690506c75950f9e49bd9c4ee624a823ff637a5cce25f7ed29be5b331bcf4b1"
+    },
+    {
+      "file": "src/recovered/world/onsen.js",
+      "bytes": 22733,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "rl",
+          "reads": [
+            "g",
+            "qc",
+            "Vector3",
+            "Qc",
+            "Xc",
+            "L",
+            "K",
+            "tl",
+            "yl",
+            "gl",
+            "Yc",
+            "_l",
+            "vl",
+            "il",
+            "loadGLTF",
+            "Kc",
+            "al",
+            "Jc",
+            "ol",
+            "ce",
+            "T",
+            "sl",
+            "ll",
+            "el",
+            "c",
+            "ul",
+            "fl",
+            "Zc",
+            "tt",
+            "Fe",
+            "pl",
+            "ml"
+          ],
+          "writes": []
+        },
+        {
+          "name": "il",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "al",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "ol",
+          "reads": [
+            "c",
+            "createToonMaterial"
+          ],
+          "writes": []
+        },
+        {
+          "name": "sl",
+          "reads": [
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ll",
+          "reads": [
+            "qc",
+            "L",
+            "cl",
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ul",
+          "reads": [
+            "cl",
+            "$c",
+            "z",
+            "i"
+          ],
+          "writes": []
+        },
+        {
+          "name": "fl",
+          "reads": [
+            "createToonMaterial",
+            "dl"
+          ],
+          "writes": []
+        },
+        {
+          "name": "pl",
+          "reads": [
+            "Ze",
+            "Je",
+            "Y",
+            "toonUniforms",
+            "dl"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ml",
+          "reads": [
+            "xl",
+            "Yc",
+            "z",
+            "i",
+            "je",
+            "Vector3",
+            "nl",
+            "Ze",
+            "Je",
+            "Y",
+            "toonUniforms",
+            "bl",
+            "c"
+          ],
+          "writes": []
+        },
+        {
+          "name": "yl",
+          "reads": [
+            "xl",
+            "z",
+            "i",
+            "nl",
+            "Ze",
+            "Je",
+            "Y",
+            "gl",
+            "Vector3",
+            "toonUniforms",
+            "bl",
+            "c"
+          ],
+          "writes": []
+        },
+        {
+          "name": "xl",
+          "reads": [],
+          "writes": []
+        }
+      ],
+      "sha256": "739631a060ed01b8a0f8961214092a6a6bc8752b89caff8bdccbd5140fc6449a"
+    },
+    {
+      "file": "src/recovered/world/vehicles.js",
+      "bytes": 58329,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "wl",
+          "reads": [
+            "g",
+            "loadGLTF",
+            "Sl",
+            "Cl",
+            "Vector3",
+            "createToonMaterial",
+            "Dl",
+            "c",
+            "Tl",
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Tl",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "El",
+          "reads": [
+            "z",
+            "et"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Dl",
+          "reads": [
+            "Ee",
+            "Vector3",
+            "El"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Al",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "jl",
+          "reads": [
+            "g",
+            "x",
+            "loadGLTF",
+            "Ol",
+            "kl",
+            "Vector3",
+            "Al",
+            "createToonMaterial",
+            "Ml",
+            "c",
+            "Tl",
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ml",
+          "reads": [
+            "El"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Fl",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Il",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Ul",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Wl",
+          "reads": [
+            "Fl",
+            "Vector3",
+            "T",
+            "Ll",
+            "Rl",
+            "Nl",
+            "MathUtils",
+            "Ul",
+            "zl",
+            "Hl",
+            "Vl",
+            "Bl",
+            "Pl",
+            "nearestLakeShore"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Zl",
+          "reads": [
+            "g",
+            "x",
+            "loadGLTF",
+            "Gl",
+            "ql",
+            "Jl",
+            "Ee",
+            "Kl",
+            "Yl",
+            "Vector3",
+            "createToonMaterial",
+            "c",
+            "mt",
+            "$l",
+            "Ql",
+            "B",
+            "ot",
+            "MathUtils",
+            "Xl"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ql",
+          "reads": [
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "$l",
+          "reads": [
+            "qe",
+            "he"
+          ],
+          "writes": []
+        },
+        {
+          "name": "tu",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "mu",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "gu",
+          "reads": [
+            "tu",
+            "Vector3",
+            "T",
+            "uu",
+            "mu",
+            "iu",
+            "au",
+            "hu",
+            "du",
+            "fu",
+            "pu",
+            "ou",
+            "lu",
+            "cu",
+            "su",
+            "eu",
+            "nu",
+            "ru"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Tu",
+          "reads": [
+            "vu"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Eu",
+          "reads": [
+            "Tu",
+            "Vector3",
+            "_u"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Du",
+          "reads": [
+            "_u"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ou",
+          "reads": [
+            "Du",
+            "Eu"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ku",
+          "reads": [
+            "g",
+            "x",
+            "_u",
+            "vu",
+            "createToonMaterial",
+            "wu",
+            "c",
+            "Nu",
+            "K",
+            "Tu",
+            "Du",
+            "et",
+            "Pu",
+            "Fu",
+            "W",
+            "yu",
+            "Ou",
+            "d",
+            "He",
+            "Vector3",
+            "bu",
+            "xu",
+            "MathUtils",
+            "Su",
+            "Cu",
+            "Au",
+            "Eu",
+            "ju",
+            "Mu",
+            "L"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Nu",
+          "reads": [
+            "Eu",
+            "zu",
+            "Bu"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Pu",
+          "reads": [
+            "Eu",
+            "zu",
+            "Bu"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Fu",
+          "reads": [
+            "Eu",
+            "Vector3",
+            "Tu",
+            "zu",
+            "Bu"
+          ],
+          "writes": []
+        },
+        {
+          "name": "zu",
+          "reads": [
+            "Iu",
+            "Lu",
+            "Ru"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Bu",
+          "reads": [
+            "z"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Vu",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Ju",
+          "reads": [
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Yu",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Xu",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Zu",
+          "reads": [
+            "Vu",
+            "Vector3",
+            "Uu",
+            "qu",
+            "Yu",
+            "Hu",
+            "Ju",
+            "MathUtils",
+            "Gu",
+            "Ku",
+            "Wu",
+            "ds",
+            "Xu",
+            "Qu",
+            "nearestLakeShore"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "bac185ea0e2b96d2bb2a4b4ef80564e0b55a5c74f1c00c1f2dfad59d3138897a"
+    },
+    {
+      "file": "src/recovered/world/scene.js",
+      "bytes": 7560,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "prepareWorldAssets",
+          "reads": [
+            "loadWorldData",
+            "loadTreeModelLibrary",
+            "PisteDistanceField",
+            "raisePisteBanks",
+            "Ha",
+            "Ja",
+            "_s",
+            "Po",
+            "liftEndpointPositions",
+            "Yo",
+            "Fo",
+            "Vector3",
+            "as"
+          ],
+          "writes": []
+        },
+        {
+          "name": "sampleRouteDistance",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "rd",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "createWorldScene",
+          "reads": [
+            "g",
+            "createTerrainLod",
+            "treeLineElevation",
+            "serviceCentreLocations",
+            "Wc",
+            "createCableway",
+            "rd",
+            "rl",
+            "hotSpringLocation",
+            "No",
+            "sampleRouteDistance",
+            "defaultRunName",
+            "Gc",
+            "Vector3",
+            "placeForestTrees",
+            "createForestBatches",
+            "nc",
+            "ws",
+            "Hc",
+            "Ca",
+            "wl",
+            "Fl",
+            "jl",
+            "Il",
+            "Zl",
+            "tu",
+            "ku",
+            "Vu",
+            "Ss",
+            "gu",
+            "Zu",
+            "Wl",
+            "ys"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "e2f41ed01be288101ffc56fea1a2b7e7cc73a5691915a4bc7ada3b2c8db94fea"
+    },
+    {
+      "file": "src/recovered/weather/sky.js",
+      "bytes": 9281,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "defaultSkyPalette",
+          "reads": [
+            "K"
+          ],
+          "writes": []
+        },
+        {
+          "name": "createSkyDome",
+          "reads": [
+            "Ze",
+            "defaultSkyPalette",
+            "Vector3",
+            "K",
+            "c",
+            "$e"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "bf75cc10b5309ee4c30f704a3550b1890fec7a755b1e0dbb3996122fd39d8f61"
+    },
+    {
+      "file": "src/recovered/rider/pose.js",
+      "bytes": 43652,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "dd",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "fd",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "pd",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "gd",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "_d",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "vd",
+          "reads": [
+            "ud",
+            "gd",
+            "crashDuration",
+            "pd",
+            "_d"
+          ],
+          "writes": []
+        },
+        {
+          "name": "crashPoseKeyframes",
+          "reads": [
+            "gd",
+            "hd",
+            "_d",
+            "md"
+          ],
+          "writes": []
+        },
+        {
+          "name": "selectCrashMotion",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Sd",
+          "reads": [
+            "fd"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Cd",
+          "reads": [
+            "selectCrashMotion",
+            "xd",
+            "dd",
+            "Sd",
+            "crashPoseKeyframes"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Id",
+          "reads": [
+            "Ad",
+            "jd",
+            "wd",
+            "Td",
+            "Nd"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ld",
+          "reads": [
+            "Id",
+            "Dd",
+            "Md",
+            "Od",
+            "Fd",
+            "jd",
+            "Ed"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Rd",
+          "reads": [
+            "Id",
+            "Dd",
+            "Md",
+            "Pd",
+            "kd",
+            "Nd",
+            "T",
+            "Ad"
+          ],
+          "writes": []
+        },
+        {
+          "name": "zd",
+          "reads": [
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Bd",
+          "reads": [
+            "dd",
+            "shakeOffDuration"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Vd",
+          "reads": [
+            "Bd",
+            "fd"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Wd",
+          "reads": [
+            "Ud"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Gd",
+          "reads": [
+            "Hd"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Kd",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Zd",
+          "reads": [
+            "c"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Qd",
+          "reads": [
+            "qd",
+            "W"
+          ],
+          "writes": []
+        },
+        {
+          "name": "$d",
+          "reads": [
+            "g",
+            "qd",
+            "Zd",
+            "Qd",
+            "Xd",
+            "W"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ef",
+          "reads": [
+            "g",
+            "Jd",
+            "Zd",
+            "d",
+            "Xd",
+            "$e",
+            "He",
+            "st"
+          ],
+          "writes": []
+        },
+        {
+          "name": "tf",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "nf",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "lf",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "uf",
+          "reads": [
+            "Kd",
+            "nf",
+            "tf",
+            "lf",
+            "af",
+            "of",
+            "rf",
+            "sf",
+            "cf",
+            "Yd"
+          ],
+          "writes": []
+        },
+        {
+          "name": "df",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "ff",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "wf",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Tf",
+          "reads": [
+            "Kd",
+            "ff",
+            "df",
+            "Sf",
+            "wf",
+            "xf",
+            "pf",
+            "Cf",
+            "hf",
+            "mf",
+            "gf",
+            "_f",
+            "vf",
+            "yf"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Df",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "kf",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Af",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "vitePreload",
+          "reads": [
+            "Df",
+            "kf",
+            "Af",
+            "Of",
+            "Ef"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Mf",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Nf",
+          "reads": [
+            "Mf",
+            "qe",
+            "he"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Pf",
+          "reads": [
+            "Mf",
+            "qe",
+            "he"
+          ],
+          "writes": []
+        },
+        {
+          "name": "solveArmReachAngle",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "$",
+          "reads": [
+            "c"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Zf",
+          "reads": [
+            "$",
+            "d",
+            "W",
+            "Vector3",
+            "Ff"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Qf",
+          "reads": [
+            "W"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "33d9e16323ecaf1010ea2f3c56c6df6fdeabda794a2c199008c66f3c531c3116"
+    },
+    {
+      "file": "src/recovered/rider/rider.js",
+      "bytes": 28944,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Rider",
+          "reads": [
+            "g",
+            "$",
+            "Qf",
+            "Q",
+            "W",
+            "uf",
+            "Tf",
+            "$d",
+            "ef",
+            "Vector3",
+            "vitePreload",
+            "__vite__mapDeps",
+            "Yf",
+            "Zf",
+            "d",
+            "$e",
+            "We",
+            "c",
+            "me",
+            "ot",
+            "Pf",
+            "createToonMaterial",
+            "Nf",
+            "st",
+            "He",
+            "Cd",
+            "Rd",
+            "Vd",
+            "Ld",
+            "Wd",
+            "Kf",
+            "Gf",
+            "Gd",
+            "zd",
+            "Lf",
+            "Hf",
+            "Rf",
+            "zf",
+            "Bf",
+            "Uf",
+            "Vf",
+            "Wf",
+            "qd",
+            "Jd",
+            "If",
+            "solveArmReachAngle",
+            "bt",
+            "yt",
+            "xt",
+            "vt",
+            "qf",
+            "Jf"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "6081da37c7cddd650958a55c232a394c9926ff5868114b05ddcf40a1e39ac9db"
+    },
+    {
+      "file": "src/recovered/render/postprocess.js",
+      "bytes": 4862,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "OutlinePostProcessor",
+          "reads": [
+            "C",
+            "u",
+            "ee",
+            "pe",
+            "re",
+            "Ze",
+            "tp",
+            "np",
+            "L",
+            "K",
+            "c",
+            "me",
+            "w",
+            "k",
+            "ep"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "3dace6d7daf6d797ab49dc8f1f3bc9a4f5bd227d51411e0c6194e49f2ec55d57"
+    },
+    {
+      "file": "src/recovered/ui/diorama-base.js",
+      "bytes": 16139,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "ap",
+          "reads": [
+            "qe",
+            "he"
+          ],
+          "writes": []
+        },
+        {
+          "name": "op",
+          "reads": [
+            "ap",
+            "D"
+          ],
+          "writes": []
+        },
+        {
+          "name": "sp",
+          "reads": [
+            "ap",
+            "D"
+          ],
+          "writes": []
+        },
+        {
+          "name": "cp",
+          "reads": [
+            "ap"
+          ],
+          "writes": []
+        },
+        {
+          "name": "lp",
+          "reads": [
+            "ap"
+          ],
+          "writes": []
+        },
+        {
+          "name": "up",
+          "reads": [
+            "z",
+            "i",
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "createPedestalDioramaBase",
+          "reads": [
+            "g",
+            "Vector3",
+            "createToonMaterial",
+            "op",
+            "c",
+            "up",
+            "ip",
+            "sp",
+            "W",
+            "me",
+            "cp",
+            "B",
+            "lp",
+            "ap",
+            "ot"
+          ],
+          "writes": []
+        },
+        {
+          "name": "fp",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "createFloatingDioramaBase",
+          "reads": [
+            "g",
+            "Vector3",
+            "createToonMaterial",
+            "op",
+            "c",
+            "up",
+            "hp",
+            "mp",
+            "fp",
+            "Xe"
+          ],
+          "writes": []
+        },
+        {
+          "name": "mp",
+          "reads": [
+            "Vector3",
+            "K",
+            "Oa",
+            "z",
+            "i"
+          ],
+          "writes": []
+        },
+        {
+          "name": "hp",
+          "reads": [
+            "fp",
+            "Vector3",
+            "K",
+            "z",
+            "i"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "79e37836443ad5c9cb4da4748eda34a4e082f202b0a4719545d700f22831a04a"
+    },
+    {
+      "file": "src/recovered/ui/title.js",
+      "bytes": 8496,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "gp",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "wp",
+          "reads": [
+            "Cp",
+            "et"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Tp",
+          "reads": [
+            "vp",
+            "wp",
+            "W",
+            "bp",
+            "yp",
+            "mt"
+          ],
+          "writes": []
+        },
+        {
+          "name": "createTitleLogo",
+          "reads": [
+            "g",
+            "ot",
+            "fp",
+            "_p",
+            "c",
+            "Tp",
+            "gp",
+            "m",
+            "Vector3",
+            "MathUtils",
+            "xp",
+            "Sp"
+          ],
+          "writes": []
+        },
+        {
+          "name": "createTitleSnow",
+          "reads": [
+            "fp",
+            "z",
+            "et",
+            "Ze",
+            "K",
+            "fe",
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "createTransitionWipe",
+          "reads": [
+            "MathUtils"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "1f9df56d174cb3c4d43296761f868fa1434f785ee6362c391f31921d5daaa151"
+    },
+    {
+      "file": "src/recovered/ui/navigation-data.js",
+      "bytes": 8185,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "encodeDestination",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "parseDestination",
+          "reads": [
+            "kp"
+          ],
+          "writes": []
+        },
+        {
+          "name": "readDestinationFromUrl",
+          "reads": [
+            "parseDestination"
+          ],
+          "writes": []
+        },
+        {
+          "name": "findRunHighStart",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "encodePlayerPosition",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "parsePlayerPosition",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "publishPlayerPosition",
+          "reads": [
+            "Pp",
+            "encodePlayerPosition"
+          ],
+          "writes": []
+        },
+        {
+          "name": "subscribePlayerPosition",
+          "reads": [
+            "parsePlayerPosition",
+            "Pp",
+            "Fp"
+          ],
+          "writes": []
+        },
+        {
+          "name": "writeDioramaHandoff",
+          "reads": [
+            "Bp"
+          ],
+          "writes": []
+        },
+        {
+          "name": "consumeDioramaHandoff",
+          "reads": [
+            "Bp"
+          ],
+          "writes": []
+        },
+        {
+          "name": "bilingualRunNames",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "runDifficultyStyles",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Gp",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "liftDisplayName",
+          "reads": [
+            "Gp"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "1ee1cfb9ad694c110e382b575bad69d7ffdc1b6b7e1b9340f9476efd4e060354"
+    },
+    {
+      "file": "src/recovered/ui/graphics-menu.js",
+      "bytes": 3465,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "yt",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "bt",
+          "reads": [
+            "graphicsModes",
+            "vt",
+            "yt",
+            "graphicsSettingOptions"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "3a639db76a05864d6604b916d6821803d39f5cc74a0be0da050be404a5c82a63"
+    },
+    {
+      "file": "src/recovered/render/diagnostics.js",
+      "bytes": 1754,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "xt",
+          "reads": [],
+          "writes": []
+        }
+      ],
+      "sha256": "a852f6dddd6db42b9f0666db6d9ec95b094fed050afd56c3a7544256548b0012"
+    },
+    {
+      "file": "src/recovered/rider/actions.js",
+      "bytes": 4416,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "St",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "playSpecialAction",
+          "reads": [
+            "specialActionDefinitions",
+            "R",
+            "md",
+            "stopSpecialAction",
+            "W",
+            "rider",
+            "physics",
+            "gd",
+            "I",
+            "pd",
+            "loadGLTF",
+            "L",
+            "hd",
+            "St",
+            "mt",
+            "dd"
+          ],
+          "writes": [
+            "hd",
+            "md",
+            "R"
+          ]
+        },
+        {
+          "name": "stopSpecialAction",
+          "reads": [
+            "R",
+            "md",
+            "dd",
+            "L",
+            "gd",
+            "rider"
+          ],
+          "writes": [
+            "hd",
+            "md",
+            "R"
+          ]
+        }
+      ],
+      "sha256": "089caaaa4206c50da08af1bab57fc1abd27d61f041648d7aff2123eb1a1fcd30"
+    },
+    {
+      "file": "src/recovered/effects/fireball.js",
+      "bytes": 3716,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "wt",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Tt",
+          "reads": [
+            "Oe",
+            "Te",
+            "Xe",
+            "it",
+            "We",
+            "et",
+            "Be",
+            "He",
+            "Vector3",
+            "wt",
+            "Ct",
+            "MathUtils"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "2fa24f61920748719608b3afe2a0ed68da0cb988c102aeb7d7657d76f0947ab3"
+    },
+    {
+      "file": "src/recovered/physics/collision.js",
+      "bytes": 2341,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Et",
+          "reads": [
+            "Dt"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Dt",
+          "reads": [],
+          "writes": []
+        }
+      ],
+      "sha256": "41c2ba8c081a2365738618b0d2f642bc24accf1cdde391b2b1ef9fb0be706761"
+    },
+    {
+      "file": "src/recovered/weather/weather-system.js",
+      "bytes": 12497,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "At",
+          "reads": [
+            "kt",
+            "We",
+            "et",
+            "Vector3",
+            "Ot",
+            "at",
+            "Ze",
+            "Be",
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ft",
+          "reads": [
+            "Vector3",
+            "Nt",
+            "Mt"
+          ],
+          "writes": []
+        },
+        {
+          "name": "weatherPresets",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Vt",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Wt",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Jt",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "WeatherController",
+          "reads": [
+            "Vector3",
+            "At",
+            "weatherPresets",
+            "zt",
+            "at",
+            "Ft",
+            "jt",
+            "Wt",
+            "Nt",
+            "Vt",
+            "Rt",
+            "MathUtils",
+            "Jt",
+            "Kt",
+            "Ut",
+            "Gt",
+            "qt",
+            "Ht"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "a883c00c8a804963211ec6e6a0e56bb1970dbff43e3674c93c8ab97db64f6315"
+    },
+    {
+      "file": "src/recovered/world/prayer-wheels.js",
+      "bytes": 4917,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "tn",
+          "reads": [
+            "Xt",
+            "MathUtils",
+            "Zt",
+            "Qt",
+            "$t",
+            "en",
+            "nn"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Kh",
+          "reads": [
+            "zh"
+          ],
+          "writes": [
+            "Vh",
+            "Bh",
+            "Hh"
+          ]
+        },
+        {
+          "name": "qh",
+          "reads": [
+            "Bh",
+            "W",
+            "rider",
+            "physics",
+            "Rh",
+            "Wh",
+            "Y",
+            "Uh",
+            "I",
+            "Vh",
+            "zh",
+            "Gh",
+            "Hh",
+            "L"
+          ],
+          "writes": [
+            "Bh",
+            "Uh",
+            "Hh"
+          ]
+        }
+      ],
+      "sha256": "ccc2a080d15d427433a14cd7a2e7530928d4fb2ec36c137a195a9e66cbd7ce05"
+    },
+    {
+      "file": "src/recovered/world/swing.js",
+      "bytes": 9518,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "mn",
+          "reads": [
+            "sn",
+            "on",
+            "cn",
+            "rn",
+            "MathUtils",
+            "an",
+            "dn",
+            "fn",
+            "un",
+            "ln",
+            "pn"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Oh",
+          "reads": [
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "kh",
+          "reads": [
+            "Ah"
+          ],
+          "writes": []
+        },
+        {
+          "name": "jh",
+          "reads": [
+            "stopSpecialAction",
+            "Dh",
+            "rider",
+            "F",
+            "physics",
+            "ug",
+            "Oh",
+            "U",
+            "I",
+            "kh"
+          ],
+          "writes": [
+            "Ah",
+            "W"
+          ]
+        },
+        {
+          "name": "Mh",
+          "reads": [
+            "Ah",
+            "I",
+            "kh"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Nh",
+          "reads": [
+            "Ah",
+            "Dh",
+            "physics",
+            "Qu",
+            "ug",
+            "rider",
+            "kp",
+            "G",
+            "I",
+            "F"
+          ],
+          "writes": [
+            "Ah",
+            "W"
+          ]
+        },
+        {
+          "name": "Ph",
+          "reads": [
+            "Ah",
+            "Dh",
+            "playerInput",
+            "MathUtils",
+            "Oh",
+            "rider",
+            "cg",
+            "dg",
+            "physics"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Lh",
+          "reads": [
+            "Ah",
+            "Dh",
+            "Sf",
+            "ep",
+            "mp",
+            "playerInput",
+            "dp",
+            "rider",
+            "Cp",
+            "camera",
+            "ap",
+            "U",
+            "Ih",
+            "xf",
+            "Fh",
+            "q",
+            "fg",
+            "K",
+            "groundHeightfield",
+            "J"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "5264f7a5676c77fc50512f7925e3f41e7b17103f94235272aeb6d9ab6f49bde0"
+    },
+    {
+      "file": "src/recovered/animals/dog.js",
+      "bytes": 29507,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "_n",
+          "reads": [
+            "loadGLTF",
+            "hn",
+            "gn"
+          ],
+          "writes": [
+            "gn"
+          ]
+        },
+        {
+          "name": "Pr",
+          "reads": [
+            "Nr"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Fr",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Ir",
+          "reads": [
+            "Oe",
+            "Vector3",
+            "ar",
+            "Lr",
+            "_r",
+            "fr",
+            "_n",
+            "Fn",
+            "$n",
+            "Sr",
+            "jr",
+            "Er",
+            "Tr",
+            "Mr",
+            "Cr",
+            "wr",
+            "Fr",
+            "Pr",
+            "Or",
+            "D",
+            "Dr",
+            "kr",
+            "Rr",
+            "Ar"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Lr",
+          "reads": [
+            "Te",
+            "Xe",
+            "createToonMaterial",
+            "Vector3",
+            "kr",
+            "Ar",
+            "Or",
+            "D"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Rr",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "_m",
+          "reads": [
+            "W",
+            "gm",
+            "physics",
+            "rider"
+          ],
+          "writes": []
+        },
+        {
+          "name": "bm",
+          "reads": [
+            "rider",
+            "Z",
+            "Sm",
+            "MathUtils",
+            "Qu",
+            "Jh",
+            "physics",
+            "Y",
+            "_m",
+            "camera",
+            "ym",
+            "I",
+            "xr",
+            "L",
+            "vm",
+            "W",
+            "xm"
+          ],
+          "writes": [
+            "ym",
+            "vm"
+          ]
+        },
+        {
+          "name": "Cm",
+          "reads": [
+            "Z",
+            "_m"
+          ],
+          "writes": [
+            "vm"
+          ]
+        }
+      ],
+      "sha256": "eb5bfb60883c5f02792d5dc4ccb68788e7c14c4c7fa95765110a9b5926d17ee5"
+    },
+    {
+      "file": "src/recovered/animals/quadruped-rig.js",
+      "bytes": 30231,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "vn",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Pn",
+          "reads": [
+            "T",
+            "Vector3",
+            "Tn",
+            "wn",
+            "Sn"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Fn",
+          "reads": [
+            "cloneSkinnedModel",
+            "createToonMaterial",
+            "T",
+            "Vector3",
+            "In",
+            "ze",
+            "An",
+            "wn",
+            "vn",
+            "En",
+            "kn",
+            "yn",
+            "bn",
+            "Dn",
+            "jn",
+            "Mn",
+            "Nn",
+            "Sn",
+            "Cn",
+            "Tn",
+            "On",
+            "xn",
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "In",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Wn",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Qn",
+          "reads": [
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "$n",
+          "reads": [
+            "Pn",
+            "Hn",
+            "Qn",
+            "qn",
+            "Un",
+            "zn",
+            "Ln",
+            "Bn",
+            "Wn",
+            "Rn",
+            "Jn",
+            "Gn",
+            "Vn",
+            "Xn",
+            "Yn",
+            "Kn",
+            "Zn"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "2a6fee70adc53b1557965faa2b337248f9221c6bb1a4d3254452fdb9e40ace59"
+    },
+    {
+      "file": "src/recovered/effects/snow-tracks.js",
+      "bytes": 16603,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "er",
+          "reads": [
+            "We",
+            "et",
+            "Pe",
+            "Te",
+            "it"
+          ],
+          "writes": []
+        },
+        {
+          "name": "tr",
+          "reads": [
+            "er",
+            "Oe",
+            "nr"
+          ],
+          "writes": []
+        },
+        {
+          "name": "rr",
+          "reads": [
+            "Xe",
+            "Te",
+            "st",
+            "createToonMaterial"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ir",
+          "reads": [
+            "Ye",
+            "Ve"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ar",
+          "reads": [
+            "We",
+            "et",
+            "Pe",
+            "Be",
+            "He",
+            "ir"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ur",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "gr",
+          "reads": [
+            "sr",
+            "cr",
+            "Vector3",
+            "We",
+            "et",
+            "Pe",
+            "rt",
+            "Re",
+            "toonUniforms",
+            "Te",
+            "Ze",
+            "mr",
+            "hr",
+            "lr",
+            "pr",
+            "or"
+          ],
+          "writes": []
+        },
+        {
+          "name": "_r",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "br",
+          "reads": [
+            "vr",
+            "yr"
+          ],
+          "writes": []
+        },
+        {
+          "name": "jp",
+          "reads": [
+            "MathUtils",
+            "physics",
+            "Ap",
+            "playerInput",
+            "ud"
+          ],
+          "writes": [
+            "ud"
+          ]
+        },
+        {
+          "name": "Mp",
+          "reads": [
+            "od",
+            "MathUtils",
+            "ud",
+            "physics",
+            "rider"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "e326e560889044c391e640e06ce31c71a5ffb019999aff015053d5c75ed7e6fb"
+    },
+    {
+      "file": "src/recovered/animals/fox.js",
+      "bytes": 36713,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Vr",
+          "reads": [
+            "loadGLTF",
+            "zr",
+            "Br"
+          ],
+          "writes": [
+            "Br"
+          ]
+        },
+        {
+          "name": "Gr",
+          "reads": [
+            "Fn",
+            "Re",
+            "Hr",
+            "Ur",
+            "Wr"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Yr",
+          "reads": [
+            "$n",
+            "Jr",
+            "Kr",
+            "qr"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ni",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "ri",
+          "reads": [
+            "Re"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ii",
+          "reads": [
+            "ni",
+            "Qr",
+            "ti",
+            "ei",
+            "Re",
+            "ai",
+            "$r",
+            "Xr",
+            "Zr"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ai",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "hi",
+          "reads": [
+            "mi"
+          ],
+          "writes": []
+        },
+        {
+          "name": "gi",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "_i",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "xi",
+          "reads": [
+            "ci",
+            "liftEndpointPositions"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Si",
+          "reads": [
+            "Oe",
+            "ar",
+            "Ci",
+            "O"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ci",
+          "reads": [
+            "_r",
+            "fr",
+            "O",
+            "Oe",
+            "Vector3",
+            "Vr",
+            "Gr",
+            "Yr",
+            "si",
+            "ri",
+            "ii",
+            "di",
+            "fi",
+            "li",
+            "ui",
+            "hi",
+            "gi",
+            "_i",
+            "wi",
+            "Ti",
+            "yi",
+            "vi",
+            "bi",
+            "pi"
+          ],
+          "writes": []
+        },
+        {
+          "name": "wi",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Ti",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "qi",
+          "reads": [
+            "Vector3",
+            "Di",
+            "Oi",
+            "Fi",
+            "zi",
+            "Ii",
+            "Li",
+            "Ri",
+            "ki",
+            "Pi",
+            "Bi",
+            "Ni",
+            "Ji",
+            "Vi",
+            "Hi",
+            "Mi",
+            "Ki",
+            "Ai",
+            "ji"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ji",
+          "reads": [
+            "Ui",
+            "Wi",
+            "Gi",
+            "Ei"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Em",
+          "reads": [
+            "Tm",
+            "_m",
+            "physics",
+            "Y",
+            "camera",
+            "mc",
+            "oi",
+            "I"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "9e72d83132000ff5a1b6faaa8edc1e5a3153552ef377bef6c73fd2b614b46b82"
+    },
+    {
+      "file": "src/recovered/animals/horse.js",
+      "bytes": 104855,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Zi",
+          "reads": [
+            "loadGLTF",
+            "Yi",
+            "Xi"
+          ],
+          "writes": [
+            "Xi"
+          ]
+        },
+        {
+          "name": "Qi",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Sa",
+          "reads": [
+            "T",
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ca",
+          "reads": [
+            "cloneSkinnedModel",
+            "wa",
+            "createToonMaterial",
+            "T",
+            "Vector3",
+            "Ta",
+            "ze",
+            "ha",
+            "la",
+            "Qi",
+            "qi",
+            "na",
+            "aa",
+            "da",
+            "ma",
+            "$i",
+            "ea",
+            "ca",
+            "ta",
+            "ra",
+            "ia",
+            "oa",
+            "ba",
+            "xa",
+            "ga",
+            "_a",
+            "va",
+            "ya",
+            "MathUtils",
+            "fa",
+            "ua",
+            "pa"
+          ],
+          "writes": []
+        },
+        {
+          "name": "wa",
+          "reads": [
+            "na",
+            "MathUtils",
+            "sa",
+            "et"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ta",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Aa",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "ja",
+          "reads": [
+            "Da"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ma",
+          "reads": [
+            "Da"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Na",
+          "reads": [
+            "Aa",
+            "ja",
+            "Ma",
+            "ka",
+            "Da",
+            "Oa",
+            "Ea"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Wa",
+          "reads": [
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Qa",
+          "reads": [
+            "Ra"
+          ],
+          "writes": []
+        },
+        {
+          "name": "$a",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "eo",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "io",
+          "reads": [
+            "Sa",
+            "Qa",
+            "Na",
+            "to",
+            "Ia",
+            "Pa",
+            "La",
+            "eo",
+            "no",
+            "Fa",
+            "Ha",
+            "Ua",
+            "Ba",
+            "za",
+            "Ga",
+            "Ka",
+            "Ja",
+            "Ya",
+            "Xa",
+            "Za",
+            "$a",
+            "qa",
+            "Ra",
+            "Va",
+            "ro"
+          ],
+          "writes": []
+        },
+        {
+          "name": "oo",
+          "reads": [
+            "ao"
+          ],
+          "writes": []
+        },
+        {
+          "name": "so",
+          "reads": [
+            "Ke",
+            "Vector3",
+            "oo"
+          ],
+          "writes": []
+        },
+        {
+          "name": "bo",
+          "reads": [
+            "Vector3",
+            "MathUtils",
+            "uo",
+            "fo"
+          ],
+          "writes": []
+        },
+        {
+          "name": "xo",
+          "reads": [
+            "So",
+            "Fe",
+            "Oe",
+            "ho",
+            "_o",
+            "co",
+            "lo",
+            "po",
+            "bo",
+            "Vector3",
+            "vo",
+            "go",
+            "yo",
+            "MathUtils",
+            "mo",
+            "Te",
+            "qe",
+            "Ee",
+            "Ge",
+            "We",
+            "we"
+          ],
+          "writes": []
+        },
+        {
+          "name": "So",
+          "reads": [
+            "We",
+            "Te",
+            "it"
+          ],
+          "writes": []
+        },
+        {
+          "name": "To",
+          "reads": [
+            "loadGLTF",
+            "Co",
+            "wo"
+          ],
+          "writes": [
+            "wo"
+          ]
+        },
+        {
+          "name": "Oo",
+          "reads": [
+            "Eo",
+            "Do"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ao",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "jo",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Mo",
+          "reads": [
+            "ko",
+            "jo",
+            "Ao",
+            "je",
+            "Le",
+            "Ie",
+            "MathUtils",
+            "Oe",
+            "Te",
+            "so"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Po",
+          "reads": [
+            "Te",
+            "Ke",
+            "Io",
+            "Fo"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Wo",
+          "reads": [
+            "ze",
+            "createToonMaterial",
+            "Ce",
+            "Te",
+            "it",
+            "Fe",
+            "Vector3",
+            "Lo",
+            "Ro",
+            "Ae",
+            "Oe",
+            "Po",
+            "Mo",
+            "so",
+            "ko",
+            "xo",
+            "Ho",
+            "Bo",
+            "Uo",
+            "We",
+            "zo",
+            "No",
+            "MathUtils",
+            "Io",
+            "Ge",
+            "tt",
+            "Vo"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Qo",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "$o",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "es",
+          "reads": [
+            "Zo",
+            "Xo",
+            "$o",
+            "Yo",
+            "Qo"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ts",
+          "reads": [
+            "Vector3",
+            "De",
+            "T",
+            "es",
+            "solveArmReachAngle",
+            "MathUtils",
+            "Ko",
+            "qo",
+            "Zo",
+            "Jo",
+            "Go"
+          ],
+          "writes": []
+        },
+        {
+          "name": "as",
+          "reads": [
+            "Jo",
+            "rs",
+            "is",
+            "ns",
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "_s",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Ss",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Cs",
+          "reads": [
+            "Vector3",
+            "De",
+            "_s",
+            "Qa",
+            "Aa",
+            "ja",
+            "Ma",
+            "gs",
+            "ys",
+            "solveArmReachAngle",
+            "ms",
+            "cs",
+            "os",
+            "to",
+            "vs",
+            "ss",
+            "ps",
+            "ds",
+            "fs",
+            "Ss",
+            "us",
+            "hs",
+            "ls",
+            "bs",
+            "xs"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Es",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "qs",
+          "reads": [
+            "Ws"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Js",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Ys",
+          "reads": [
+            "Ds"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Xs",
+          "reads": [
+            "Ns",
+            "Ps",
+            "Hs"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Zs",
+          "reads": [
+            "Oe",
+            "Vector3",
+            "Us",
+            "ar",
+            "_r",
+            "fr",
+            "Ms",
+            "Zi",
+            "To",
+            "Ca",
+            "io",
+            "Ts",
+            "Wo",
+            "Cs",
+            "ts",
+            "Qs",
+            "As",
+            "Zo",
+            "Vs",
+            "Es",
+            "Oo",
+            "Ls",
+            "as",
+            "Qi",
+            "Rs",
+            "zs",
+            "Hs",
+            "Os",
+            "ks",
+            "qs",
+            "Js",
+            "js",
+            "Gs",
+            "Ks",
+            "Fs",
+            "Xs",
+            "Ws",
+            "Bs",
+            "nearestLakeShore",
+            "Is"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Qs",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "$s",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "ec",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "sh",
+          "reads": [
+            "MathUtils",
+            "camera"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ch",
+          "reads": [
+            "L",
+            "sh",
+            "Y",
+            "oh",
+            "I",
+            "ws",
+            "ug",
+            "Nd",
+            "mh"
+          ],
+          "writes": [
+            "oh",
+            "_h"
+          ]
+        },
+        {
+          "name": "lh",
+          "reads": [
+            "$",
+            "Y",
+            "_m",
+            "camera",
+            "ch"
+          ],
+          "writes": []
+        },
+        {
+          "name": "uh",
+          "reads": [
+            "rider",
+            "physics",
+            "F",
+            "hh",
+            "$",
+            "I"
+          ],
+          "writes": [
+            "Zh",
+            "W"
+          ]
+        },
+        {
+          "name": "dh",
+          "reads": [
+            "$"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ph",
+          "reads": [
+            "rider",
+            "$",
+            "Pp",
+            "Fp",
+            "physics",
+            "fh",
+            "MathUtils",
+            "Qu"
+          ],
+          "writes": [
+            "Pp"
+          ]
+        },
+        {
+          "name": "mh",
+          "reads": [
+            "rider",
+            "nm",
+            "$",
+            "physics",
+            "Qu",
+            "Zh",
+            "kp",
+            "I",
+            "F"
+          ],
+          "writes": [
+            "W"
+          ]
+        },
+        {
+          "name": "gh",
+          "reads": [
+            "$",
+            "hh",
+            "playerInput",
+            "I",
+            "Es"
+          ],
+          "writes": []
+        },
+        {
+          "name": "vh",
+          "reads": [
+            "gh",
+            "$",
+            "Y",
+            "camera",
+            "ch",
+            "W",
+            "rider",
+            "cg",
+            "dg",
+            "ph",
+            "kp",
+            "physics",
+            "Qu",
+            "xh",
+            "I",
+            "_h"
+          ],
+          "writes": [
+            "_h"
+          ]
+        },
+        {
+          "name": "bh",
+          "reads": [
+            "$",
+            "Sf",
+            "yh",
+            "pg",
+            "G",
+            "fg",
+            "MathUtils",
+            "U",
+            "Ef",
+            "vu",
+            "groundHeightfield"
+          ],
+          "writes": []
+        },
+        {
+          "name": "xh",
+          "reads": [
+            "G",
+            "xf",
+            "$",
+            "Ef",
+            "yh",
+            "kf",
+            "bh",
+            "K",
+            "q",
+            "camera",
+            "groundHeightfield",
+            "J",
+            "Sf"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "2c34809aad4d291b4d46e291ca7910c34e76946c3bd169c2931dce582dc51a82"
+    },
+    {
+      "file": "src/recovered/animals/snow-monster.js",
+      "bytes": 36450,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "nc",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "dc",
+          "reads": [
+            "nc",
+            "br",
+            "_r",
+            "fr",
+            "Oe",
+            "Vector3",
+            "tc",
+            "T",
+            "Qe",
+            "rt",
+            "cc",
+            "sc",
+            "oc",
+            "et",
+            "Fe",
+            "uc",
+            "rc",
+            "ic",
+            "ec",
+            "ac",
+            "MathUtils",
+            "lc"
+          ],
+          "writes": []
+        },
+        {
+          "name": "pc",
+          "reads": [
+            "fc"
+          ],
+          "writes": []
+        },
+        {
+          "name": "mc",
+          "reads": [
+            "pc",
+            "fc"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Mm",
+          "reads": [
+            "Dm",
+            "Q",
+            "jm",
+            "Om",
+            "km",
+            "groundHeightfield",
+            "Am"
+          ],
+          "writes": [
+            "jm"
+          ]
+        },
+        {
+          "name": "Nm",
+          "reads": [
+            "Q",
+            "km",
+            "groundHeightfield",
+            "Dm",
+            "Am"
+          ],
+          "writes": []
+        },
+        {
+          "name": "zm",
+          "reads": [
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Bm",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Vm",
+          "reads": [
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Hm",
+          "reads": [
+            "Vm",
+            "Bm",
+            "zm",
+            "Gm",
+            "Um",
+            "Wm",
+            "fg",
+            "Q",
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Xm",
+          "reads": [
+            "Ym",
+            "Eu",
+            "Jm",
+            "K",
+            "Gm",
+            "Q",
+            "xf"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Zm",
+          "reads": [
+            "Q",
+            "physics",
+            "rider",
+            "Vm",
+            "U",
+            "ug",
+            "zm",
+            "F",
+            "I"
+          ],
+          "writes": [
+            "Pm",
+            "Fm",
+            "Im",
+            "Lm",
+            "W"
+          ]
+        },
+        {
+          "name": "Qm",
+          "reads": [
+            "Q",
+            "I"
+          ],
+          "writes": [
+            "Fm",
+            "Im"
+          ]
+        },
+        {
+          "name": "$m",
+          "reads": [
+            "Q",
+            "I",
+            "Nd"
+          ],
+          "writes": [
+            "Fm",
+            "Im"
+          ]
+        },
+        {
+          "name": "eh",
+          "reads": [
+            "Q",
+            "W",
+            "physics",
+            "Mm",
+            "I",
+            "th",
+            "L",
+            "Nm"
+          ],
+          "writes": [
+            "Rm"
+          ]
+        },
+        {
+          "name": "th",
+          "reads": [
+            "Q",
+            "nm",
+            "K",
+            "xf",
+            "physics",
+            "Qu",
+            "rider",
+            "Pm",
+            "G",
+            "kp",
+            "F",
+            "I"
+          ],
+          "writes": [
+            "W",
+            "cg"
+          ]
+        },
+        {
+          "name": "nh",
+          "reads": [
+            "Q",
+            "Im",
+            "th"
+          ],
+          "writes": []
+        },
+        {
+          "name": "rh",
+          "reads": [
+            "Q",
+            "playerInput",
+            "Lm",
+            "eh",
+            "W",
+            "rider",
+            "fg",
+            "Gm",
+            "Km",
+            "qm",
+            "Jm",
+            "Xm",
+            "zm",
+            "Hm",
+            "Um",
+            "cg",
+            "dg",
+            "Vm",
+            "physics",
+            "Qu",
+            "ih",
+            "I"
+          ],
+          "writes": [
+            "Im",
+            "Lm"
+          ]
+        },
+        {
+          "name": "ih",
+          "reads": [
+            "xf",
+            "Q",
+            "G",
+            "Gm",
+            "MathUtils",
+            "Fm",
+            "U",
+            "K",
+            "q",
+            "Ef",
+            "vu",
+            "groundHeightfield",
+            "Rm",
+            "camera",
+            "J",
+            "Sf"
+          ],
+          "writes": [
+            "Fm",
+            "Rm"
+          ]
+        }
+      ],
+      "sha256": "ec388f0dee867a5add18902804acee18067161c5865df9ba6977519fefa0fa50"
+    },
+    {
+      "file": "src/recovered/ui/dialogue.js",
+      "bytes": 11562,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "hc",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Ec",
+          "reads": [
+            "Tc",
+            "wc",
+            "yc",
+            "bc",
+            "T"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Dc",
+          "reads": [
+            "Cc",
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Oc",
+          "reads": [
+            "Oe",
+            "gt",
+            "cloneSkinnedModel",
+            "createToonMaterial",
+            "Cc",
+            "wc",
+            "Ue",
+            "ht",
+            "_t",
+            "hc",
+            "Vector3",
+            "T",
+            "xc",
+            "gc",
+            "Dc",
+            "Ec",
+            "vc",
+            "_c",
+            "MathUtils",
+            "Sc"
+          ],
+          "writes": []
+        },
+        {
+          "name": "kc",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "jc",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Mc",
+          "reads": [
+            "jc",
+            "Ac"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Eh",
+          "reads": [
+            "Sh",
+            "W",
+            "Th",
+            "physics",
+            "rider",
+            "Ch",
+            "wh"
+          ],
+          "writes": [
+            "wh"
+          ]
+        }
+      ],
+      "sha256": "caa47c72b84727b8693212bffc01fccc5b3affe6f8f2dc70ca5756b966837d2b"
+    },
+    {
+      "file": "src/recovered/physics/skier.js",
+      "bytes": 18874,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "SnowboardPhysics",
+          "reads": [
+            "Vector3",
+            "MathUtils",
+            "crashDuration",
+            "selectCrashMotion",
+            "gravity",
+            "crashedSlideFriction",
+            "crashPoseKeyframes",
+            "shakeOffDuration",
+            "Uc",
+            "Bc",
+            "zc",
+            "Vc",
+            "Hc",
+            "edgePumpParameters",
+            "pushStartSpeedCutoff",
+            "kickTimingParameters",
+            "worldBoundaryMargin",
+            "nearestLakeShore"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "5d7b67c2cc542ddcb7367bc4e8c7a1a12319a31ce951ca3331ebf81b6248c84c"
+    },
+    {
+      "file": "src/recovered/navigation/gps.js",
+      "bytes": 18994,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "$c",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "el",
+          "reads": [
+            "Gc",
+            "Kc",
+            "Yc",
+            "qc",
+            "Qc",
+            "Xc",
+            "Jc",
+            "serviceCentreLocations",
+            "Zc",
+            "$c"
+          ],
+          "writes": []
+        },
+        {
+          "name": "cl",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "ll",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "ul",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "GpsNavigator",
+          "reads": [
+            "el",
+            "cl",
+            "sl",
+            "al",
+            "ol",
+            "il",
+            "ll",
+            "ul",
+            "rl",
+            "nl",
+            "tl"
+          ],
+          "writes": []
+        },
+        {
+          "name": "fl",
+          "reads": [
+            "tl",
+            "rl",
+            "nl"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "b90dacc574f3d37379859e17b46a54606b15f977494b4a0b0099273dc7e165ab"
+    },
+    {
+      "file": "src/recovered/ui/hud.js",
+      "bytes": 9057,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "ml",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "gl",
+          "reads": [
+            "hl"
+          ],
+          "writes": []
+        },
+        {
+          "name": "_l",
+          "reads": [
+            "ml",
+            "gl",
+            "pl",
+            "serviceCentreLocations",
+            "lakeContainingPoint",
+            "fl"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "40a5e4843d5a64b8066cfe7a26b208e1152f3b02d0ea8626e360ced23cd1b136"
+    },
+    {
+      "file": "src/recovered/navigation/big-map.js",
+      "bytes": 17973,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "wl",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "BigMapController",
+          "reads": [
+            "serviceCentreLocations",
+            "xl",
+            "wl",
+            "bl",
+            "Sl",
+            "ll",
+            "yl",
+            "gl",
+            "pl",
+            "vl",
+            "El",
+            "fl",
+            "Cl"
+          ],
+          "writes": []
+        },
+        {
+          "name": "El",
+          "reads": [],
+          "writes": []
+        }
+      ],
+      "sha256": "d57aebf6f2308382e18027bc5083c11538afa37fe8d959265589591282f790ab"
+    },
+    {
+      "file": "src/recovered/navigation/beacons.js",
+      "bytes": 6572,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Ml",
+          "reads": [
+            "Oe",
+            "Te",
+            "Ee",
+            "Ze",
+            "at",
+            "tl",
+            "Dl",
+            "Ol",
+            "We",
+            "et",
+            "Pe",
+            "Al",
+            "kl",
+            "jl"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "e222a6eb258624d85ccf1bcdfdf19c9d06927661fe8a8232214bfbd5d6ede4e7"
+    },
+    {
+      "file": "src/recovered/audio/sound-system.js",
+      "bytes": 23702,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Ll",
+          "reads": [
+            "Fl",
+            "Il"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Rl",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "zl",
+          "reads": [
+            "Bl",
+            "Nl",
+            "Pl",
+            "Ll",
+            "Rl"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Bl",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Gl",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "ql",
+          "reads": [
+            "Gl",
+            "Vl",
+            "Zl",
+            "Yl",
+            "Ql"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Jl",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "Yl",
+          "reads": [
+            "Vl",
+            "Jl"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Xl",
+          "reads": [
+            "Vl"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Zl",
+          "reads": [
+            "Vl",
+            "Jl",
+            "Xl"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ql",
+          "reads": [
+            "Vl"
+          ],
+          "writes": []
+        },
+        {
+          "name": "$l",
+          "reads": [
+            "Kl",
+            "Hl",
+            "ql",
+            "Vl",
+            "Ul",
+            "Wl",
+            "Gl"
+          ],
+          "writes": []
+        },
+        {
+          "name": "eu",
+          "reads": [
+            "$l",
+            "zl"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "79f3151f8e7007fc6ac79786690ce8013a53869109ea2fa97c38ebf8cad3b8e8"
+    },
+    {
+      "file": "src/recovered/ui/menu.js",
+      "bytes": 3749,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "nu",
+          "reads": [
+            "tu"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ru",
+          "reads": [
+            "nu",
+            "tu"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "8d150636ae06c90264184af25b1262529d49e8e7e6e17e0bf6c56bf8b9ef415b"
+    },
+    {
+      "file": "src/recovered/input/touch.js",
+      "bytes": 8889,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "cu",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "lu",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "uu",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "du",
+          "reads": [
+            "au",
+            "ou",
+            "su",
+            "uu",
+            "cu",
+            "lu",
+            "iu"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "b6c73f51e3c8c477f2e2cb187fca8456a30977053275c9a6f3166d5fda834f2c"
+    },
+    {
+      "file": "src/recovered/camera/mouse-look.js",
+      "bytes": 3031,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "MouseLookController",
+          "reads": [
+            "mouseLookSensitivity",
+            "touchLookSensitivity",
+            "MathUtils",
+            "lookPitchLimits"
+          ],
+          "writes": []
+        },
+        {
+          "name": "vu",
+          "reads": [
+            "_u",
+            "gu"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "f7e8e3729b93423ba8b031e64653fc2912118bd210931dc4e0eb3d97c336cd47"
+    },
+    {
+      "file": "src/recovered/input/player-controls.js",
+      "bytes": 9204,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "xu",
+          "reads": [
+            "bu",
+            "yu"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Od",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "handleActionKey",
+          "reads": [
+            "W",
+            "Xf",
+            "Yf",
+            "Kg",
+            "z",
+            "playSpecialAction",
+            "R",
+            "md",
+            "stopSpecialAction",
+            "toggleLocomotion",
+            "startRun",
+            "ig",
+            "Q",
+            "$m",
+            "nh",
+            "$g",
+            "Xh",
+            "Mh",
+            "hp",
+            "Sh",
+            "B",
+            "I",
+            "Nd",
+            "tg",
+            "Mg",
+            "Nh",
+            "dh",
+            "Qm",
+            "qp",
+            "Qh",
+            "Jp",
+            "Zm",
+            "Yp",
+            "uh",
+            "Xp",
+            "jg",
+            "Zp",
+            "jh",
+            "Qp",
+            "Cm",
+            "em",
+            "Kh",
+            "Gp",
+            "rm",
+            "X",
+            "lm",
+            "df"
+          ],
+          "writes": [
+            "df"
+          ]
+        },
+        {
+          "name": "Ad",
+          "reads": [
+            "L",
+            "handleActionKey"
+          ],
+          "writes": []
+        },
+        {
+          "name": "jd",
+          "reads": [
+            "L",
+            "handleActionKey"
+          ],
+          "writes": []
+        },
+        {
+          "name": "readInputState",
+          "reads": [
+            "Dd",
+            "V",
+            "Nd",
+            "playerInput",
+            "MathUtils",
+            "R",
+            "rider",
+            "Pd"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Id",
+          "reads": [
+            "rider",
+            "physics",
+            "F"
+          ],
+          "writes": []
+        },
+        {
+          "name": "toggleLocomotion",
+          "reads": [
+            "stopSpecialAction",
+            "physics",
+            "rider",
+            "Id",
+            "I",
+            "Nd",
+            "F"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "f01c8637ece2cd6ca0d91cfb092753be1116bf43d0a6ef62be50642b789c87d9"
+    },
+    {
+      "file": "src/recovered/render/viewport.js",
+      "bytes": 1006,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Du",
+          "reads": [
+            "graphicsController",
+            "renderer",
+            "postProcessor",
+            "toonUniforms",
+            "camera"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "7089a455614ab4d07d77db6ec962ab4d6370c9b5e9091e6a5817b7102b4cd323"
+    },
+    {
+      "file": "src/recovered/world/interiors.js",
+      "bytes": 678,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Ju",
+          "reads": [
+            "qu"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Yu",
+          "reads": [
+            "qu"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "11d6facdd0dec6d1ab22ac31c38d8b8e4e4b9f1bb2138004fac5108ea2749e5a"
+    },
+    {
+      "file": "src/recovered/game/session.js",
+      "bytes": 1252,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Qu",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "startRun",
+          "reads": [
+            "$u",
+            "Id",
+            "physics",
+            "Qu",
+            "F",
+            "rider",
+            "G",
+            "U",
+            "resetFollowCamera",
+            "I",
+            "yd",
+            "bd"
+          ],
+          "writes": [
+            "pf",
+            "mf",
+            "hf",
+            "W"
+          ]
+        }
+      ],
+      "sha256": "daaa76bc719b892ae822ba7c765e2bdf0d8e442fdb41244e6578fc6ade55c1a2"
+    },
+    {
+      "file": "src/recovered/navigation/position.js",
+      "bytes": 629,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "bd",
+          "reads": [
+            "physics",
+            "W",
+            "X"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "79e9c708b52ed2555d36adecee7bd3e2293bc2b3a645a2591a9caf737bdbc22d"
+    },
+    {
+      "file": "src/recovered/game/vehicle-riding.js",
+      "bytes": 8213,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Cd",
+          "reads": [
+            "Sd"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Td",
+          "reads": [
+            "wd",
+            "B"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Qh",
+          "reads": [
+            "rider",
+            "Id",
+            "ug",
+            "K",
+            "physics",
+            "Dp",
+            "I",
+            "Td",
+            "F",
+            "eg"
+          ],
+          "writes": [
+            "Zh",
+            "B",
+            "W",
+            "Pp",
+            "$h"
+          ]
+        },
+        {
+          "name": "eg",
+          "reads": [
+            "$h"
+          ],
+          "writes": []
+        },
+        {
+          "name": "tg",
+          "reads": [
+            "ng",
+            "B",
+            "K",
+            "Dp",
+            "physics",
+            "ug",
+            "rider",
+            "Zh",
+            "kp",
+            "I",
+            "Td",
+            "F"
+          ],
+          "writes": [
+            "W",
+            "B"
+          ]
+        },
+        {
+          "name": "ng",
+          "reads": [
+            "B",
+            "Ep",
+            "Dp",
+            "nearestLakeShore",
+            "lakes",
+            "groundHeightfield",
+            "forest",
+            "physics",
+            "Sg"
+          ],
+          "writes": []
+        },
+        {
+          "name": "rg",
+          "reads": [
+            "physics",
+            "B"
+          ],
+          "writes": []
+        },
+        {
+          "name": "ig",
+          "reads": [
+            "B",
+            "Qu",
+            "rg",
+            "G",
+            "mg",
+            "camera",
+            "J",
+            "I"
+          ],
+          "writes": []
+        },
+        {
+          "name": "og",
+          "reads": [
+            "B",
+            "rider",
+            "ag",
+            "cg",
+            "dg",
+            "MathUtils"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "c08f3f4c8ecf8aa1cc59168c5b832e904cf9ef14ee2d8e6d876f53ee4741492a"
+    },
+    {
+      "file": "src/recovered/rider/selection.js",
+      "bytes": 1887,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Hd",
+          "reads": [
+            "Bd"
+          ],
+          "writes": []
+        },
+        {
+          "name": "selectRider",
+          "reads": [
+            "Id",
+            "Hd",
+            "zd",
+            "Vd",
+            "rider",
+            "Ud",
+            "z",
+            "W",
+            "Lg",
+            "Bg",
+            "Ag",
+            "Dg",
+            "Nd"
+          ],
+          "writes": [
+            "Ud",
+            "Wd"
+          ]
+        }
+      ],
+      "sha256": "fa6ba4c94cc1b2c04bcf5e2334c7d096ad823c7389e2e327715e3d18f98bfd1d"
+    },
+    {
+      "file": "src/recovered/ui/weather-menu.js",
+      "bytes": 1797,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "ef",
+          "reads": [
+            "Qd",
+            "weather"
+          ],
+          "writes": []
+        },
+        {
+          "name": "nf",
+          "reads": [
+            "tf",
+            "z",
+            "weather"
+          ],
+          "writes": []
+        },
+        {
+          "name": "af",
+          "reads": [
+            "weather",
+            "qd",
+            "Jd",
+            "weatherPresets",
+            "rf",
+            "Yd"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "4d093fc3e56aae0de40156318c6a603ccd688988b61a2545d96aa39a89ca7330"
+    },
+    {
+      "file": "src/recovered/rider/gear.js",
+      "bytes": 902,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "cf",
+          "reads": [
+            "rider",
+            "physics",
+            "F",
+            "sf",
+            "z"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "e3ddf5894bbef72e040127fd87044e8abc1dbbdb35029054b379f1256d1197df"
+    },
+    {
+      "file": "src/recovered/ui/panel.js",
+      "bytes": 839,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "ff",
+          "reads": [
+            "uf",
+            "lf"
+          ],
+          "writes": [
+            "df"
+          ]
+        }
+      ],
+      "sha256": "9bf7f5e0972793658df6ebf383a0d4fdaf1586ba30da7e22cc8c0d877b71e6d8"
+    },
+    {
+      "file": "src/recovered/ui/intro.js",
+      "bytes": 3724,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "_f",
+          "reads": [],
+          "writes": []
+        },
+        {
+          "name": "vf",
+          "reads": [
+            "_f"
+          ],
+          "writes": []
+        },
+        {
+          "name": "yf",
+          "reads": [
+            "vf"
+          ],
+          "writes": []
+        },
+        {
+          "name": "bf",
+          "reads": [
+            "ff",
+            "Nd",
+            "yf",
+            "xr",
+            "startRun"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "cfa189971903e1e1f0c8af34004f447bc8248dafd730da5678e0934af7f881c6"
+    },
+    {
+      "file": "src/recovered/camera/follow.js",
+      "bytes": 11913,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Sf",
+          "reads": [
+            "MathUtils",
+            "camera"
+          ],
+          "writes": []
+        },
+        {
+          "name": "computeFollowCameraTargets",
+          "reads": [
+            "physics",
+            "Sf",
+            "Cf",
+            "MathUtils",
+            "wf",
+            "G",
+            "U",
+            "Of",
+            "Ef",
+            "vu",
+            "Yu",
+            "groundHeightfield"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Of",
+          "reads": [
+            "physics"
+          ],
+          "writes": []
+        },
+        {
+          "name": "kf",
+          "reads": [
+            "U",
+            "Df",
+            "J",
+            "camera",
+            "vu"
+          ],
+          "writes": []
+        },
+        {
+          "name": "resetFollowCamera",
+          "reads": [
+            "computeFollowCameraTargets",
+            "camera",
+            "J"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Mf",
+          "reads": [
+            "rider",
+            "physics",
+            "groundHeightfield"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Nf",
+          "reads": [
+            "Mf",
+            "jf",
+            "camera",
+            "q",
+            "Pf",
+            "Sf"
+          ],
+          "writes": [
+            "jf"
+          ]
+        },
+        {
+          "name": "Pf",
+          "reads": [
+            "camera",
+            "MathUtils",
+            "postProcessor"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Wf",
+          "reads": [
+            "MathUtils",
+            "Ff",
+            "camera",
+            "Lf"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Gf",
+          "reads": [
+            "Wf",
+            "Lf",
+            "Uf",
+            "If"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Kf",
+          "reads": [
+            "Lf",
+            "Uu",
+            "Xu",
+            "weather"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Jf",
+          "reads": [
+            "Gf",
+            "camera",
+            "J",
+            "Pf",
+            "Ff",
+            "qf"
+          ],
+          "writes": [
+            "Uf",
+            "qf"
+          ]
+        },
+        {
+          "name": "Xf",
+          "reads": [
+            "W",
+            "L",
+            "Vf",
+            "Rf",
+            "Vector3",
+            "Mf",
+            "Je",
+            "camera",
+            "MathUtils",
+            "J"
+          ],
+          "writes": [
+            "W",
+            "Yf"
+          ]
+        },
+        {
+          "name": "Qf",
+          "reads": [
+            "Yf",
+            "MathUtils",
+            "Zf",
+            "camera",
+            "groundHeightfield",
+            "J",
+            "Pf",
+            "Ff",
+            "Bf",
+            "zf",
+            "Kf",
+            "Rf",
+            "Vf",
+            "bf"
+          ],
+          "writes": [
+            "Yf",
+            "W",
+            "jf"
+          ]
+        },
+        {
+          "name": "updateFollowCamera",
+          "reads": [
+            "physics",
+            "xf",
+            "rider",
+            "G",
+            "Ju",
+            "Cf",
+            "ep",
+            "mp",
+            "rp",
+            "dp",
+            "Cp",
+            "camera",
+            "Sf",
+            "kf",
+            "Of",
+            "Ef",
+            "computeFollowCameraTargets",
+            "K",
+            "q",
+            "Yu",
+            "groundHeightfield",
+            "J",
+            "MathUtils"
+          ],
+          "writes": [
+            "Cf"
+          ]
+        }
+      ],
+      "sha256": "10266828d07c54cc5b7e2839b0f7e8a1b9ba81e2aee003e2ecb00f17434c8fcd"
+    },
+    {
+      "file": "src/recovered/camera/first-person.js",
+      "bytes": 9823,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "mp",
+          "reads": [
+            "rider"
+          ],
+          "writes": []
+        },
+        {
+          "name": "hp",
+          "reads": [
+            "ep",
+            "mp",
+            "I",
+            "rp",
+            "U"
+          ],
+          "writes": [
+            "ep"
+          ]
+        },
+        {
+          "name": "yp",
+          "reads": [
+            "vp",
+            "We"
+          ],
+          "writes": []
+        },
+        {
+          "name": "xp",
+          "reads": [
+            "rider",
+            "yp",
+            "_p"
+          ],
+          "writes": [
+            "bp"
+          ]
+        },
+        {
+          "name": "Sp",
+          "reads": [
+            "rider",
+            "fp",
+            "_p",
+            "pp",
+            "op",
+            "sp"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Cp",
+          "reads": [
+            "U",
+            "rp",
+            "MathUtils",
+            "up",
+            "vu",
+            "Df",
+            "tp",
+            "lp",
+            "Sp",
+            "cp",
+            "xp",
+            "camera",
+            "J",
+            "ip"
+          ],
+          "writes": [
+            "np"
+          ]
+        },
+        {
+          "name": "kp",
+          "reads": [
+            "rider",
+            "R",
+            "physics",
+            "Op",
+            "Ep",
+            "Dp",
+            "Tp",
+            "K",
+            "wp",
+            "cg",
+            "ud",
+            "W",
+            "dg",
+            "Su",
+            "playerInput",
+            "MathUtils",
+            "crashDuration",
+            "vm",
+            "shakeOffDuration",
+            "cd",
+            "ld"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "73d3749e2640bdfed303304c8f9ded3e71c5e52979c963dda19a0468441bf636"
+    },
+    {
+      "file": "src/recovered/game/render-loop.js",
+      "bytes": 15176,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "zp",
+          "reads": [
+            "Np",
+            "R",
+            "W",
+            "rider",
+            "stopSpecialAction",
+            "readInputState",
+            "np",
+            "cableway",
+            "Ed",
+            "L",
+            "Pp",
+            "Fp",
+            "physics",
+            "playerInput",
+            "I",
+            "F",
+            "Wp",
+            "Rp",
+            "ad",
+            "K",
+            "mf",
+            "Vector3",
+            "$u",
+            "tm",
+            "Ep",
+            "Ip",
+            "jp",
+            "ud",
+            "Lp",
+            "id",
+            "kp",
+            "dd",
+            "Mp",
+            "updateFollowCamera",
+            "pf",
+            "B",
+            "Pd",
+            "yg",
+            "rg",
+            "og",
+            "xg",
+            "bg",
+            "hg",
+            "eg",
+            "rh",
+            "Q",
+            "vh",
+            "$",
+            "Lg",
+            "zg",
+            "Pg",
+            "Vg",
+            "Ph",
+            "Ah",
+            "Lh",
+            "X",
+            "im",
+            "Nf",
+            "Jf",
+            "Qf",
+            "Jg",
+            "od",
+            "tp",
+            "camera",
+            "ap",
+            "bp",
+            "xp",
+            "yd",
+            "bd",
+            "xd",
+            "Y",
+            "publishPlayerPosition",
+            "Zg",
+            "i_",
+            "o_",
+            "Vp",
+            "Rf",
+            "qf",
+            "Hf",
+            "zf",
+            "renderer",
+            "Lf",
+            "wd",
+            "Hu",
+            "Wu",
+            "kg",
+            "Bu",
+            "bm",
+            "Em",
+            "lh",
+            "eh",
+            "qh",
+            "Dh",
+            "Eh",
+            "sd",
+            "weather",
+            "MathUtils",
+            "gg",
+            "nearestLakeShore",
+            "lakes",
+            "forest",
+            "Iu",
+            "h_",
+            "Xu",
+            "af",
+            "Eu",
+            "postProcessor",
+            "scene",
+            "Dm",
+            "Z",
+            "Tm",
+            "Uu"
+          ],
+          "writes": [
+            "Y",
+            "tp",
+            "np",
+            "Pp",
+            "hf",
+            "mf",
+            "pf",
+            "$h",
+            "ud",
+            "Xg",
+            "kg",
+            "gg"
+          ]
+        },
+        {
+          "name": "Bp",
+          "reads": [
+            "graphicsController",
+            "zp"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "f9fdd2029d57616b994d529dbb1acbef56b0b987ab07909432b130a59bd03cb8"
+    },
+    {
+      "file": "src/recovered/input/touch-hud.js",
+      "bytes": 4281,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Vp",
+          "reads": [
+            "Nd",
+            "Ed",
+            "i_",
+            "W",
+            "rider",
+            "Sh",
+            "qp",
+            "Jp",
+            "Yp",
+            "Xp",
+            "Zp",
+            "Qp",
+            "em",
+            "Gp",
+            "$p",
+            "B",
+            "$",
+            "Q",
+            "Ah",
+            "X"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "5846fc8f95d76d2d268383cd23a002f7c842ec32c481bac246a4322106b131ed"
+    },
+    {
+      "file": "src/recovered/game/recovery.js",
+      "bytes": 1482,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Wp",
+          "reads": [
+            "Id",
+            "Up",
+            "physics",
+            "forest",
+            "groundHeightfield",
+            "Hp",
+            "K",
+            "Qu",
+            "G",
+            "resetFollowCamera",
+            "F"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "f6eecb4701c8e4cbe8a19aa9499f8e07a39f53e6cdaa7f18fb014f31b566ffb9"
+    },
+    {
+      "file": "src/recovered/game/interactions.js",
+      "bytes": 5359,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "tm",
+          "reads": [
+            "physics",
+            "wd",
+            "Sg",
+            "qp",
+            "Q",
+            "Jp",
+            "$",
+            "Yp",
+            "Bu",
+            "Xp",
+            "rider",
+            "Dg",
+            "Dh",
+            "Zp",
+            "Z",
+            "Qp",
+            "Bh",
+            "Rh",
+            "Wh",
+            "td",
+            "nd",
+            "serviceCentreLocations",
+            "Kp",
+            "I",
+            "Sh",
+            "Ad",
+            "xr",
+            "em",
+            "Gp",
+            "mf",
+            "$u",
+            "$p",
+            "jd"
+          ],
+          "writes": [
+            "Gp",
+            "qp",
+            "Yp",
+            "Jp",
+            "Xp",
+            "Zp",
+            "Qp",
+            "$p",
+            "em",
+            "Kp"
+          ]
+        }
+      ],
+      "sha256": "bb36b26688231e8750d46b04871d0656bb51654dcbd8bcad113ef1e350138394"
+    },
+    {
+      "file": "src/recovered/game/lift-riding.js",
+      "bytes": 14012,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "rm",
+          "reads": [
+            "cableway",
+            "om",
+            "Id",
+            "MathUtils",
+            "X",
+            "rider",
+            "rd",
+            "physics",
+            "F",
+            "I",
+            "Ad",
+            "im",
+            "camera",
+            "K"
+          ],
+          "writes": [
+            "W",
+            "X"
+          ]
+        },
+        {
+          "name": "im",
+          "reads": [
+            "X",
+            "sm",
+            "rd",
+            "crossedCircularDistance",
+            "lm",
+            "physics",
+            "nm",
+            "K",
+            "groundHeightfield",
+            "camera",
+            "q",
+            "J",
+            "Sf"
+          ],
+          "writes": []
+        },
+        {
+          "name": "am",
+          "reads": [
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "om",
+          "reads": [
+            "cableway",
+            "physics",
+            "groundHeightfield",
+            "Et",
+            "I",
+            "Id",
+            "U",
+            "rider",
+            "F",
+            "rd"
+          ],
+          "writes": [
+            "W",
+            "X"
+          ]
+        },
+        {
+          "name": "sm",
+          "reads": [
+            "X",
+            "MathUtils",
+            "physics",
+            "groundHeightfield",
+            "Qu",
+            "kp",
+            "crossedCircularDistance",
+            "ug",
+            "rider",
+            "am",
+            "I",
+            "Ad",
+            "fg",
+            "cg",
+            "dg",
+            "cm",
+            "V",
+            "U",
+            "q",
+            "K",
+            "vu",
+            "nm",
+            "forest",
+            "Sg",
+            "camera",
+            "J",
+            "Sf"
+          ],
+          "writes": []
+        },
+        {
+          "name": "cm",
+          "reads": [
+            "U",
+            "ug",
+            "rider",
+            "physics",
+            "Qu",
+            "G",
+            "I",
+            "F",
+            "yd",
+            "bd"
+          ],
+          "writes": [
+            "X",
+            "W"
+          ]
+        },
+        {
+          "name": "lm",
+          "reads": [
+            "X",
+            "Id",
+            "um",
+            "physics",
+            "Qu",
+            "G",
+            "resetFollowCamera",
+            "rider",
+            "rd",
+            "I",
+            "yd",
+            "bd"
+          ],
+          "writes": [
+            "X",
+            "W"
+          ]
+        },
+        {
+          "name": "um",
+          "reads": [
+            "pm",
+            "pisteField",
+            "mm"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "ff550db9bb76fa1ef8e047f8a3c3c78f051ac8875913200df2c9b510b0a8f6ed"
+    },
+    {
+      "file": "src/recovered/world/safe-position.js",
+      "bytes": 1783,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "dm",
+          "reads": [
+            "physics"
+          ],
+          "writes": []
+        },
+        {
+          "name": "fm",
+          "reads": [
+            "groundHeightfield",
+            "dm",
+            "forest"
+          ],
+          "writes": []
+        },
+        {
+          "name": "pm",
+          "reads": [
+            "fm",
+            "groundHeightfield",
+            "Hp"
+          ],
+          "writes": []
+        },
+        {
+          "name": "mm",
+          "reads": [],
+          "writes": []
+        }
+      ],
+      "sha256": "8416760167b0d896758c10fab2ea442ea30c6343d4ea53b3838089c05e301068"
+    },
+    {
+      "file": "src/recovered/rider/snowball.js",
+      "bytes": 1058,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Xh",
+          "reads": [
+            "physics",
+            "Z",
+            "rider",
+            "U",
+            "camera",
+            "Jh",
+            "G",
+            "Yh"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "a2915d12b88e24b5460510e985742a5eabbfd594d88f34e72578388489e4759a"
+    },
+    {
+      "file": "src/recovered/rider/mount-transition.js",
+      "bytes": 1267,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "ug",
+          "reads": [
+            "rider"
+          ],
+          "writes": [
+            "cg"
+          ]
+        },
+        {
+          "name": "dg",
+          "reads": [
+            "cg",
+            "MathUtils",
+            "sg",
+            "rider",
+            "lg"
+          ],
+          "writes": [
+            "cg"
+          ]
+        }
+      ],
+      "sha256": "650f1f43ed3422a09499fc44aba659a990867a1bb9152d9a26ceac3e8d6e7116"
+    },
+    {
+      "file": "src/recovered/camera/vehicle-follow.js",
+      "bytes": 2704,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "mg",
+          "reads": [
+            "B",
+            "Sf",
+            "pg",
+            "G",
+            "fg",
+            "MathUtils",
+            "groundHeightfield",
+            "U",
+            "Ef",
+            "vu"
+          ],
+          "writes": []
+        },
+        {
+          "name": "hg",
+          "reads": [
+            "B",
+            "G",
+            "xf",
+            "Ef",
+            "kf",
+            "mg",
+            "K",
+            "q",
+            "camera",
+            "groundHeightfield",
+            "J",
+            "Sf"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "25d726f200ada959a271f4b1800b1e732819eb2d3f0e166acc932469d6bd28a3"
+    },
+    {
+      "file": "src/recovered/game/vehicle-effects.js",
+      "bytes": 2355,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "yg",
+          "reads": [
+            "B",
+            "vg",
+            "Wu"
+          ],
+          "writes": [
+            "gg"
+          ]
+        },
+        {
+          "name": "bg",
+          "reads": [
+            "B",
+            "_g",
+            "Ep",
+            "Wu"
+          ],
+          "writes": [
+            "_g"
+          ]
+        },
+        {
+          "name": "xg",
+          "reads": [
+            "B",
+            "Ep",
+            "Dp",
+            "Rp",
+            "groundHeightfield"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Sg",
+          "reads": [],
+          "writes": []
+        }
+      ],
+      "sha256": "eba8fae00d2aab5dd55bd5006451f7f850a6647258d85fd01580e7730869da7a"
+    },
+    {
+      "file": "src/recovered/game/onsen-riding.js",
+      "bytes": 9367,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Cg",
+          "reads": [
+            "Vector3"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Ag",
+          "reads": [
+            "rider",
+            "Og",
+            "Bu",
+            "Y",
+            "c"
+          ],
+          "writes": [
+            "Og",
+            "kg"
+          ]
+        },
+        {
+          "name": "jg",
+          "reads": [
+            "rider",
+            "F",
+            "physics",
+            "ug",
+            "Dg",
+            "Bu",
+            "Fg",
+            "Rg",
+            "Cg",
+            "Ag",
+            "Qu",
+            "I",
+            "hotSpringLocation"
+          ],
+          "writes": [
+            "wg",
+            "W",
+            "Tg"
+          ]
+        },
+        {
+          "name": "Mg",
+          "reads": [
+            "Bu",
+            "physics",
+            "Qu",
+            "ug",
+            "rider",
+            "wg",
+            "Ag",
+            "kp",
+            "G",
+            "I",
+            "F"
+          ],
+          "writes": [
+            "W",
+            "Lg"
+          ]
+        },
+        {
+          "name": "Ng",
+          "reads": [
+            "rider",
+            "Bu"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Pg",
+          "reads": [
+            "rider",
+            "Bu",
+            "Cg",
+            "Ng",
+            "fg",
+            "Qu",
+            "cg",
+            "dg",
+            "Y"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Rg",
+          "reads": [
+            "Bu",
+            "Ig",
+            "rider"
+          ],
+          "writes": [
+            "Lg"
+          ]
+        },
+        {
+          "name": "zg",
+          "reads": [
+            "Lg",
+            "Bu",
+            "MathUtils",
+            "rider",
+            "Ig",
+            "Bg",
+            "fg",
+            "Qu",
+            "cg",
+            "dg"
+          ],
+          "writes": []
+        },
+        {
+          "name": "Bg",
+          "reads": [
+            "ug",
+            "rider",
+            "Cg",
+            "Pg"
+          ],
+          "writes": [
+            "Lg"
+          ]
+        },
+        {
+          "name": "Vg",
+          "reads": [
+            "Bu",
+            "Sf",
+            "playerInput",
+            "U",
+            "Lg",
+            "rider",
+            "Eg",
+            "xf",
+            "fg",
+            "Tg",
+            "K",
+            "q",
+            "camera",
+            "J"
+          ],
+          "writes": [
+            "Tg",
+            "Eg"
+          ]
+        }
+      ],
+      "sha256": "aa49baf261ae7cae49db3d0e9d5e2fc119dc168902c997111afe6ea70afb3a98"
+    },
+    {
+      "file": "src/recovered/navigation/destinations.js",
+      "bytes": 3159,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Wg",
+          "reads": [
+            "encodeDestination",
+            "findRunHighStart",
+            "groundHeightfield",
+            "worldMetadata",
+            "sampleRouteDistance",
+            "fm",
+            "Hg",
+            "Ug",
+            "serviceCentreLocations",
+            "pm",
+            "mm",
+            "G",
+            "ed",
+            "Gg",
+            "liftDisplayName",
+            "um"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "3c8bf8ff20240849e3723f9254a4c2ba0a2b8da04d769c991769c44ce2f58ae8"
+    },
+    {
+      "file": "src/recovered/game/arrival.js",
+      "bytes": 3240,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Gg",
+          "reads": [
+            "Vector3",
+            "groundHeightfield"
+          ],
+          "writes": []
+        },
+        {
+          "name": "qg",
+          "reads": [
+            "Id",
+            "r_",
+            "Kf",
+            "Rf",
+            "zf",
+            "Vf",
+            "lf",
+            "physics",
+            "Qu",
+            "G",
+            "Vector3",
+            "computeFollowCameraTargets",
+            "Bf",
+            "Jg"
+          ],
+          "writes": [
+            "$u",
+            "W",
+            "df",
+            "Kg"
+          ]
+        },
+        {
+          "name": "Jg",
+          "reads": [
+            "Kg",
+            "camera",
+            "groundHeightfield",
+            "J",
+            "Pf",
+            "Sf",
+            "Bf",
+            "MathUtils",
+            "startRun",
+            "$u",
+            "rm"
+          ],
+          "writes": [
+            "Kg"
+          ]
+        }
+      ],
+      "sha256": "b71d4f5c5d15162de9833d62bc17897a53ea675474c53171c0664d1d42ce35d1"
+    },
+    {
+      "file": "src/recovered/navigation/map-controls.js",
+      "bytes": 1793,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "Zg",
+          "reads": [
+            "W",
+            "X",
+            "physics",
+            "Yg",
+            "MathUtils"
+          ],
+          "writes": []
+        },
+        {
+          "name": "$g",
+          "reads": [
+            "Ed",
+            "i_",
+            "W",
+            "Zg",
+            "I",
+            "physics",
+            "Qg",
+            "publishPlayerPosition"
+          ],
+          "writes": []
+        },
+        {
+          "name": "e_",
+          "reads": [
+            "Ed",
+            "Qg"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "8aa8ed7492fd198780e3d8adda4979c9cf95deef3c5aada7e64b4d86fc695815"
+    },
+    {
+      "file": "src/recovered/navigation/diorama-handoff.js",
+      "bytes": 3095,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-feature",
+      "bindings": [
+        {
+          "name": "n_",
+          "reads": [
+            "$u",
+            "W",
+            "encodePlayerPosition",
+            "Zg"
+          ],
+          "writes": []
+        },
+        {
+          "name": "r_",
+          "reads": [
+            "t_",
+            "n_"
+          ],
+          "writes": []
+        },
+        {
+          "name": "a_",
+          "reads": [
+            "writeDioramaHandoff",
+            "c_"
+          ],
+          "writes": [
+            "i_"
+          ]
+        },
+        {
+          "name": "o_",
+          "reads": [
+            "i_",
+            "Bf",
+            "MathUtils",
+            "e_"
+          ],
+          "writes": [
+            "i_"
+          ]
+        },
+        {
+          "name": "c_",
+          "reads": [
+            "W",
+            "s_",
+            "Zg"
+          ],
+          "writes": []
+        },
+        {
+          "name": "l_",
+          "reads": [
+            "s_"
+          ],
+          "writes": []
+        },
+        {
+          "name": "u_",
+          "reads": [
+            "Wg",
+            "MathUtils",
+            "groundHeightfield"
+          ],
+          "writes": []
+        }
+      ],
+      "sha256": "3db17c6c05f627fb26b6c66344955300c6360cf3873cf092b9e4a16b2312ecce"
+    },
+    {
+      "file": "src/vendor/three/buffer-geometry-utils.js",
+      "bytes": 8082,
+      "source": "BufferGeometryUtils-CcxdTGak.js",
+      "category": "third-party-vendor",
+      "originalExportAliases": [
+        "n",
+        "r",
+        "t"
+      ],
+      "sha256": "e59d20e0f683d13ae4e29e4f8633aa15f3a78e545af722295c71fcd24d5fd655"
+    },
+    {
+      "file": "src/recovered/diorama.js",
+      "bytes": 68921,
+      "source": "diorama-DPOYz-if.js",
+      "category": "recovered-entry",
+      "originalExportAliases": [],
+      "sha256": "e41f235ad7ec44548d88d984b22757530798581e8f1f4f32b528738fc9b8ee00"
+    },
+    {
+      "file": "src/recovered/rider/gear-mount.js",
+      "bytes": 42561,
+      "source": "gear-mount-CvxORJQd.js",
+      "category": "recovered-entry",
+      "originalExportAliases": [
+        "makeStockBoard"
+      ],
+      "sha256": "34733aedbbf1c9d20cdfa1f696fd54aa2ac979252b05c9cfb0db2bc0276a1f86"
+    },
+    {
+      "file": "src/recovered/main.js",
+      "bytes": 133757,
+      "source": "main-VX-cDQwL.js",
+      "category": "recovered-entry",
+      "originalExportAliases": [],
+      "sha256": "8a987d60adb916e0c07614efaa7fdf85bd4c4e7eef8a022459c364ebd404f4fc"
+    },
+    {
+      "file": "src/recovered/assets/model-loader-lazy.js",
+      "bytes": 410,
+      "source": "model-loader-BmPhavCK.js",
+      "category": "recovered-entry",
+      "originalExportAliases": [],
+      "sha256": "3ea8cfe1af1ef27f48e09e1e0237a4581c2e7298127da6c4c21ba37b14159098"
+    },
+    {
+      "file": "src/recovered/assets/model-loader.js",
+      "bytes": 9149,
+      "source": "model-loader-DSq0b4m1.js",
+      "category": "recovered-entry",
+      "originalExportAliases": [
+        "a",
+        "i",
+        "n",
+        "o",
+        "r",
+        "t"
+      ],
+      "sha256": "31cd35e9cf8cd200689b06ac954e93d46d38893a15b1c1b58e4e737ad16116b4"
+    },
+    {
+      "file": "src/recovered/shared-runtime.js",
+      "bytes": 94560,
+      "source": "names-Bi68pVgn.js",
+      "category": "recovered-entry",
+      "originalExportAliases": [
+        "$",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "_",
+        "a",
+        "b",
+        "c",
+        "d",
+        "et",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "tt",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z"
+      ],
+      "sha256": "7d1a0fdf3617e7b39461e8d5aac94aeb6a1791c44d412044011951d23ee20f3a"
+    },
+    {
+      "file": "src/recovered/rider/model.js",
+      "bytes": 31972,
+      "source": "rider-model-BIDVHzGE.js",
+      "category": "recovered-entry",
+      "originalExportAliases": [
+        "a",
+        "c",
+        "i",
+        "l",
+        "n",
+        "o",
+        "r",
+        "s",
+        "t"
+      ],
+      "sha256": "1b46b4e1a10c0525891c3b893a7d785d45991c5ed27d41c1260614028ab64160"
+    },
+    {
+      "file": "src/recovered/rider/model-lazy.js",
+      "bytes": 478,
+      "source": "rider-model-j8SEKt19.js",
+      "category": "recovered-entry",
+      "originalExportAliases": [],
+      "sha256": "bb72dbd42f79f35abe576c2cd3cfd3a35c420c56200e99734a2d2a7a0b5b925b"
+    },
+    {
+      "file": "src/vendor/three/core.js",
+      "bytes": 401014,
+      "source": "three.core-CPCyBexQ.js",
+      "category": "third-party-vendor",
+      "originalExportAliases": [
+        "$",
+        "$n",
+        "$t",
+        "A",
+        "An",
+        "Ar",
+        "At",
+        "B",
+        "Bn",
+        "Bt",
+        "C",
+        "Cn",
+        "Cr",
+        "Ct",
+        "D",
+        "Dn",
+        "Dr",
+        "Dt",
+        "E",
+        "En",
+        "Er",
+        "Et",
+        "F",
+        "Fn",
+        "Fr",
+        "Ft",
+        "G",
+        "Gn",
+        "Gt",
+        "H",
+        "Hn",
+        "Ht",
+        "I",
+        "In",
+        "Ir",
+        "It",
+        "J",
+        "Jn",
+        "Jt",
+        "K",
+        "Kn",
+        "Kt",
+        "L",
+        "Ln",
+        "Lr",
+        "Lt",
+        "M",
+        "Mn",
+        "Mr",
+        "Mt",
+        "N",
+        "Nn",
+        "Nr",
+        "Nt",
+        "O",
+        "On",
+        "Or",
+        "Ot",
+        "P",
+        "Pn",
+        "Pr",
+        "Pt",
+        "Q",
+        "Qn",
+        "Qt",
+        "R",
+        "Rn",
+        "Rr",
+        "Rt",
+        "S",
+        "Sn",
+        "Sr",
+        "St",
+        "T",
+        "Tn",
+        "Tr",
+        "Tt",
+        "U",
+        "Un",
+        "Ut",
+        "V",
+        "Vn",
+        "Vt",
+        "W",
+        "Wn",
+        "Wt",
+        "X",
+        "Xn",
+        "Xt",
+        "Y",
+        "Yn",
+        "Yt",
+        "Z",
+        "Zn",
+        "Zt",
+        "_",
+        "_n",
+        "_r",
+        "_t",
+        "a",
+        "an",
+        "ar",
+        "at",
+        "b",
+        "bn",
+        "br",
+        "bt",
+        "c",
+        "cn",
+        "cr",
+        "ct",
+        "d",
+        "dn",
+        "dr",
+        "dt",
+        "en",
+        "er",
+        "et",
+        "f",
+        "fn",
+        "fr",
+        "ft",
+        "g",
+        "gn",
+        "gr",
+        "gt",
+        "h",
+        "hn",
+        "hr",
+        "ht",
+        "i",
+        "in",
+        "ir",
+        "it",
+        "j",
+        "jn",
+        "jr",
+        "jt",
+        "k",
+        "kn",
+        "kr",
+        "kt",
+        "l",
+        "ln",
+        "lr",
+        "lt",
+        "m",
+        "mn",
+        "mr",
+        "mt",
+        "n",
+        "nn",
+        "nr",
+        "nt",
+        "o",
+        "on",
+        "or",
+        "ot",
+        "p",
+        "pn",
+        "pr",
+        "pt",
+        "q",
+        "qn",
+        "qt",
+        "r",
+        "rn",
+        "rr",
+        "rt",
+        "s",
+        "sn",
+        "sr",
+        "st",
+        "t",
+        "tn",
+        "tr",
+        "tt",
+        "u",
+        "un",
+        "ur",
+        "ut",
+        "v",
+        "vn",
+        "vr",
+        "vt",
+        "w",
+        "wn",
+        "wr",
+        "wt",
+        "x",
+        "xn",
+        "xr",
+        "xt",
+        "y",
+        "yn",
+        "yr",
+        "yt",
+        "z",
+        "zn",
+        "zr",
+        "zt"
+      ],
+      "sha256": "5990f3a2e529a7facf8db905ee5dda2beea89e0d90157aa86c221df0a437b829"
+    },
+    {
+      "file": "src/recovered/rider/throw.js",
+      "bytes": 2549,
+      "source": "throw-f7i-9-x5.js",
+      "category": "recovered-entry",
+      "originalExportAliases": [
+        "a",
+        "i",
+        "n",
+        "r",
+        "t"
+      ],
+      "sha256": "2754aa16625b5d55aa29952981d2b930485120b67f0e2303f4b171615afbb355"
+    },
+    {
+      "file": "src/recovered/render/toon-lazy.js",
+      "bytes": 374,
+      "source": "toon-D0q0jif_.js",
+      "category": "recovered-entry",
+      "originalExportAliases": [],
+      "sha256": "64e4d1ecebc432ef1bd191d38ae567572b472facf371163e56ab2a1bfe718489"
+    },
+    {
+      "file": "src/recovered/render/toon-materials.js",
+      "bytes": 8460,
+      "source": "toon-zaef0iWs.js",
+      "category": "recovered-entry",
+      "originalExportAliases": [
+        "n",
+        "t"
+      ],
+      "sha256": "59d4e2ba0d5534cb4fd97d3b66fa9b95bb06deb63b16324720dce49da7f3b9b1"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "BufferGeometryUtils-CcxdTGak.js",
+      "bytes": 6124,
+      "sha256": "3e61e7ef186bc860889409333ae6ac26b7f4c89abd63be72939f32f4f694aabe",
+      "target": "src/vendor/three/buffer-geometry-utils.js"
+    },
+    {
+      "file": "diorama-DPOYz-if.js",
+      "bytes": 50554,
+      "sha256": "cb023e2d5e8b8763baf2d46938bf376d19bb748dec5485e8156d1ddb38f4bb78",
+      "target": "src/recovered/diorama.js"
+    },
+    {
+      "file": "gear-mount-CvxORJQd.js",
+      "bytes": 29020,
+      "sha256": "2ee1de03f9d2be9d8d70f166c0adeca460f456f0d6f55e098a489643f48c3e02",
+      "target": "src/recovered/rider/gear-mount.js"
+    },
+    {
+      "file": "main-VX-cDQwL.js",
+      "bytes": 298347,
+      "sha256": "43775064470d6688be5a67a991dbf56e0b93bb7d8729fee5e46979b8d454281c",
+      "target": "src/recovered/main.js"
+    },
+    {
+      "file": "model-loader-BmPhavCK.js",
+      "bytes": 100,
+      "sha256": "9fbe2a6d35b89ff1b3d40442e150e798ea0419089cbf1f66479fea6a5e343158",
+      "target": "src/recovered/assets/model-loader-lazy.js"
+    },
+    {
+      "file": "model-loader-DSq0b4m1.js",
+      "bytes": 50129,
+      "sha256": "1921b32c463a9fd5c88c0ea30e1bd934c93b487dbad72d131cc5d94b54860131",
+      "target": "src/recovered/assets/model-loader.js"
+    },
+    {
+      "file": "names-Bi68pVgn.js",
+      "bytes": 562754,
+      "sha256": "ce7b645b839e04fd1bbe85cf252f19cc3da637b5d4e2b98ddff85e48bfa33ce1",
+      "target": "src/recovered/shared-runtime.js"
+    },
+    {
+      "file": "rider-model-BIDVHzGE.js",
+      "bytes": 23712,
+      "sha256": "0680756f4519f9b72b7c87a6a92b32534de8f3d0621d3f062f977249f44dcaf5",
+      "target": "src/recovered/rider/model.js"
+    },
+    {
+      "file": "rider-model-j8SEKt19.js",
+      "bytes": 172,
+      "sha256": "eb1f2e16c0de5b5054c7d70401a5b7d7a62a2850660d3b7dacb0518c452e1a84",
+      "target": "src/recovered/rider/model-lazy.js"
+    },
+    {
+      "file": "three.core-CPCyBexQ.js",
+      "bytes": 297642,
+      "sha256": "bc94fbfb181ac30d7bbb7d21f41fb3547d25a0ade437dfcdda5f84a4c0787173",
+      "target": "src/vendor/three/core.js"
+    },
+    {
+      "file": "throw-f7i-9-x5.js",
+      "bytes": 1549,
+      "sha256": "42444a8de21081117f6be1bf8d802376891d1852efc32b5dfbf211a9cf535343",
+      "target": "src/recovered/rider/throw.js"
+    },
+    {
+      "file": "toon-D0q0jif_.js",
+      "bytes": 64,
+      "sha256": "d0ad71a83e285aade2a3a43bc97ac597e8fa9346141d803651f9492b54453cf7",
+      "target": "src/recovered/render/toon-lazy.js"
+    },
+    {
+      "file": "toon-zaef0iWs.js",
+      "bytes": 7678,
+      "sha256": "ea7bfaaeac123b8b001329bdb5eddc3671329913b7e026f24a06a8fc100a8e6c",
+      "target": "src/recovered/render/toon-materials.js"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "physics-tuning",
+      "defaults": {
+        "gravityScale": 1,
+        "dragScale": 1,
+        "steeringScale": 1,
+        "maxSpeed": 0
+      },
+      "note": "Gravity affects grounded/crash/air; drag affects ground/crash/air; steering affects ground/air; cap runs before movement. maxSpeed=0 preserves original uncapped behavior."
+    },
+    {
+      "source": "names-Bi68pVgn.js",
+      "kind": "scope-aware-feature-extraction",
+      "bindingCount": 267,
+      "context": "worldScope"
+    },
+    {
+      "source": "main-VX-cDQwL.js",
+      "kind": "scope-aware-feature-extraction",
+      "bindingCount": 297,
+      "context": "gameScope"
+    }
+  ],
+  "semanticLabelsSource": "Recovered implementation and AST inspection; semantic labels are recorded per module below. Temporary analysis files were removed at finalization.",
+  "totalSourceModules": 90,
+  "featureModules": [
+    "recovered/ui/loading.js",
+    "recovered/render/graphics-settings.js",
+    "recovered/world/lifts.js",
+    "recovered/world/locations.js",
+    "recovered/world/data.js",
+    "recovered/world/heightfield.js",
+    "recovered/world/pistes.js",
+    "recovered/world/terrain.js",
+    "recovered/world/landmarks.js",
+    "recovered/world/structures.js",
+    "recovered/world/water.js",
+    "recovered/world/forest.js",
+    "recovered/world/markers.js",
+    "recovered/world/onsen.js",
+    "recovered/world/vehicles.js",
+    "recovered/world/scene.js",
+    "recovered/weather/sky.js",
+    "recovered/rider/pose.js",
+    "recovered/rider/rider.js",
+    "recovered/render/postprocess.js",
+    "recovered/ui/diorama-base.js",
+    "recovered/ui/title.js",
+    "recovered/ui/navigation-data.js",
+    "recovered/ui/graphics-menu.js",
+    "recovered/render/diagnostics.js",
+    "recovered/rider/actions.js",
+    "recovered/effects/fireball.js",
+    "recovered/physics/collision.js",
+    "recovered/weather/weather-system.js",
+    "recovered/world/prayer-wheels.js",
+    "recovered/world/swing.js",
+    "recovered/animals/dog.js",
+    "recovered/animals/quadruped-rig.js",
+    "recovered/effects/snow-tracks.js",
+    "recovered/animals/fox.js",
+    "recovered/animals/horse.js",
+    "recovered/animals/snow-monster.js",
+    "recovered/ui/dialogue.js",
+    "recovered/physics/skier.js",
+    "recovered/navigation/gps.js",
+    "recovered/ui/hud.js",
+    "recovered/navigation/big-map.js",
+    "recovered/navigation/beacons.js",
+    "recovered/audio/sound-system.js",
+    "recovered/ui/menu.js",
+    "recovered/input/touch.js",
+    "recovered/camera/mouse-look.js",
+    "recovered/input/player-controls.js",
+    "recovered/render/viewport.js",
+    "recovered/world/interiors.js",
+    "recovered/game/session.js",
+    "recovered/navigation/position.js",
+    "recovered/game/vehicle-riding.js",
+    "recovered/rider/selection.js",
+    "recovered/ui/weather-menu.js",
+    "recovered/rider/gear.js",
+    "recovered/ui/panel.js",
+    "recovered/ui/intro.js",
+    "recovered/camera/follow.js",
+    "recovered/camera/first-person.js",
+    "recovered/game/render-loop.js",
+    "recovered/input/touch-hud.js",
+    "recovered/game/recovery.js",
+    "recovered/game/interactions.js",
+    "recovered/game/lift-riding.js",
+    "recovered/world/safe-position.js",
+    "recovered/rider/snowball.js",
+    "recovered/rider/mount-transition.js",
+    "recovered/camera/vehicle-follow.js",
+    "recovered/game/vehicle-effects.js",
+    "recovered/game/onsen-riding.js",
+    "recovered/navigation/destinations.js",
+    "recovered/game/arrival.js",
+    "recovered/navigation/map-controls.js",
+    "recovered/navigation/diorama-handoff.js"
+  ],
+  "counts": {
+    "javascript_modules": 90,
+    "feature_modules": 75,
+    "entry_or_adapter_modules": 11,
+    "vendor_modules": 4,
+    "feature_modules_by_responsibility": {
+      "ui": 11,
+      "render": 4,
+      "world": 18,
+      "weather": 2,
+      "rider": 7,
+      "effects": 2,
+      "physics": 2,
+      "animals": 5,
+      "navigation": 7,
+      "audio": 1,
+      "input": 3,
+      "camera": 4,
+      "game": 9
+    }
+  },
+  "aliasSafety": "Vendor public aliases are preserved. Consumer bindings are renamed only to vetted semantic names after checking every reference scope for an existing capturing binding; internal minified export locals are not adopted."
+}

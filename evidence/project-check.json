@@ -1,0 +1,10 @@
+{
+  "checkedUtc": "2026-11-08T14:48:18.967Z",
+  "kind": "Source structure and asset integrity checks",
+  "errors": [],
+  "sourceFiles": 109,
+  "recoveredFeatureModules": 75,
+  "vendorModules": 4,
+  "assetsChecked": 59,
+  "passed": true
+}

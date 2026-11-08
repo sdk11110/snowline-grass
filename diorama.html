@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>雪线漫游 · Snowline Roam</title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <script type="module" src="/src/diorama-entry.js"></script>
+</head>
+  <body>
+    <canvas id="game"></canvas>
+    <div id="you-tag" class="dio-you hidden" aria-hidden="true">You</div>
+
+    <aside class="dio-card" id="legend">
+      <div class="tab">雪线漫游</div>
+      <p class="sub">Jikepulin Ski Resort · Altay, Xinjiang</p>
+      <ul class="key">
+        <li><span class="badge easy"></span>Easy</li>
+        <li><span class="badge intermediate"></span>Intermediate</li>
+        <li><span class="badge advanced"></span>Advanced</li>
+        <li><span class="badge expert"></span>Expert</li>
+        <li><span class="badge lift"></span>Lift</li>
+        <li><span class="badge lodge"></span>Service centre</li>
+      </ul>
+      <p class="dim" id="stats"></p>
+      <p class="hint">Drag to spin · scroll to zoom · WASD to fly (Q/E down/up, Shift faster) · click a run, lift, station or lodge to go there</p>
+      <p class="hint touch-hint">Drag to spin · pinch to zoom · two fingers to move · tap a run, lift or lodge to go there</p>
+      <div class="btns">
+        <button id="spin" aria-pressed="true">Auto-spin</button>
+        <button id="home">Reset view</button>
+        <a href="./">Ride it ▸</a>
+      </div>
+      <label class="gfx">Graphics
+        <select id="graphics">
+          <option value="auto">Auto</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+          <option value="custom">Custom</option>
+        </select>
+      </label>
+    </aside>
+
+    <div id="tip" class="dio-tip hidden" role="status">
+      <div class="head"><span class="badge"></span><span class="zh"></span></div>
+      <div class="en"></div>
+      <div class="rows"></div>
+    </div>
+
+    <!-- The picked place, and where it can send you in the game. -->
+    <section id="pick" class="dio-pick hidden" aria-label="Selected place" aria-live="polite">
+      <div class="tab"></div>
+      <button type="button" class="x" aria-label="Close">×</button>
+      <div class="head"><span class="badge"></span><span class="zh"></span></div>
+      <div class="en"></div>
+      <div class="rows"></div>
+      <p class="what"></p>
+      <div class="acts"></div>
+    </section>
+    <!-- The first time on a touch screen: how to handle the table. -->
+    <div id="guide" class="dio-guide hidden">
+      <section role="dialog" aria-modal="true" aria-labelledby="guide-tab">
+        <div class="tab" id="guide-tab">Touch the table</div>
+        <div class="moves">
+          <svg viewBox="0 0 64 56" aria-hidden="true"><circle cx="44" cy="22" r="10" fill="#fff" stroke-dasharray="4 3" /><path d="M34 40C26 46 14 44 8 34M8 34h9M8 34l2 8" /></svg>
+          <p><b>Spin it</b>: drag with one finger</p>
+          <svg viewBox="0 0 64 56" aria-hidden="true"><circle cx="22" cy="34" r="8" fill="#fff" stroke-dasharray="4 3" /><circle cx="42" cy="22" r="8" fill="#fff" stroke-dasharray="4 3" /><path d="M12 46 6 52M6 52h7M6 52v-7M52 10l6-6M58 4h-7M58 4v7" /></svg>
+          <p><b>Zoom</b>: pinch</p>
+          <svg viewBox="0 0 64 56" aria-hidden="true"><circle cx="20" cy="20" r="8" fill="#fff" stroke-dasharray="4 3" /><circle cx="40" cy="20" r="8" fill="#fff" stroke-dasharray="4 3" /><path d="M20 32v16M40 32v16M15 43l5 5 5-5M35 43l5 5 5-5" /></svg>
+          <p><b>Move around</b>: drag with two fingers</p>
+          <svg viewBox="0 0 64 56" aria-hidden="true"><circle cx="32" cy="28" r="8" fill="#fff" stroke-dasharray="4 3" /><circle cx="32" cy="28" r="16" stroke-dasharray="2 4" /></svg>
+          <p><b>Pick a place</b>: tap a run, a lift, a station or a lodge</p>
+          <svg viewBox="0 0 64 56" aria-hidden="true"><circle cx="32" cy="28" r="8" fill="#fff" stroke-dasharray="4 3" /><path d="M18 14l-5-5M46 14l5-5M18 42l-5 5M46 42l5 5" /></svg>
+          <p><b>Fly closer</b>: double-tap a spot</p>
+        </div>
+        <button type="button" class="ok">Got it</button>
+      </section>
+    </div>
+    <div id="cloud"></div>
+
+    <p class="dio-credit">Terrain: AWS Terrain Tiles · Runs &amp; lifts © OpenStreetMap contributors</p>
+
+    <div id="loading" class="ski-loading"><div class="loading-art"><div class="goggles mountain" aria-hidden="true"><div class="ink ink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 130" fill="none"><g transform="translate(0 0)" stroke="#23303a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M41 91Q44 85 49 77L85 37Q89 33 93 38L111 59Q115 63 119 59L136 39Q140 34 144 39L198 88Q203 93 196 94Q120 98 44 94Q39 94 41 91Z"/>
+<path d="M69 57Q76 57 80 61Q84 64 88 59Q91 55 95 60Q98 63 102 62M126 50Q132 51 135 54Q139 58 142 53Q146 49 150 55Q154 59 160 57" stroke-width="1.9"/>
+<path d="M54 83Q70 78 84 81M152 83Q168 79 186 85" stroke-width="1.4" opacity=".65"/>
+</g></svg></div><div class="ink ink-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 130" fill="none"><g transform="translate(0.3 -0.2)" stroke="#23303a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M41 91Q44 85 49 77L85 37Q89 33 93 38L111 59Q115 63 119 59L136 39Q140 34 144 39L198 88Q203 93 196 94Q120 98 44 94Q39 94 41 91Z"/>
+<path d="M69 57Q76 57 80 61Q84 64 88 59Q91 55 95 60Q98 63 102 62M126 50Q132 51 135 54Q139 58 142 53Q146 49 150 55Q154 59 160 57" stroke-width="1.9"/>
+<path d="M54 83Q70 78 84 81M152 83Q168 79 186 85" stroke-width="1.4" opacity=".65"/>
+</g></svg></div><div class="ink ink-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 130" fill="none"><g transform="translate(-0.3 0.2)" stroke="#23303a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M41 91Q44 85 49 77L85 37Q89 33 93 38L111 59Q115 63 119 59L136 39Q140 34 144 39L198 88Q203 93 196 94Q120 98 44 94Q39 94 41 91Z"/>
+<path d="M69 57Q76 57 80 61Q84 64 88 59Q91 55 95 60Q98 63 102 62M126 50Q132 51 135 54Q139 58 142 53Q146 49 150 55Q154 59 160 57" stroke-width="1.9"/>
+<path d="M54 83Q70 78 84 81M152 83Q168 79 186 85" stroke-width="1.4" opacity=".65"/>
+</g></svg></div></div><div class="label" role="status" aria-label="Building the mountain"><span aria-hidden="true"><span class="letter" style="--y:0px;--r:-0.8deg;--d:0.00s">B</span><span class="letter" style="--y:-0.6px;--r:0.6deg;--d:-0.23s">u</span><span class="letter" style="--y:0.5px;--r:-0.6deg;--d:-0.46s">i</span><span class="letter" style="--y:-0.4px;--r:0.5deg;--d:-0.69s">l</span><span class="letter" style="--y:0.7px;--r:-0.6deg;--d:-0.92s">d</span><span class="letter" style="--y:-0.3px;--r:0.7deg;--d:-1.15s">i</span><span class="letter" style="--y:0.35px;--r:-0.4deg;--d:-1.38s">n</span><span class="letter" style="--y:0.4px;--r:0.3deg;--d:-1.61s">g</span> <span class="letter" style="--y:0.25px;--r:0.5deg;--d:-2.07s">t</span><span class="letter" style="--y:0px;--r:-0.8deg;--d:-2.30s">h</span><span class="letter" style="--y:-0.6px;--r:0.6deg;--d:-2.53s">e</span> <span class="letter" style="--y:-0.4px;--r:0.5deg;--d:-2.99s">m</span><span class="letter" style="--y:0.7px;--r:-0.6deg;--d:-3.22s">o</span><span class="letter" style="--y:-0.3px;--r:0.7deg;--d:-3.45s">u</span><span class="letter" style="--y:0.35px;--r:-0.4deg;--d:-3.68s">n</span><span class="letter" style="--y:0.4px;--r:0.3deg;--d:-3.91s">t</span><span class="letter" style="--y:-0.25px;--r:-0.4deg;--d:-4.14s">a</span><span class="letter" style="--y:0.25px;--r:0.5deg;--d:-4.37s">i</span><span class="letter" style="--y:0px;--r:-0.8deg;--d:-4.60s">n</span></span></div><div id="loading-progress" role="progressbar" aria-label="Loading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><svg class="footprints" viewBox="0 0 190 44" fill="none" aria-hidden="true"><g stroke="#23303a" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"><g class="step" data-step="0" transform="translate(14 12) rotate(-5)"><path d="M-9-4.8C-6-5.4-3-4.2 0-5.1 3-6.3 8-6.5 10-4.1 12-1.6 11.8 2.5 9 4.4 6 6.1 2 5.4-.5 4.5-3 3.8-6 5.2-9 4.4-10.3 2.5-10.4-2.8-9-4.8Z"/><path class="tread" d="M-7-3v6m3-6 .8 2.8L-4 3M0-3l1.8 3L0 3m3-6 2 3-2 3m4-6 1.2 3L7 3"/></g><g class="step" data-step="1" transform="translate(37 30) rotate(5)"><path d="M-9-4.8C-6-5.4-3-4.2 0-5.1 3-6.3 8-6.5 10-4.1 12-1.6 11.8 2.5 9 4.4 6 6.1 2 5.4-.5 4.5-3 3.8-6 5.2-9 4.4-10.3 2.5-10.4-2.8-9-4.8Z"/><path class="tread" d="M-7-3v6m3-6 .8 2.8L-4 3M0-3l1.8 3L0 3m3-6 2 3-2 3m4-6 1.2 3L7 3"/></g><g class="step" data-step="2" transform="translate(60 12) rotate(-5)"><path d="M-9-4.8C-6-5.4-3-4.2 0-5.1 3-6.3 8-6.5 10-4.1 12-1.6 11.8 2.5 9 4.4 6 6.1 2 5.4-.5 4.5-3 3.8-6 5.2-9 4.4-10.3 2.5-10.4-2.8-9-4.8Z"/><path class="tread" d="M-7-3v6m3-6 .8 2.8L-4 3M0-3l1.8 3L0 3m3-6 2 3-2 3m4-6 1.2 3L7 3"/></g><g class="step" data-step="3" transform="translate(83 30) rotate(5)"><path d="M-9-4.8C-6-5.4-3-4.2 0-5.1 3-6.3 8-6.5 10-4.1 12-1.6 11.8 2.5 9 4.4 6 6.1 2 5.4-.5 4.5-3 3.8-6 5.2-9 4.4-10.3 2.5-10.4-2.8-9-4.8Z"/><path class="tread" d="M-7-3v6m3-6 .8 2.8L-4 3M0-3l1.8 3L0 3m3-6 2 3-2 3m4-6 1.2 3L7 3"/></g><g class="step" data-step="4" transform="translate(106 12) rotate(-5)"><path d="M-9-4.8C-6-5.4-3-4.2 0-5.1 3-6.3 8-6.5 10-4.1 12-1.6 11.8 2.5 9 4.4 6 6.1 2 5.4-.5 4.5-3 3.8-6 5.2-9 4.4-10.3 2.5-10.4-2.8-9-4.8Z"/><path class="tread" d="M-7-3v6m3-6 .8 2.8L-4 3M0-3l1.8 3L0 3m3-6 2 3-2 3m4-6 1.2 3L7 3"/></g><g class="step" data-step="5" transform="translate(129 30) rotate(5)"><path d="M-9-4.8C-6-5.4-3-4.2 0-5.1 3-6.3 8-6.5 10-4.1 12-1.6 11.8 2.5 9 4.4 6 6.1 2 5.4-.5 4.5-3 3.8-6 5.2-9 4.4-10.3 2.5-10.4-2.8-9-4.8Z"/><path class="tread" d="M-7-3v6m3-6 .8 2.8L-4 3M0-3l1.8 3L0 3m3-6 2 3-2 3m4-6 1.2 3L7 3"/></g><g class="step" data-step="6" transform="translate(152 12) rotate(-5)"><path d="M-9-4.8C-6-5.4-3-4.2 0-5.1 3-6.3 8-6.5 10-4.1 12-1.6 11.8 2.5 9 4.4 6 6.1 2 5.4-.5 4.5-3 3.8-6 5.2-9 4.4-10.3 2.5-10.4-2.8-9-4.8Z"/><path class="tread" d="M-7-3v6m3-6 .8 2.8L-4 3M0-3l1.8 3L0 3m3-6 2 3-2 3m4-6 1.2 3L7 3"/></g><g class="step" data-step="7" transform="translate(175 30) rotate(5)"><path d="M-9-4.8C-6-5.4-3-4.2 0-5.1 3-6.3 8-6.5 10-4.1 12-1.6 11.8 2.5 9 4.4 6 6.1 2 5.4-.5 4.5-3 3.8-6 5.2-9 4.4-10.3 2.5-10.4-2.8-9-4.8Z"/><path class="tread" d="M-7-3v6m3-6 .8 2.8L-4 3M0-3l1.8 3L0 3m3-6 2 3-2 3m4-6 1.2 3L7 3"/></g></g></svg></div><div class="loading-arrival" role="status"></div></div></div>
+  </body>
+</html>

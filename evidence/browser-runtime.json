@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-08",
+  "timezone": "Asia/Shanghai",
+  "url": "http://127.0.0.1:5187/",
+  "method": "Actual in-app browser interaction and unretouched screenshots",
+  "checks": [
+    {
+      "feature": "Recovered-source game startup and live downhill movement",
+      "result": "passed",
+      "observed": "HUD progressed from 28 km/h to the selected practice limit of 54 km/h"
+    },
+    {
+      "feature": "Practice preset",
+      "result": "passed",
+      "observed": "Runtime controls read back gravity 0.75, drag 1.5, steering 1.15, maxSpeed 15m/s"
+    },
+    {
+      "feature": "Female rider and skis",
+      "result": "passed",
+      "observed": "Selected through customization controls and original female model displayed"
+    },
+    {
+      "feature": "Night powder preset",
+      "result": "passed",
+      "observed": "22:30, snow, day cycle off, aurora enabled; night snow rendered"
+    },
+    {
+      "feature": "Profile export",
+      "result": "passed",
+      "observed": "Actual downloaded JSON copied to exported-profile.json with the practice parameter values"
+    },
+    {
+      "feature": "Narrow viewport",
+      "result": "passed",
+      "observed": "390px viewport, document width 390px and body width 390px; controls remained available"
+    },
+    {
+      "feature": "Recovered-source Diorama",
+      "result": "passed",
+      "observed": "Mountain rendered with 55 named runs, 10 lifts and 56 riders; recovered material binding and base styles verified after fixes"
+    },
+    {
+      "feature": "Restore defaults",
+      "result": "passed",
+      "observed": "Default profile restored through the customization panel at the end"
+    }
+  ],
+  "coverageLimitations": [
+    "Retaining all gameplay modules does not mean every trail, vehicle, action, animal or interaction was manually played through",
+    "Import validation has automated tests; the browser file-import dialog was not separately exercised",
+    "No FPS benchmark or all-device compatibility claim is made"
+  ],
+  "screenshots": [
+    {
+      "file": "01_customizable_game.jpg",
+      "width": 1366,
+      "height": 1167,
+      "sha256": "359d9fe511d7f64a6e2035e2db2041e1bf08cec23850d5afa9c65643e1e40e20"
+    },
+    {
+      "file": "02_custom_night.jpg",
+      "width": 1366,
+      "height": 1167,
+      "sha256": "798063ca89fa146864097cf64bd7774c8fc157687f1318f862edc83d3866749c"
+    },
+    {
+      "file": "03_mobile_controls.jpg",
+      "width": 390,
+      "height": 843,
+      "sha256": "f9e318550efdc39c705ea19087a5ce675688d8c1918317d11591436b20a42411"
+    },
+    {
+      "file": "04_source_diorama.jpg",
+      "width": 1280,
+      "height": 720,
+      "sha256": "d963c44bf39c8d5501d61ef0aec5d7758d6996e9cff33f7c3b546d8ea7767974"
+    }
+  ]
+}
