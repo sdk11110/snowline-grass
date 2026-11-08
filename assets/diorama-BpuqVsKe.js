@@ -1,0 +1,3 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./diorama-DbAGy6hw.js","./shared-runtime-CbIO3nCP.js","./core-C8-RwXbc.js","./buffer-geometry-utils-C60Vs5Zo.js","./model-loader-D18Tjah5.js","./toon-materials-Z37d-d7A.js","./throw-CONYjdfJ.js","./project-settings-DBnt4uC1.js","./project-settings-C7mvDilv.css"])))=>i.map(i=>d[i]);
+import{P as r,_ as e}from"./project-settings-DBnt4uC1.js";document.title=`${r.name} · 雪场沙盘`;e(()=>import("./diorama-DbAGy6hw.js"),__vite__mapDeps([0,1,2,3,4,5,6,7,8]),import.meta.url).catch(o=>{console.error("Snowfield Lab diorama:",o)});
+//# sourceMappingURL=diorama-BpuqVsKe.js.map
